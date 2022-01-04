@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export PATH=~/repos/rofi-network-manager:$PATH
+export BROWSER=firefox

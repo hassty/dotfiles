@@ -1,0 +1,62 @@
+#define black    #04040A
+#define red      #B8324C
+#define green    #0E567D
+#define yellow   #FFE81F
+#define blue     #036B92
+#define magenta  #A7595D
+#define cyan     #0991AF
+#define white    #9AD1DC
+#define gray     #6B929A
+#define bred     #B8324C
+#define bgreen   #0E567D
+#define byellow  #FFE81F
+#define bblue    #036B92
+#define bmagenta #A7595D
+#define bcyan    #0991AF
+#define bwhite   #9AD1DC
+
+*.fontMain:RobotoMono Nerd Font Mono:size=11
+
+*.background : black
+*.foreground : white
+*.color0	 : black
+*.color1	 : red
+*.color2	 : green
+*.color3	 : yellow
+*.color4	 : blue
+*.color5	 : magenta
+*.color6	 : cyan
+*.color7	 : white
+*.color8	 : gray
+*.color9	 : bred
+*.color10	 : bgreen
+*.color11	 : byellow
+*.color12	 : bblue
+*.color13	 : bmagenta
+*.color14	 : bcyan
+*.color15	 : bwhite
+
+dwm.normbgcolor     : black
+dwm.normbordercolor : black
+dwm.normfgcolor     : white
+dwm.selbgcolor      : white
+dwm.selbordercolor  : white
+dwm.selfgcolor      : black
+dwm.borderpx        : 1
+dwm.gappih          : 9
+dwm.gappiv          : 9
+dwm.gappoh          : 10
+dwm.gappov          : 10
+dwm.smartgaps       : 0
+
+dmenu.normfgcolor : white
+dmenu.normbgcolor : black
+dmenu.selfgcolor  : black
+dmenu.selbgcolor  : white
+dmenu.outfgcolor  : white
+dmenu.outbgcolor  : magenta
+dmenu.borderpx    : 1
+
+st.alpha        : 0.95
+st.blinktimeout : 215
+st.font         : Hack Nerd Font Mono:pixelsize=20:antialias=true:autohint=true
