@@ -19,7 +19,8 @@
         "python",
         "sh",
         "graphql",
-        "xml"
+        "xml",
+        "go"
     ],
 
     "html.autoClosingTags": true,
