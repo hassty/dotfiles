@@ -25,7 +25,7 @@
 
     "html.autoClosingTags": true,
     "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-    "snippets.textmateSnippetsRoots": ["/home/hasty/.config/snippets"],
+    "snippets.textmateSnippetsRoots": ["~/.config/snippets"],
     "prettier.trailingComma": "es5",
     "prettier.tabWidth": 4,
     "prettier.semi": false,
