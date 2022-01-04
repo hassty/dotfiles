@@ -1,0 +1,46 @@
+{
+    "suggest.languageSourcePriority": 89,
+    "coc.source.file.priority": 2,
+    "coc.source.around.priority": 3,
+    "coc.source.buffer.priority": 4,
+
+    "eslint.autoFixOnSave": true,
+    "javascript.suggestionActions.enabled": false,
+    "javascript.autoClosingTags": true,
+    "javascript.suggest.autoImports": true,
+    "javascript.referencesCodeLens.enable": true,
+
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "javascript",
+        "html",
+        "json",
+        "rust",
+        "python",
+        "sh",
+        "graphql",
+        "xml"
+    ],
+
+    "html.autoClosingTags": true,
+    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+    "snippets.textmateSnippetsRoots": ["/home/hasty/.config/snippets"],
+    "prettier.trailingComma": "es5",
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "diagnostic-languageserver.filetypes": {
+        "sh": "shellcheck"
+    },
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
+
+    "rest-client.showHeaders": false,
+
+    "languageserver": {
+        "graphql": {
+            "command": "graphql-lsp",
+            "args": ["server", "-m", "stream"],
+            "filetypes": ["typescript", "typescriptreact", "graphql"]
+        }
+    }
+}
