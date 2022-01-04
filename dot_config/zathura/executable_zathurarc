@@ -1,0 +1,19 @@
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+set selection-clipboard clipboard
+set pages-per-row 1
+set incremental-search "true"
+
+map r reload
+map R rotate
+
+map n scroll down
+map N navigate next
+map e scroll up
+map E navigate previous
+map i scroll right
+map k search forward
+map K search backward
+map = zoom in
+map + zoom default

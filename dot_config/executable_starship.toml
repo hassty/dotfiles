@@ -1,0 +1,132 @@
+# Inserts a blank line between shell prompts
+add_newline = false
+command_timeout = 1000
+
+format = """
+[┌── ](bold white)\
+$username\
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$custom\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$cmd_duration\
+$line_break\
+[└](bold white)\
+$lua\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+$character"""
+
+[character]
+success_symbol = "[❯](bold white)"
+error_symbol = "[✗](bold red)"
+
+[line_break]
+disabled = false
+
+[cmd_duration]
+disabled = true
+
+[directory]
+truncation_length = 5
+truncation_symbol = "/"
+style = "bold white"
+home_symbol = ""
+
+[git_status]
+disabled = false
+format = '([$all_status$ahead_behind]($style)) '
+conflicted = '\[ [$count](bright-white bold)\]'
+ahead = '\[[﯁ ](bright-blue)[$count](bright-white bold)\]'
+behind = '\[[﮾ ](white)[$count](bright-white bold)\]'
+diverged = '\[[ ](purple)|[ ﯁ ](bright-blue)[$ahead_count](bright-white bold)[ ﮾ ](white)[$behind_count](bright-white)\]'
+untracked = '\[ [$count](bright-white bold)\]'
+stashed = '\[[](yellow) [$count](bright-white bold)\]'
+modified = '\[[ ](bright-yellow)[$count](bright-white bold)\]'
+staged = '\[[ ](bright-green)[$count](bright-white bold)\]'
+renamed = '\[[ ](bright-cyan) [$count](bright-white bold)\]'
+deleted = '\[ [$count](bright-white bold)\]'
+
+[custom.giturl]
+# disabled = true
+description = "Display symbol for remote Git server"
+command = """
+GIT_REMOTE=$(command git ls-remote --get-url 2> /dev/null)
+if [[ "$GIT_REMOTE" =~ "github" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "git" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+else
+    GIT_REMOTE_SYMBOL=" "
+fi
+echo "$GIT_REMOTE_SYMBOL "
+"""
+when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
+format = "at $output "
+
+[custom.c]
+command = "gcc -dumpversion"
+symbol = ""
+extensions = ["c"]
+style = "bold blue"
+format = "via [$symbol v$output]($style) "
+
+[custom.cpp]
+command = "gcc -dumpversion"
+symbol = ""
+extensions = ["cpp"]
+style = "bold yellow"
+format = "via [$symbol v$output]($style) "
