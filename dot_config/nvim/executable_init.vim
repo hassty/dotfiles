@@ -137,7 +137,7 @@ autocmd BufWritePost config.def.h !sudo make clean install
 autocmd BufWritePost blocks.def.h !sudo make clean install && { killall -q dwmblocks;setsid dwmblocks & }
 autocmd BufWritePost dunstrc !killall dunst
 autocmd BufWritePost sxhkdrc !pidof sxhkd | xargs kill -SIGUSR1
-" autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
+autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
 
 
 " mappings
@@ -527,14 +527,14 @@ let g:startify_update_oldfiles = 1
 
 " all symbols except [q, e, i, b, s, v, t]
 let g:startify_bookmarks = [
-            \ {'h':'~/.bashrc'},
-            \ {'a':'~/.config/alacritty/alacritty.yml'},
-            \ {'c':'~/.config/nvim/init.vim'},
-            \ {'l':'~/.config/shell/aliases'},
-            \ {'f':'~/.config/shell/functions'},
-            \ {'n':'~/.config/shell/inputrc'},
-            \ {'x':'~/.config/x11/xinitrc'},
-            \ {'p':'~/.profile'},
+            \ {'h':'~/.local/share/chezmoi/executable_dot_bashrc'},
+            \ {'a':'~/.local/share/chezmoi/dot_config/alacritty/executable_alacritty.yml'},
+            \ {'c':'~/.local/share/chezmoi/dot_config/nvim/executable_init.vim'},
+            \ {'l':'~/.local/share/chezmoi/dot_config/shell/executable_aliases'},
+            \ {'f':'~/.local/share/chezmoi/dot_config/shell/executable_functions'},
+            \ {'n':'~/.local/share/chezmoi/dot_config/shell/executable_inputrc'},
+            \ {'x':'~/.local/share/chezmoi/dot_config/x11/executable_xinitrc'},
+            \ {'p':'~/.local/share/chezmoi/executable_dot_profile'},
             \ ]
 
 let g:ascii = [
