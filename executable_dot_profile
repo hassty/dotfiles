@@ -1,0 +1,117 @@
+#!/bin/sh
+
+# set default programs
+export EDITOR="nvim"
+export TERMINAL="st"
+
+
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_DIRS="$HOME/.local/share:/usr/local/share/:/usr/share/"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+
+export GOPATH="$XDG_DATA_HOME"/go
+
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+
+export PYENV_ROOT="$XDG_DATA_HOME"/pyenv
+export PYTHONSTARTUP="$XDG_CONFIG_HOME"/pythonstartup.py
+export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export NODE_PATH="$XDG_DATA_HOME"/npm/lib/node_modules
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export PATH="$HOME/.local/npm/bin:$PATH"
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+export PATH="$JAVA_HOME/bin:${PATH}"
+export JDK_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export _JAVA_AWT_WM_NONREPARENTING=1
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+
+
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export GDBHISTFILE="$XDG_DATA_HOME"/gdb/history
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc-2.0
+export LESSHISTFILE="$XDG_DATA_HOME"/less/history
+export LESSKEY="$XDG_CONFIG_HOME"/lesskey
+export HISTFILE="$XDG_DATA_HOME"/history
+export INPUTRC="$XDG_CONFIG_HOME"/shell/inputrc
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/password-store
+export SUDO_ASKPASS="$HOME"/.local/scripts/dmenupass
+export WGETRC="$XDG_CONFIG_HOME"/wget/wgetrc
+export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
+export XINITRC="$XDG_CONFIG_HOME"/x11/xinitrc
+export ZDOTDIR="$XDG_CONFIG_HOME"/shell/zsh
+
+
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude '.git'" 
+export FZF_DEFAULT_OPTS="--bind=ctrl-n:down,ctrl-e:up,ctrl-k:end-of-line,ctrl-j:kill-line"
+
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export NLS_LANG=AMERICAN_CIS.UTF8
+
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+
+# setup PATH
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/scripts" ]; then
+    PATH="$HOME/.local/scripts:$PATH"
+fi
+
+
+# add colors to man
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+
+# start ssh-agent
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [ ! "$SSH_AUTH_SOCK" ]; then
+    . "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
+
+
+# startx in tty1
+[ "$(fgconsole 2>/dev/null)" = 1 ] && exec startx "$XDG_CONFIG_HOME/x11/xinitrc" -- vt1
+
+
+eval "$(pyenv init --path)"
+
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    if [ -f "$XDG_CONFIG_HOME/shell/bash/.bashrc" ]; then
+        . "$XDG_CONFIG_HOME/shell/bash/.bashrc"
+    else
+        . "$HOME/.bashrc"
+    fi
+# if running zsh
+elif [ -n "$ZSH_NAME" ]; then
+    if [ -f "$XDG_CONFIG_HOME/shell/zsh/.zshrc" ]; then
+        . "$XDG_CONFIG_HOME/shell/zsh/.zshrc"
+    fi
+fi

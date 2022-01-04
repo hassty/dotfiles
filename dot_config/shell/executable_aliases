@@ -1,0 +1,77 @@
+#!/bin/sh
+
+
+alias \
+    cp="cp -irv" \
+    mv="mv -iv" \
+    rm="rm -vI" \
+    mkdir="mkdir -pv"
+
+
+alias \
+    grep="grep --color=auto" \
+    fgrep="fgrep --color=auto" \
+    egrep="egrep --color=auto"
+
+
+# alias \
+#     ls="ls --color=auto --group-directories-first" \
+#     ll="ls -AgFh" \
+#     la="ls -1A" \
+#     l="ls -CF"
+
+alias \
+    ls="exa --color=automatic --group-directories-first --icons" \
+    la="exa -1a --color=automatic --group-directories-first --icons" \
+    ll="exa -la --color=automatic --group-directories-first --icons --git" \
+    l="exa -la --color=automatic --group-directories-first --icons --git" \
+    lt="exa -aT --color=automatic --group-directories-first --icons"
+
+
+alias cat="bat -p"
+alias vifm="$HOME/.config/vifm/scripts/vifmrun"
+alias vf="$HOME/.config/vifm/scripts/vifmrun"
+
+
+alias \
+    mp="ncmpcpp 2>/dev/null" \
+    am="alsamixer" \
+    im="sxiv -t *" \
+    nb="newsboat" \
+    ca="calcurse" \
+    c="clear" \
+    t="tldr " \
+    gt="gotop" \
+    lz="lazygit" \
+    v="$EDITOR"
+
+
+alias \
+    dl="cd $HOME/downloads" \
+    dc="cd $HOME/documents" \
+    re="cd $HOME/repos" \
+    dv="cd $HOME/development" \
+    cf="cd $HOME/.config" \
+    wp="cd $HOME/pictures/wallpapers" \
+
+
+alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
+alias info="info --vi-keys"
+alias livereload="browser-sync start --server --files ."
+alias p="sudo pacman"
+
+
+alias \
+    ga="git add" \
+    gaa="git add --all" \
+    gs="git status" \
+    gb="git branch" \
+    gc="git commit" \
+    gca="git commit --amend" \
+    gd="git diff" \
+    gco="git checkout" \
+    gcm="git checkout master" \
+    gh="git log --oneline --graph" \
+    gm="git merge" \
+    gr="git remote"
