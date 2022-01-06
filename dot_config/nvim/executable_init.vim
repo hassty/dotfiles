@@ -149,7 +149,7 @@ autocmd BufWritePost config.def.h !sudo make clean install
 autocmd BufWritePost blocks.def.h !sudo make clean install && { killall -q dwmblocks;setsid dwmblocks & }
 autocmd BufWritePost dunstrc !killall dunst
 autocmd BufWritePost sxhkdrc !pidof sxhkd | xargs kill -SIGUSR1
-autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
+autocmd BufWritePost ~/.local/share/chezmoi/* silent !chezmoi apply --source-path "%"
 
 
 " mappings
@@ -753,7 +753,7 @@ nmap <space>a  <Plug>(coc-codeaction-selected)
 " Remap keys for applying codeAction to the current buffer.
 nmap <space>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <space>qf  <Plug>(coc-fix-current)
+nmap <space>q  <Plug>(coc-fix-current)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
