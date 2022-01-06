@@ -43,16 +43,8 @@ alias \
     t="tldr " \
     gt="gotop" \
     lz="lazygit" \
+    g="goto" \
     v="$EDITOR"
-
-
-alias \
-    dl="cd $HOME/downloads" \
-    dc="cd $HOME/documents" \
-    re="cd $HOME/repos" \
-    dv="cd $HOME/development" \
-    cf="cd $HOME/.config" \
-    wp="cd $HOME/pictures/wallpapers" \
 
 
 alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
