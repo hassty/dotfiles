@@ -539,14 +539,16 @@ let g:startify_update_oldfiles = 1
 
 " all symbols except [q, e, i, b, s, v, t]
 let g:startify_bookmarks = [
-            \ {'h':'~/.local/share/chezmoi/executable_dot_bashrc'},
             \ {'a':'~/.local/share/chezmoi/dot_config/alacritty/executable_alacritty.yml'},
             \ {'c':'~/.local/share/chezmoi/dot_config/nvim/executable_init.vim'},
-            \ {'l':'~/.local/share/chezmoi/dot_config/shell/executable_aliases'},
             \ {'f':'~/.local/share/chezmoi/dot_config/shell/executable_functions'},
+            \ {'h':'~/.local/share/chezmoi/executable_dot_bashrc'},
+            \ {'l':'~/.local/share/chezmoi/dot_config/shell/executable_aliases'},
+            \ {'m':'~/.local/share/chezmoi/dot_config/picom/executable_picom.conf'},
             \ {'n':'~/.local/share/chezmoi/dot_config/shell/executable_inputrc'},
-            \ {'x':'~/.local/share/chezmoi/dot_config/x11/executable_xinitrc'},
             \ {'p':'~/.local/share/chezmoi/executable_dot_profile'},
+            \ {'r':'~/.local/share/chezmoi/dot_config/x11/executable_xresources'},
+            \ {'x':'~/.local/share/chezmoi/dot_config/x11/executable_xinitrc'},
             \ ]
 
 let g:ascii = [
