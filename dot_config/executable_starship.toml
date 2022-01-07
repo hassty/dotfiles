@@ -82,6 +82,12 @@ truncation_symbol = "/"
 style = "bold white"
 home_symbol = ""
 
+[golang]
+symbol = "ﳑ "
+
+[rust]
+symbol = " "
+
 [git_status]
 disabled = false
 format = '([$all_status$ahead_behind]($style)) '
