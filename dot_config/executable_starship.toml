@@ -88,6 +88,9 @@ symbol = "ﳑ "
 [rust]
 symbol = " "
 
+[php]
+symbol = ""
+
 [git_status]
 disabled = false
 format = '([$all_status$ahead_behind]($style)) '
