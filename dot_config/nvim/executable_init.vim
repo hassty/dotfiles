@@ -189,6 +189,7 @@ inoremap , ,<C-g>u
 inoremap . .<C-g>u
 inoremap ! !<C-g>u
 inoremap ? ?<C-g>u
+inoremap = =<C-g>u
 
 " add big relative jumps to jumplist
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
