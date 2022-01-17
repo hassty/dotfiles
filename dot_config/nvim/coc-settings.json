@@ -5,6 +5,17 @@
     "coc.source.buffer.priority": 4,
 
     "eslint.autoFixOnSave": true,
+
+    "typescript.format.semicolons": "insert",
+    "typescript.preferences.useAliasesForRenames": false,
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.inlayHints.variableTypes.enabled": true,
+
     "javascript.suggestionActions.enabled": false,
     "javascript.autoClosingTags": true,
     "javascript.suggest.autoImports": true,
@@ -13,6 +24,7 @@
     "coc.preferences.formatOnSaveFiletypes": [
         "css",
         "javascript",
+        "typescript",
         "html",
         "json",
         "rust",
@@ -23,16 +35,20 @@
         "go"
     ],
 
-    "html.autoClosingTags": true,
     "coc.preferences.currentFunctionSymbolAutoUpdate": true,
     "snippets.textmateSnippetsRoots": ["~/.config/snippets"],
     "prettier.trailingComma": "es5",
     "prettier.tabWidth": 4,
-    "prettier.semi": false,
     "prettier.singleQuote": true,
+
     "diagnostic-languageserver.filetypes": {
         "sh": "shellcheck"
     },
+    "diagnostic.hintSign": "",
+    "diagnostic.infoSign": "",
+    "diagnostic.warningSign": "",
+    "diagnostic.errorSign": "",
+
     "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
 
     "rest-client.showHeaders": false,
