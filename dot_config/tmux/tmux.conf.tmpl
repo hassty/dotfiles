@@ -1,7 +1,9 @@
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @resurrect-dir '~/.local/share/tmux/resurrect'
-set -g @resurrect-capture-pane-contents 'on'
 set -g @resurrect-strategy-nvim 'session'
+set -g @resurrect-processes 'gotop ssh ~tsc'
+
+set -g @plugin 'tmux-plugins/tmux-continuum'
 
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @yank_selection_mouse 'clipboard'
