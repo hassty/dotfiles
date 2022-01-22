@@ -100,9 +100,6 @@ fi
 [ "$(fgconsole 2>/dev/null)" = 1 ] && exec startx "$XDG_CONFIG_HOME/x11/xinitrc" -- vt1
 
 
-eval "$(pyenv init --path)"
-
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     if [ -f "$XDG_CONFIG_HOME/shell/bash/.bashrc" ]; then
