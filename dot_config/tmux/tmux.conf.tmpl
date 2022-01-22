@@ -51,4 +51,11 @@ bind C-l select-pane -R
 bind C-c command-prompt -p "Create window with name:" "new-window; rename-window '%%'"
 bind C-y set-window-option synchronize-panes
 
+unbind -T copy-mode-vi v
+bind -T copy-mode-vi v send -X begin-selection
+bind -T copy-mode-vi C-v send -X rectangle-toggle
+bind -T copy-mode-vi y send -X copy-selection
+
+bind -r i run-shell "tmux neww tmux-cht.sh"
+
 run '/usr/share/tmux-plugin-manager/tpm'
