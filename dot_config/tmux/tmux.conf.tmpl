@@ -8,12 +8,21 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @yank_selection_mouse 'clipboard'
 
+set -g @plugin 'tmux-plugins/tmux-sessionist'
+
+set -g @plugin 'laktak/extrakto'
+
 unbind C-b
 set -g prefix C-a
 unbind C-a
 bind C-a send-prefix
 
 set -g base-index 1
+setw -g pane-base-index 1
+
+set -g set-titles on
+set -g set-titles-string "#T"
+
 set -g bell-action none
 set -g default-terminal screen-256color
 set -g focus-events on
@@ -27,7 +36,7 @@ setw -g aggressive-resize on
 setw -g mode-keys vi
 setw -g monitor-activity on
 
-bind R source-file '{{ .chezmoi.homeDir }}/.config/tmux/tmux.conf'
+bind r source-file '{{ .chezmoi.homeDir }}/.config/tmux/tmux.conf' \; display "tmux.conf reloaded"
 
 bind C-p previous-window
 bind C-n next-window
@@ -39,6 +48,7 @@ bind C-j select-pane -D
 bind C-k select-pane -U
 bind C-l select-pane -R
 
+bind C-c command-prompt -p "Create window with name:" "new-window; rename-window '%%'"
 bind C-y set-window-option synchronize-panes
 
 run '/usr/share/tmux-plugin-manager/tpm'
