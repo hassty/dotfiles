@@ -1292,13 +1292,13 @@ xkb_symbols "pc+us(colemak)+ru:2+inet(evdev)+group(ctrls_toggle)+shift(both_caps
     key <AD02> {
         type[group1]= "FOUR_LEVEL_ALPHABETIC",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [               w,               W,        quotedbl,           Aring ],
+        symbols[Group1]= [               w,               W,              at,           Aring ],
         symbols[Group2]= [    Cyrillic_tse,    Cyrillic_TSE ]
     };
     key <AD03> {
         type[group1]= "FOUR_LEVEL_ALPHABETIC",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [               f,               F,      apostrophe,          Atilde ],
+        symbols[Group1]= [               f,               F,      numbersign,          Atilde ],
         symbols[Group2]= [      Cyrillic_u,      Cyrillic_U ]
     };
     key <AD04> {
@@ -1316,31 +1316,31 @@ xkb_symbols "pc+us(colemak)+ru:2+inet(evdev)+group(ctrls_toggle)+shift(both_caps
     key <AD06> {
         type[group1]= "FOUR_LEVEL_ALPHABETIC",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [               j,               J,           equal,         Dstroke ],
+        symbols[Group1]= [               j,               J,     asciicircum,         Dstroke ],
         symbols[Group2]= [     Cyrillic_en,     Cyrillic_EN ]
     };
     key <AD07> {
         type[group1]= "FOUR_LEVEL_ALPHABETIC",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [               l,               L,               7,         Lstroke ],
+        symbols[Group1]= [               l,               L,       ampersand,         Lstroke ],
         symbols[Group2]= [    Cyrillic_ghe,    Cyrillic_GHE ]
     };
     key <AD08> {
         type[group1]= "FOUR_LEVEL_ALPHABETIC",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [               u,               U,               8,          Uacute ],
+        symbols[Group1]= [               u,               U,        asterisk,          Uacute ],
         symbols[Group2]= [    Cyrillic_sha,    Cyrillic_SHA ]
     };
     key <AD09> {
         type[group1]= "FOUR_LEVEL_ALPHABETIC",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [               y,               Y,               9,      Udiaeresis ],
+        symbols[Group1]= [               y,               Y,       parenleft,      Udiaeresis ],
         symbols[Group2]= [  Cyrillic_shcha,  Cyrillic_SHCHA ]
     };
     key <AD10> {
         type[group1]= "FOUR_LEVEL",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [       semicolon,           colon,            plus,      Odiaeresis ],
+        symbols[Group1]= [       semicolon,           colon,      parenright,      Odiaeresis ],
         symbols[Group2]= [     Cyrillic_ze,     Cyrillic_ZE ]
     };
     key <AD11> {
