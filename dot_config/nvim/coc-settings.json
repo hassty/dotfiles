@@ -32,7 +32,9 @@
         "sh",
         "graphql",
         "xml",
-        "go"
+        "go",
+        "toml",
+        "yaml"
     ],
 
     "coc.preferences.currentFunctionSymbolAutoUpdate": true,
