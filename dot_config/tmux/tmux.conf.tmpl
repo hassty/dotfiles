@@ -3,8 +3,6 @@ set -g @resurrect-dir '~/.local/share/tmux/resurrect'
 set -g @resurrect-strategy-nvim 'session'
 set -g @resurrect-processes 'gotop ssh ~tsc'
 
-set -g @plugin 'tmux-plugins/tmux-continuum'
-
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @yank_selection_mouse 'clipboard'
 
@@ -47,6 +45,7 @@ bind C-h select-pane -L
 bind C-j select-pane -D
 bind C-k select-pane -U
 bind C-l select-pane -R
+bind o kill-pane -a
 
 bind C-c command-prompt -p "Create window with name:" "new-window; rename-window '%%'"
 bind C-y set-window-option synchronize-panes
@@ -56,6 +55,6 @@ bind -T copy-mode-vi v send -X begin-selection
 bind -T copy-mode-vi C-v send -X rectangle-toggle
 bind -T copy-mode-vi y send -X copy-selection
 
-bind -r i run-shell "tmux neww tmux-cht.sh"
+bind -r i run-shell "tmux splitw -h tmux-cht.sh"
 
 run '/usr/share/tmux-plugin-manager/tpm'
