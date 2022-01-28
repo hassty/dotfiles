@@ -262,8 +262,11 @@ augroup END
 let g:nord_borders = v:true
 let g:nord_disable_background = v:false
 let g:nord_cursorline_transparent = v:true
+let g:nord_italic = v:false
 colorscheme nord
 highlight SignColumn guibg=NONE ctermbg=NONE
+highlight CocRustTypeHint guifg=Gray ctermfg=Gray
+highlight CocRustChainingHint guifg=Gray ctermfg=Gray
 
 
 " use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
