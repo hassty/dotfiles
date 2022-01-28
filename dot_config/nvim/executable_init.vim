@@ -182,7 +182,7 @@ inoremap <M-,> <Esc>A,<CR>
 inoremap <M-.> <Esc>A.<CR>
 inoremap <M-CR> <Esc>o
 inoremap <C-a> <C-o>I
-inoremap <C-e> <C-o>A
+inoremap <C-k> <C-o>A
 
 " undo breakpoints
 inoremap , ,<C-g>u
@@ -454,14 +454,15 @@ autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
             \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
-let g:which_key_map['/'] = [ 'Commentary'                 , 'comment' ]
-let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
-let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
-let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['x'] = [ ':!chmod +x %'               , 'make executable']
-let g:which_key_map['l'] = [ ':Limelight!!'               , 'limelight' ]
-let g:which_key_map['z'] = [ ':Goyo'                      , 'goyo' ]
-let g:which_key_map['f'] = [ ':Files'                     , 'fzf' ]
+let g:which_key_map['/'] = [ 'Commentary'                   , 'comment' ]
+let g:which_key_map['h'] = [ '<C-W>s'                       , 'split below']
+let g:which_key_map['S'] = [ ':Startify'                    , 'start screen' ]
+let g:which_key_map['v'] = [ '<C-W>v'                       , 'split right']
+let g:which_key_map['x'] = [ ':!chmod +x %'                 , 'make executable']
+let g:which_key_map['l'] = [ ':Limelight!!'                 , 'limelight' ]
+let g:which_key_map['z'] = [ ':Goyo'                        , 'goyo' ]
+let g:which_key_map['f'] = [ ':Files'                       , 'fzf' ]
+let g:which_key_map['c'] = [ ':Files ~/.local/share/chezmoi', 'fzf' ]
 
 let g:which_key_map.s = {
             \ 'name' : '+search' ,
@@ -650,7 +651,7 @@ let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o'
 
 
 " hardtime
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 let g:hardtime_allow_different_key = 1
 let g:hardtime_maxcount = 2
 let g:hardtime_ignore_buffer_patterns = [ "NERD.*" ]
@@ -796,8 +797,6 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<CR>
 " Manage extensions.
 " nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<CR>
-" Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<CR>
 " Find symbol of current document.
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<CR>
 " Search workleader symbols.
