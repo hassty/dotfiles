@@ -36,6 +36,7 @@ alias vf="$HOME/.config/vifm/scripts/vifmrun"
 alias \
     mp="ncmpcpp 2>/dev/null" \
     am="alsamixer" \
+    pm="pulsemixer" \
     im="sxiv -t *" \
     nb="newsboat" \
     ca="calcurse" \
