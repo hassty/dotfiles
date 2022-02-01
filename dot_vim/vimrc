@@ -588,6 +588,38 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 
 " coc settings
+" coc extensions
+let g:coc_global_extensions = [
+            \'coc-clang-format-style-options',
+            \'coc-clangd',
+            \'coc-cmake',
+            \'coc-coverage',
+            \'coc-css',
+            \'coc-db',
+            \'coc-diagnostic',
+            \'coc-docker',
+            \'coc-emmet',
+            \'coc-eslint',
+            \'coc-go',
+            \'coc-html-css-support',
+            \'coc-jedi',
+            \'coc-json',
+            \'coc-lists',
+            \'coc-marketplace',
+            \'coc-prettier',
+            \'coc-react-refactor',
+            \'coc-restclient',
+            \'coc-rust-analyzer',
+            \'coc-sh',
+            \'coc-simple-react-snippets',
+            \'coc-snippets',
+            \'coc-sumneko-lua',
+            \'coc-toml',
+            \'coc-tsserver',
+            \'coc-vimlsp',
+            \'coc-xml',
+            \]
+
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
