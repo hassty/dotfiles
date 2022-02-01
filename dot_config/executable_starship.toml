@@ -41,6 +41,7 @@ $python\
 $red\
 $ruby\
 $rust\
+$lua\
 $scala\
 $swift\
 $terraform\
@@ -58,7 +59,6 @@ $crystal\
 $cmd_duration\
 $line_break\
 [└](bold white)\
-$lua\
 $jobs\
 $battery\
 $time\
@@ -90,6 +90,10 @@ symbol = " "
 
 [php]
 symbol = ""
+
+[lua]
+style = "bold yellow"
+symbol = " "
 
 [git_status]
 disabled = false
