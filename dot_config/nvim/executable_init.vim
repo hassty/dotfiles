@@ -120,7 +120,6 @@ set fileencodings=usc-bom,utf-8,default,cp1251,latin1
 set exrc
 
 " persistent undo
-set undodir=~/.local/share/nvim/undodir
 set undofile
 
 
