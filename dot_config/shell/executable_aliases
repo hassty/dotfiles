@@ -63,8 +63,9 @@ alias \
     gc="git commit" \
     gca="git commit --amend" \
     gd="git diff" \
+    gds="git diff --staged" \
     gco="git checkout" \
     gcm="git checkout master" \
-    gh="git log --oneline --graph" \
+    gl="git log --oneline --graph" \
     gm="git merge" \
-    gr="git remote"
+    gr="git restore"
