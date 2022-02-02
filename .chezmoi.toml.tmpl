@@ -1,0 +1,9 @@
+{{ $email := promptString "git email" -}}
+{{ $name := promptString "git name" -}}
+
+[data]
+    email = {{ $email | quote }}
+    name = {{ $name | quote }}
+
+[diff]
+    pager = "diff-so-fancy"
