@@ -54,4 +54,5 @@ exec xsettingsd &
 exec sxhkd -m 1 &
 exec unclutter &
 exec dwmblocks &
+exec clipster -d >/dev/null 2>&1 &
 exec dwm
