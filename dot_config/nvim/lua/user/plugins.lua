@@ -110,6 +110,8 @@ return packer.startup(function(use)
 	use("sunjon/shade.nvim")
 	use("tjdevries/colorbuddy.nvim")
 	use("unblevable/quick-scope")
+	use("tpope/vim-surround")
+	use("tpope/vim-repeat")
 
 	-- colorschemes
 	use("lunarvim/darkplus.nvim")
