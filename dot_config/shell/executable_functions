@@ -32,6 +32,13 @@ cdd () {
     cd "$1" || exit 1
 }
 
+
+# list git repositories and cd
+gf () {
+    cd $(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="tree {}")
+}
+
+
 lr () {
     fullpath="$(readlink -f "$1")"
     command="entr -ccr"
