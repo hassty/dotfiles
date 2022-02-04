@@ -112,6 +112,7 @@ return packer.startup(function(use)
 	use("unblevable/quick-scope")
 	use("tpope/vim-surround")
 	use("tpope/vim-repeat")
+	use("alker0/chezmoi.vim")
 
 	-- colorschemes
 	use("lunarvim/darkplus.nvim")
