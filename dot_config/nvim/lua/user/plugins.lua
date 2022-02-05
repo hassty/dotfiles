@@ -65,6 +65,7 @@ return packer.startup(function(use)
 
 	-- telescope
 	use("nvim-telescope/telescope.nvim")
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
 	-- treesitter
 	use({
