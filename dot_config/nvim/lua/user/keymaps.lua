@@ -5,9 +5,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-keymap("n", "<leader>w", ":write<CR>", opts)
 keymap("n", "<F5>", ":source $MYVIMRC<CR>", opts)
-keymap("n", "<leader><Tab>", "<C-^>", opts)
 keymap("n", "<CR>", "o<Esc>k", opts)
 keymap("n", "<M-CR>", "O<Esc>j", opts)
 keymap("n", "ZX", "ZQ", opts)
@@ -45,10 +43,6 @@ keymap("i", "=", "=<C-g>u", opts)
 vim.cmd([[nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k']])
 vim.cmd([[nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j']])
 
--- resize splits
-keymap("n", "<leader>,", ":vertical resize -5<CR>", opts)
-keymap("n", "<leader>.", ":vertical resize +5<CR>", opts)
-
 -- moving text
 keymap("v", "<M-j>", ":m '>+1<Cr>gv=gv", opts)
 keymap("v", "<M-k>", ":m '<-2<Cr>gv=gv", opts)
@@ -67,28 +61,16 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- change vertical split to horizontal
-keymap("n", "<leader>th", "<C-w>t<C-w>K", opts)
-
--- change horizontal split to vertical
-keymap("n", "<leader>tv", "<C-w>t<C-w>H", opts)
-
 -- calculate expression
 keymap("i", "<M-=>", "<C-O>yiW<End>=<C-R>=<C-R>0<CR>", opts)
 
--- search and replace
 vim.cmd([[nnoremap <Leader>rs :%s/\<<C-r><C-w>\>//g<Left><Left>]])
 vim.cmd([[vnoremap <Leader>rs "hy:%s/<C-r>h//g<Left><Left>]])
-
--- telescope
-keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
-keymap("n", "<leader>st", "<cmd>Telescope live_grep<CR>", opts)
-
--- nvimtree
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>E", "<cmd>NvimTreeFindFileToggle<CR>", opts)
 
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 keymap("x", "<leader>/", "<ESC><CMD>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
 
-keymap("n", "<leader>z", "<cmd>ZenMode<CR>", opts)
+-- keymap("n", "<leader>,", ":vertical resize -5<CR>", opts)
+-- keymap("n", "<leader>.", ":vertical resize +5<CR>", opts)
+-- keymap("n", "<leader>th", "<C-w>t<C-w>K", opts)
+-- keymap("n", "<leader>tv", "<C-w>t<C-w>H", opts)

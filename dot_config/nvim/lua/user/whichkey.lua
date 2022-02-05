@@ -11,8 +11,6 @@ local setup = {
 			enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
 			suggestions = 20, -- how many suggestions should be shown in the list?
 		},
-		-- the presets plugin, adds help for a bunch of default keybindings in Neovim
-		-- No actual key bindings are created
 		presets = {
 			operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
 			motions = true, -- adds help for motions
@@ -23,20 +21,15 @@ local setup = {
 			g = true, -- bindings for prefixed with g
 		},
 	},
-	-- add operators that will trigger motion and text object completion
-	-- to enable all native operators, set the preset / operators plugin above
-	-- operators = { gc = "Comments" },
 	key_labels = {
-		-- override the label used to display some keys. It doesn't effect WK in any other way.
-		-- For example:
-		-- ["<space>"] = "SPC",
-		-- ["<cr>"] = "RET",
-		-- ["<tab>"] = "TAB",
+		["<space>"] = "SPC",
+		["<cr>"] = "RET",
+		["<Tab>"] = "TAB",
 	},
 	icons = {
 		breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
 		separator = "➜", -- symbol used between a key and it's label
-		group = "+", -- symbol prepended to a group
+		group = " ", -- symbol prepended to a group
 	},
 	popup_mappings = {
 		scroll_down = "<c-d>", -- binding to scroll down inside the popup
@@ -53,17 +46,13 @@ local setup = {
 		height = { min = 4, max = 25 }, -- min and max height of the columns
 		width = { min = 20, max = 50 }, -- min and max width of the columns
 		spacing = 3, -- spacing between columns
-		align = "left", -- align columns left, center or right
+		align = "center", -- align columns left, center or right
 	},
-	ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
+	ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
 	hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
-	show_help = true, -- show help message on the command line when the popup is visible
+	show_help = false, -- show help message on the command line when the popup is visible
 	triggers = "auto", -- automatically setup triggers
-	-- triggers = {"<leader>"} -- or specify a list manually
 	triggers_blacklist = {
-		-- list of mode / prefixes that should never be hooked by WhichKey
-		-- this is mostly relevant for key maps that start with a native binding
-		-- most people should not need to change this
 		i = { "j", "k" },
 		v = { "j", "k" },
 	},
@@ -79,23 +68,17 @@ local opts = {
 }
 
 local mappings = {
-	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-	["b"] = {
-		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-		"Buffers",
-	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["w"] = { "<cmd>w!<CR>", "Save" },
-	["q"] = { "<cmd>q!<CR>", "Quit" },
+	["E"] = { "<cmd>NvimTreeFindFileToggle<CR>", "Explorer (current file)" },
+	["w"] = { "<cmd>write!<CR>", "Save" },
+	["q"] = { "<cmd>quit!<CR>", "Quit" },
 	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-	["f"] = {
-		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-		"Find files",
-	},
-	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+	["f"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-	["/"] = { "<cmd>Cheatsheet<CR>", "Cheatsheet" },
+	["?"] = { "<cmd>Cheatsheet<CR>", "Cheatsheet" },
+	["z"] = { "<cmd>ZenMode<CR>", "Zen Mode" },
+	["<Tab>"] = { "<C-^>", "Alternate file" },
 
 	p = {
 		name = "Packer",
@@ -162,7 +145,7 @@ local mappings = {
 	},
 	s = {
 		name = "Search",
-		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+		b = { "<cmd>Telescope git_branches<cr>", "Checkout Branch" },
 		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
@@ -170,6 +153,7 @@ local mappings = {
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
+		t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 	},
 
 	t = {
