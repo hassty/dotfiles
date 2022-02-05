@@ -117,6 +117,7 @@ return packer.startup(function(use)
 	use("tpope/vim-surround")
 	use("tpope/vim-repeat")
 	use("alker0/chezmoi.vim")
+    use("zhimsel/vim-stay")
 
 	-- colorschemes
 	use("lunarvim/darkplus.nvim")
