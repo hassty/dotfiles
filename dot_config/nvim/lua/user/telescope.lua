@@ -4,10 +4,10 @@ if not status_ok then
 end
 
 local actions = require("telescope.actions")
+local action_layout = require("telescope.actions.layout")
 
 telescope.setup({
 	defaults = {
-
 		prompt_prefix = " ",
 		selection_caret = " ",
 		path_display = { "smart" },
@@ -17,7 +17,7 @@ telescope.setup({
 				["<C-j>"] = actions.move_selection_next,
 				["<C-e>"] = actions.move_selection_previous,
 
-				["<C-c>"] = actions.close,
+				["<Esc>"] = actions.close,
 
 				["<Down>"] = actions.move_selection_next,
 				["<Up>"] = actions.move_selection_previous,
@@ -39,6 +39,8 @@ telescope.setup({
 				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 				["<C-l>"] = actions.complete_tag,
 				["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+
+				["<M-p>"] = action_layout.toggle_preview,
 			},
 
 			n = {
@@ -71,17 +73,15 @@ telescope.setup({
 				["<PageDown>"] = actions.results_scrolling_down,
 
 				["?"] = actions.which_key,
+
+				["<M-p>"] = action_layout.toggle_preview,
 			},
 		},
 	},
 	pickers = {
-		-- Default configuration for builtin pickers goes here:
-		-- picker_name = {
-		--   picker_config_key = value,
-		--   ...
-		-- }
-		-- Now the picker_config_key will be applied every time you call this
-		-- builtin picker
+		find_files = {
+			find_command = { "fd", "--type", "f", "--strip-cwd-prefix" },
+		},
 	},
 	extensions = {
 		fzf = {
