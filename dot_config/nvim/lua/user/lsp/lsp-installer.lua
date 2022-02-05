@@ -5,16 +5,27 @@ end
 
 -- Automatically install LSP servers
 local servers = {
+	"ansiblels",
+	"asm_lsp",
+	"bashls",
+	"clangd",
+	"cmake",
+	"cssls",
+	"dockerls",
+	"gopls",
+	"graphql",
+	"html",
 	"intelephense",
+	"jsonls",
+	"lemminx",
+	"pyright",
+	"rust_analyzer",
+	"spectral",
+	"sumneko_lua",
+	"taplo",
 	"tsserver",
 	"vimls",
-	"cssls",
-	"html",
-	"gopls",
-	"rust_analyzer",
-	"jsonls",
-	"sumneko_lua",
-	"clangd",
+	"yamlls",
 }
 
 for _, name in pairs(servers) do
