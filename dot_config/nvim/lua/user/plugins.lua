@@ -68,7 +68,7 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use("sudormrfbin/cheatsheet.nvim")
 	use("nvim-telescope/telescope-packer.nvim")
-    use("nvim-telescope/telescope-ui-select.nvim")
+	use("nvim-telescope/telescope-ui-select.nvim")
 
 	-- treesitter
 	use({
@@ -117,7 +117,8 @@ return packer.startup(function(use)
 	use("tpope/vim-surround")
 	use("tpope/vim-repeat")
 	use("alker0/chezmoi.vim")
-    use("zhimsel/vim-stay")
+	use("zhimsel/vim-stay")
+	use("rktjmp/highlight-current-n.nvim")
 
 	-- colorschemes
 	use("lunarvim/darkplus.nvim")
