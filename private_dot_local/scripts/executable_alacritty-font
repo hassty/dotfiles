@@ -1,0 +1,4 @@
+#!/bin/sh
+
+font=$(fc-list --format="%{family[0]}\n" | grep -i "mono" | sort | uniq | fzf)
+[ -n "$font" ] && sed -i "s/family: .*/family: $font/" ~/.config/alacritty/alacritty.yml

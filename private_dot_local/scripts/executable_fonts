@@ -1,0 +1,4 @@
+#!/bin/sh
+
+fc-list | cut -d':' -f2 | cut -d',' -f2 | sed 's/^\s*//' | sort | uniq | dmenu -bw 0 -i -l 15 -h 22 | tr -d '\n' | xclip -sel clip
+
