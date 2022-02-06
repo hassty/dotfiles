@@ -55,6 +55,6 @@ bind -T copy-mode-vi v send -X begin-selection
 bind -T copy-mode-vi C-v send -X rectangle-toggle
 bind -T copy-mode-vi y send -X copy-selection
 
-bind -r i run-shell "tmux splitw -h tmux-cht.sh"
+bind -r i run-shell "tmux splitw -h cht"
 
 run '/usr/share/tmux-plugin-manager/tpm'
