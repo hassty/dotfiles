@@ -26,6 +26,7 @@ local servers = {
 	"tsserver",
 	"vimls",
 	"yamlls",
+	"sqls",
 }
 
 for _, name in pairs(servers) do

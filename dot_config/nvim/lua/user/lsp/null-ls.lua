@@ -11,9 +11,32 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier,
-		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.black,
+		formatting.clang_format,
+		formatting.cmake_format,
+		formatting.goimports,
+		formatting.prettierd,
+		formatting.rustfmt,
+		formatting.shellharden,
+		formatting.sqlformat,
 		formatting.stylua,
-		diagnostics.flake8,
+		formatting.xmllint,
+
+		diagnostics.checkmake,
+		diagnostics.golangci_lint,
+		diagnostics.hadolint,
+		diagnostics.shellcheck,
+		diagnostics.tsc,
 	},
+
+	on_attach = function(client)
+		if client.resolved_capabilities.document_formatting then
+			vim.cmd([[
+            augroup LspFormatting
+                autocmd! * <buffer>
+                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+            augroup END
+            ]])
+		end
+	end,
 })
