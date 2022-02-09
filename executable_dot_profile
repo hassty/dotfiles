@@ -21,6 +21,9 @@ export PYENV_ROOT="$XDG_DATA_HOME"/pyenv
 export PYTHONSTARTUP="$XDG_CONFIG_HOME"/pythonstartup.py
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+export WORKON_HOME="$XDG_DATA_HOME"/environments
+
+export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NODE_PATH="$XDG_DATA_HOME"/npm/lib/node_modules
@@ -28,7 +31,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export PATH="$HOME/.local/npm/bin:$PATH"
 
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
-export PATH="$JAVA_HOME/bin:${PATH}"
+export PATH="$JAVA_HOME/bin:$PATH"
 export JDK_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export _JAVA_AWT_WM_NONREPARENTING=1
