@@ -22,8 +22,12 @@ keymap("n", "<M-e>", "k", opts)
 keymap("n", "{", "{zz", opts)
 keymap("n", "}", "}zz", opts)
 
-vim.cmd([[cnoremap <C-n> <Down>]])
-vim.cmd([[cnoremap <C-e> <Up>]])
+vim.cmd([[
+cnoremap <C-n> <Down>
+cnoremap <C-e> <Up>
+cnoremap <C-a> <Home>
+cnoremap <C-k> <End>
+]])
 
 keymap("i", "<M-;>", "<Esc>A;<CR>", opts)
 keymap("i", "<M-,>", "<Esc>A,<CR>", opts)
