@@ -537,6 +537,18 @@ nnoremap l i
 nnoremap L I
 nnoremap j e
 nnoremap J E
+vnoremap n j
+vnoremap N J
+vnoremap e k
+vnoremap E K
+vnoremap i l
+vnoremap I L
+vnoremap k n
+vnoremap K N
+vnoremap l i
+vnoremap L I
+vnoremap j e
+vnoremap J E
 nnoremap ZX ZQ
 
 command! dragon dragon-drag-and-drop -a -x %f
