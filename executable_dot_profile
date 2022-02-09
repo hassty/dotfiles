@@ -23,6 +23,7 @@ export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 export WORKON_HOME="$XDG_DATA_HOME"/environments
 
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
