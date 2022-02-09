@@ -56,6 +56,9 @@ export XINITRC="$XDG_CONFIG_HOME"/x11/xinitrc
 export ZDOTDIR="$XDG_CONFIG_HOME"/shell/zsh
 
 
+export GVIMINIT='let $MYGVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/gvimrc" : "$XDG_CONFIG_HOME/nvim/init.gvim" | so $MYGVIMRC'
+export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.lua" | so $MYVIMRC'
+
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude '.git'" 
 export FZF_DEFAULT_OPTS="--bind=ctrl-n:down,ctrl-e:up,ctrl-k:end-of-line,ctrl-j:kill-line --cycle"
 
