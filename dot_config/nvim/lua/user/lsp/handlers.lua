@@ -92,6 +92,8 @@ M.on_attach = function(client, bufnr)
 		or client.name == "clangd"
 		or client.name == "sqls"
 		or client.name == "lemminx"
+		or client.name == "jsonls"
+		or client.name == "csharp_ls"
 	then
 		client.resolved_capabilities.document_formatting = false
 		client.resolved_capabilities.document_range_formatting = false
