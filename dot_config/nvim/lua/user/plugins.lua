@@ -96,7 +96,7 @@ return packer.startup(function(use)
 	use({ "folke/zen-mode.nvim", cmd = "ZenMode" })
 
 	-- misc
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", cmd = "MarkdownPreview" })
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install" })
 	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
 	use("akinsho/toggleterm.nvim")
