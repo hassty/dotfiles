@@ -1,5 +1,17 @@
-{{ $email := promptString "git email" -}}
-{{ $name := promptString "git name" -}}
+{{- $email := "" -}}
+{{- if (hasKey . "email") -}}
+{{-   $email = .email -}}
+{{- else -}}
+{{-   $email = promptString "git email" -}}
+{{- end -}}
+
+{{- $name := "" -}}
+{{- if (hasKey . "name") -}}
+{{-   $name = .name -}}
+{{- else -}}
+{{-   $name = promptString "git name" -}}
+{{- end -}}
+
 
 [data]
     email = {{ $email | quote }}
