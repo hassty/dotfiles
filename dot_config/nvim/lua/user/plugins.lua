@@ -120,6 +120,7 @@ return packer.startup(function(use)
 	use("alker0/chezmoi.vim")
 	use("zhimsel/vim-stay")
 	use("rktjmp/highlight-current-n.nvim")
+	use("jeffkreeftmeijer/vim-numbertoggle")
 
 	-- colorschemes
 	use("lunarvim/darkplus.nvim")
