@@ -17,6 +17,7 @@ ex ()
       *.zip)       unzip "$1"     ;;
       *.Z)         uncompress "$1";;
       *.7z)        7z x "$1"      ;;
+      *.iso)       7z x "$1"      ;;
       *.deb)       ar x "$1"      ;;
       *.tar.xz)    tar xf "$1"    ;;
       *.tar.zst)   unzstd "$1"    ;;
@@ -35,7 +36,7 @@ cdd () {
 
 # list git repositories and cd
 gf () {
-    cd $(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="tree {}")
+    cd "$(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="tree {}")"
 }
 
 
