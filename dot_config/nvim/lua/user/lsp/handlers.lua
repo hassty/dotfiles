@@ -89,6 +89,7 @@ M.on_attach = function(client, bufnr)
 		client.name == "tsserver"
 		or client.name == "gopls"
 		or client.name == "rust_analyzer"
+		or client.name == "sumneko_lua"
 		or client.name == "clangd"
 		or client.name == "sqls"
 		or client.name == "lemminx"

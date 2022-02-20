@@ -12,10 +12,14 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.black,
-		formatting.clang_format,
+		formatting.clang_format.with({
+			disabled_filetypes = { "c", "cpp" },
+		}),
 		formatting.cmake_format,
 		formatting.goimports,
-		formatting.prettierd,
+		formatting.prettierd.with({
+			disabled_filetypes = { "html" },
+		}),
 		formatting.rustfmt,
 		formatting.shellharden,
 		formatting.sqlformat,
