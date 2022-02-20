@@ -9,6 +9,7 @@ local options = {
 	fileencodings = { "usc-bom", "utf-8", "default", "cp1251", "latin1" },
 	fileformat = "unix",
 	ignorecase = true,
+	laststatus = 2,
 	lazyredraw = true,
 	linebreak = true,
 	mouse = "a",
