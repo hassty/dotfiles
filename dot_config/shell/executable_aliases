@@ -37,7 +37,7 @@ alias \
     mp="ncmpcpp 2>/dev/null" \
     am="alsamixer" \
     pm="pulsemixer" \
-    im="sxiv -t *" \
+    im="nsxiv -t *" \
     nb="newsboat" \
     ca="calcurse" \
     c="clear" \
