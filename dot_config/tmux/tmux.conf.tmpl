@@ -52,6 +52,7 @@ bind o kill-pane -a
 
 bind C-c command-prompt -p "Create window with name:" "new-window; rename-window '%%'"
 bind C-y set-window-option synchronize-panes
+bind b set-option -g status
 
 unbind -T copy-mode-vi v
 bind -T copy-mode-vi v send -X begin-selection
