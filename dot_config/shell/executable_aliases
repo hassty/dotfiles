@@ -69,3 +69,10 @@ alias \
     gl="git log --oneline --graph" \
     gm="git merge" \
     gr="git restore"
+
+
+alias \
+    tm="tmux" \
+    ta="tmux attach" \
+    tk="tmux kill-server" \
+    tl="tmux ls"
