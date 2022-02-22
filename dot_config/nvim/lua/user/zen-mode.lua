@@ -44,6 +44,7 @@ zen_mode.setup({
 		vim.opt.scrolloff = 999
 		vim.cmd("ScrollViewDisable")
 		vim.cmd("set guicursor+=a:blinkon0")
+		vim.cmd("HardTimeOff")
 		keymap("n", "n", "j", opts)
 		keymap("n", "e", "k", opts)
 		keymap("n", "i", "l", opts)
@@ -60,6 +61,7 @@ zen_mode.setup({
 		vim.opt.scrolloff = 1
 		vim.cmd("ScrollViewEnable")
 		vim.cmd("set guicursor-=a:blinkon0")
+		vim.cmd("HardTimeOn")
 		keymap("n", "n", "n", opts)
 		keymap("n", "e", "e", opts)
 		keymap("n", "i", "i", opts)
