@@ -90,6 +90,11 @@ return packer.startup(function(use)
 	use({ "folke/twilight.nvim", cmd = "Twilight" })
 	use({ "folke/zen-mode.nvim", cmd = "ZenMode" })
 
+	-- db
+	use("kristijanhusak/vim-dadbod-completion")
+	use("tpope/vim-dadbod")
+	use("kristijanhusak/vim-dadbod-ui")
+
 	-- misc
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install" })
 	use("windwp/nvim-autopairs")
