@@ -7,7 +7,7 @@
 # interface. It should not be edited directly.
 
 generic-cancel  ESC 
-generic-select  SPC 
+generic-select  f 
 generic-credits  @ 
 generic-help  ? 
 generic-quit  q Q 
@@ -16,10 +16,10 @@ generic-reload  R
 generic-copy  c 
 generic-paste  p ^V 
 generic-change-view  TAB 
-generic-import  i I 
+generic-import  u U 
 generic-export  x X 
 generic-goto  g G 
-generic-other-cmd  o O 
+generic-other-cmd  O 
 generic-config-menu  C 
 generic-redraw  ^R 
 generic-add-appt  ^N 
@@ -36,20 +36,20 @@ generic-scroll-down  ^D
 generic-scroll-up  ^U 
 generic-goto-today  ^G 
 generic-command  : 
-move-right  l RGT 
+move-right  i RGT 
 move-left  h LFT 
-move-down  j DWN 
-move-up  k UP 
+move-down  n DWN 
+move-up  e UP 
 start-of-week  H 
-end-of-week  L 
+end-of-week  I 
 add-item  a A 
 del-item  d D 
-edit-item  e E 
-view-item  v V RET 
+edit-item  RET 
+view-item  v V SPC 
 pipe-item  | 
 flag-item  ! 
 repeat  . 
-edit-note  n N 
+edit-note  o 
 view-note  > 
 raise-priority  ^X 
 lower-priority  ^A 
