@@ -37,7 +37,7 @@ zen_mode.setup({
 		},
 		twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
 		gitsigns = { enabled = false }, -- disables git signs
-		tmux = { enabled = true }, -- disables the tmux statusline
+		tmux = { enabled = false }, -- disables the tmux statusline
 	},
 	-- callback where you can add custom code when the Zen window opens
 	on_open = function(win)
@@ -45,6 +45,7 @@ zen_mode.setup({
 		vim.cmd("ScrollViewDisable")
 		vim.cmd("set guicursor+=a:blinkon0")
 		vim.cmd("HardTimeOff")
+		vim.cmd("highlight Twilight guibg=None")
 		keymap("n", "n", "j", opts)
 		keymap("n", "e", "k", opts)
 		keymap("n", "i", "l", opts)
