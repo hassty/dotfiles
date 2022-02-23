@@ -63,6 +63,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lua")
 	use("tamago324/nlsp-settings.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
+	use("jose-elias-alvarez/nvim-lsp-ts-utils")
 
 	-- debugging
 	use("mfussenegger/nvim-dap")
