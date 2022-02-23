@@ -78,3 +78,18 @@ keymap("x", "<leader>/", "<ESC><CMD>lua require('Comment.api').toggle_linewise_o
 -- keymap("n", "<leader>.", ":vertical resize +5<CR>", opts)
 -- keymap("n", "<leader>th", "<C-w>t<C-w>K", opts)
 -- keymap("n", "<leader>tv", "<C-w>t<C-w>H", opts)
+
+keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
+keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<CR>", opts)
+keymap("n", "<F11>", "<cmd>lua require'dap'.step_into()<CR>", opts)
+keymap("n", "<F12>", "<cmd>lua require'dap'.step_out()<CR>", opts)
+keymap("n", "<leader>b", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", opts)
+keymap("n", "<leader>B", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
+keymap(
+	"n",
+	"<leader>lp",
+	"<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>",
+	opts
+)
+keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>", opts)
+keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
