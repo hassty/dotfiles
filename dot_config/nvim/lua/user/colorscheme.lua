@@ -20,7 +20,13 @@ end
 
 colorbuddy.colorscheme("nord")
 
-vim.cmd("hi! Normal ctermbg=NONE guibg=NONE")
+vim.cmd([[
+highlight Normal ctermbg=None guibg=None
+highlight NormalFloat ctermbg=None guibg=None
+highlight FloatBorder ctermbg=None guibg=None
+highlight Twilight ctermbg=None guibg=None
+highlight WhichKeyFloat ctermbg=None guibg=None
+]])
 
 local colorizer_status_ok, colorizer = pcall(require, "colorizer")
 if not colorizer_status_ok then
