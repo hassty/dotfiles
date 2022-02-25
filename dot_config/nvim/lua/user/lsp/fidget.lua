@@ -43,9 +43,9 @@ fidget.setup({
 		end,
 	},
 	sources = { -- Sources to configure
-		-- * = {                     -- Name of source
-		--   ignore = false,         -- Ignore notifications from this source
-		-- },
+		["null-ls"] = { -- Name of source
+			ignore = true, -- Ignore notifications from this source
+		},
 	},
 	debug = {
 		logging = false, -- whether to enable logging, for debugging
