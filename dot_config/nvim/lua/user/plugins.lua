@@ -89,6 +89,10 @@ return packer.startup(function(use)
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("p00f/nvim-ts-rainbow")
 
+	-- statusline
+	use("nvim-lualine/lualine.nvim")
+	use("SmiteshP/nvim-gps")
+
 	-- git
 	use("lewis6991/gitsigns.nvim")
 
@@ -116,7 +120,6 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
-	use("nvim-lualine/lualine.nvim")
 	use("AndrewRadev/switch.vim")
 	use("norcalli/nvim-colorizer.lua")
 	use("psliwka/vim-smoothie")
