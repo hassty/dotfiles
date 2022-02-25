@@ -66,6 +66,7 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/nvim-lsp-ts-utils")
 	use("j-hui/fidget.nvim")
 	use("ray-x/lsp_signature.nvim")
+	use("b0o/schemastore.nvim")
 
 	-- debugging
 	use("mfussenegger/nvim-dap")
