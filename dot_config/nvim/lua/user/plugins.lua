@@ -49,7 +49,6 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
-	use("hrsh7th/cmp-nvim-lsp-signature-help")
 	use("lukas-reineke/cmp-under-comparator")
 
 	-- snippets
@@ -66,6 +65,7 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jose-elias-alvarez/nvim-lsp-ts-utils")
 	use("j-hui/fidget.nvim")
+	use("ray-x/lsp_signature.nvim")
 
 	-- debugging
 	use("mfussenegger/nvim-dap")
