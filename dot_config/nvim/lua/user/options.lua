@@ -44,6 +44,5 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
-vim.opt.iskeyword:append("-")
 vim.opt.display:append("lastline")
 vim.opt.shortmess:append("c")
