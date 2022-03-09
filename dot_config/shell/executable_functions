@@ -36,7 +36,7 @@ cdd () {
 
 # list git repositories and cd
 gf () {
-    cd "$(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="tree {}")"
+    cd "$(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="onefetch --no-bold --no-palette --show-logo never {}")"
 }
 
 
