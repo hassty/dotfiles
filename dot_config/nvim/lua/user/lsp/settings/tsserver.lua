@@ -12,7 +12,7 @@ return {
 			includeInlayFunctionLikeReturnTypeHints = true,
 			includeInlayEnumMemberValueHints = true,
 
-			disableSuggestions = true,
+			disableSuggestions = false,
 		},
 	},
 	--
