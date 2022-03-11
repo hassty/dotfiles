@@ -39,6 +39,10 @@ gf () {
     cd "$(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="onefetch --no-bold --no-palette --show-logo never {}")"
 }
 
+qira (){
+    docker run --rm -v "$PWD":/mnt -p 3002:3002 -p 4000:4000 -ti qira bash
+}
+
 
 lr () {
     fullpath="$(readlink -f "$1")"
