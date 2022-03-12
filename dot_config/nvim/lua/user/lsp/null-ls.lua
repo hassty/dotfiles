@@ -48,7 +48,6 @@ null_ls.setup({
 		code_actions.eslint_d.with({
 			prefer_local = "node_modules/.bin",
 		}),
-		code_actions.gitsigns,
 	},
 
 	on_attach = function(client)
