@@ -67,6 +67,7 @@ return packer.startup(function(use)
 	use("j-hui/fidget.nvim")
 	use("ray-x/lsp_signature.nvim")
 	use("b0o/schemastore.nvim")
+	use("simrat39/rust-tools.nvim")
 
 	-- debugging
 	use("mfussenegger/nvim-dap")
