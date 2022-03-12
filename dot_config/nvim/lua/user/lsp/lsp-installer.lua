@@ -66,7 +66,12 @@ lsp_installer.on_server_ready(function(server)
 	end
 
 	if server.name == "rust_analyzer" then
+		local rust_analyzer_opts = require("user.lsp.settings.rust_analyzer")
+		opts = vim.tbl_deep_extend("force", rust_analyzer_opts, opts)
+
 		require("rust-tools").setup({
+			tools = require("user.lsp.settings.rust_tools"),
+
 			-- The "server" property provided in rust-tools setup function are the
 			-- settings rust-tools will provide to lspconfig during init.            --
 			-- We merge the necessary settings from nvim-lsp-installer (server:get_default_options())
