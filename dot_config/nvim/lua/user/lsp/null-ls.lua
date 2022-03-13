@@ -28,7 +28,7 @@ null_ls.setup({
 			},
 		}),
 		formatting.rustfmt,
-		formatting.shellharden,
+		formatting.shfmt,
 		formatting.sqlformat,
 		formatting.stylua,
 		formatting.xmllint,
