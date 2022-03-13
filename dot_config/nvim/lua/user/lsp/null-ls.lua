@@ -13,7 +13,7 @@ null_ls.setup({
 	sources = {
 		formatting.black,
 		formatting.clang_format.with({
-			disabled_filetypes = { "c", "cpp" },
+			disabled_filetypes = { "cs" },
 		}),
 		formatting.cmake_format,
 		formatting.goimports,
