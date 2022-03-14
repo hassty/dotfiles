@@ -142,19 +142,3 @@ cmp.setup({
 		},
 	},
 })
-
--- colorbuddy higlhight groups
--- local colorbuddy_status_ok, _ = pcall(require, "colorbuddy")
--- if not colorbuddy_status_ok then
--- 	return
--- end
---
--- local Group = require("colorbuddy.group").Group
--- local g = require("colorbuddy.group").groups
--- local s = require("colorbuddy.style").styles
---
--- Group.new("CmpItemAbbr", g.Comment)
--- Group.new("CmpItemAbbrDeprecated", g.Error)
--- Group.new("CmpItemAbbrMatchFuzzy", g.CmpItemAbbr.fg:dark(), nil, s.italic)
--- Group.new("CmpItemKind", g.Special)
--- Group.new("CmpItemMenu", g.NonText)
