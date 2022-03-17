@@ -21,6 +21,7 @@ dressing.setup({
 
 		-- These can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
 		prefer_width = 40,
+		width = nil,
 		max_width = nil,
 		min_width = 20,
 
@@ -40,10 +41,7 @@ dressing.setup({
 		backend = { "telescope", "fzf_lua", "fzf", "builtin", "nui" },
 
 		-- Options for telescope selector
-		telescope = {
-			-- can be 'dropdown', 'cursor', or 'ivy'
-			theme = "dropdown",
-		},
+		theme = require("telescope.themes").get_dropdown({}),
 
 		-- Options for fzf selector
 		fzf = {
