@@ -45,6 +45,7 @@ zen_mode.setup({
 		vim.cmd("ScrollViewDisable")
 		vim.cmd("set guicursor+=a:blinkon0")
 		vim.cmd("HardTimeOff")
+		vim.cmd("highlight Twilight guibg=None")
 		keymap("n", "n", "j", opts)
 		keymap("n", "e", "k", opts)
 		keymap("n", "i", "l", opts)
