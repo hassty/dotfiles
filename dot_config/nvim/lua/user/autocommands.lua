@@ -26,7 +26,8 @@ vim.cmd([[
   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
   \,sm:block-blinkwait175-blinkoff150-blinkon175
 
-  autocmd FileType alpha set laststatus=0 | autocmd BufUnload <buffer> set laststatus=3
+  autocmd FileType alpha set laststatus=0 | set noruler
+  autocmd BufUnload <buffer> set laststatus=3 | set ruler
 
   autocmd VimLeave,VimSuspend * set guicursor=a:hor20-blinkon215
 
