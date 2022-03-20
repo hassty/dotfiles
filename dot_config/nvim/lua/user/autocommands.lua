@@ -26,6 +26,8 @@ vim.cmd([[
   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
   \,sm:block-blinkwait175-blinkoff150-blinkon175
 
+  autocmd FileType alpha set laststatus=0 | autocmd BufUnload <buffer> set laststatus=3
+
   autocmd VimLeave,VimSuspend * set guicursor=a:hor20-blinkon215
 
   autocmd BufWritePost ~/.local/share/chezmoi/* silent !chezmoi apply --source-path "%"
