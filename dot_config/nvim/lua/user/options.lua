@@ -36,6 +36,7 @@ local options = {
 	wildignore = { "*.a", "*.o", "*.so", "*.pyc", ".git", "*.pdf" },
 	wrap = false,
 	writebackup = false,
+	fillchars = "eob: ",
 	guifont = "Hack Nerd Font Mono:h15",
 }
 
