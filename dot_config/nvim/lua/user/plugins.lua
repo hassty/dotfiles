@@ -74,7 +74,6 @@ return packer.startup(function(use)
 
 	-- debugging
 	use("mfussenegger/nvim-dap")
-	use("Pocco81/DAPInstall.nvim")
 	use("rcarriga/nvim-dap-ui")
 	use("theHamsta/nvim-dap-virtual-text")
 
