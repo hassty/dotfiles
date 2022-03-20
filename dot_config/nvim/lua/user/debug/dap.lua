@@ -26,3 +26,26 @@ dap.configurations.javascript = {
 		processId = require("dap.utils").pick_process,
 	},
 }
+
+dap.adapters.coreclr = {
+	type = "executable",
+	command = "/usr/bin/netcoredbg",
+	args = { "--interpreter=vscode" },
+}
+
+dap.configurations.cs = {
+	{
+		name = "Launch",
+		type = "coreclr",
+		request = "launch",
+		program = function()
+			return vim.fn.input("Path to dll", vim.fn.getcwd() .. "/bin/Debug/", "file")
+		end,
+	},
+	{
+		name = "Attach to process",
+		type = "coreclr",
+		request = "attach",
+		processId = require("dap.utils").pick_process,
+	},
+}
