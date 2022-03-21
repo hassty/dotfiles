@@ -1,0 +1,3 @@
+#!/bin/sh
+
+$BROWSER https://wiki.archlinux.org/index.php?search="${1}"

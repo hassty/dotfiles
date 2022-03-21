@@ -1,0 +1,12 @@
+#!/bin/sh
+
+touchpad=$(xinput list | grep -i 'touchpad' | cut -f2 | cut -d'=' -f2)
+enabled=$(xinput list-props "$touchpad" | grep -i 'device enabled' | cut -f3)
+
+if [ "$enabled" -eq 0 ]; then
+    xinput enable "$touchpad"
+    notify-send -u low -t 1000 'touchpad' 'enabled'
+else
+    xinput disable "$touchpad"
+    notify-send -u low -t 1000 'touchpad' 'disabled'
+fi
