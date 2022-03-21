@@ -1,0 +1,29 @@
+XF86Audio{Mute,LowerVolume,RaiseVolume}
+    volume {mute,down,up}
+
+{_,shift + }XF86MonBrightness{Down,Up}
+    xbacklight {-dec 10, -set 0, -inc 10, -set 100} && brightness
+
+{_,shift + }Print
+    flameshot {gui,screen --number 0 --clipboard}
+
+Pause
+    gromit-mpx
+
+XF86Display
+    toggle-touchpad
+
+super+m
+    passmenu
+
+super+alt+i
+    lock
+
+super+l
+    this-month
+
+super+{BackSpace,grave}
+    dunstctl {close-all,history-pop}
+
+super+F2
+    toggle-notifications
