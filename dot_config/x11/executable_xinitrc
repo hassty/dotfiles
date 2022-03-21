@@ -9,43 +9,39 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 if [ -f $sysresources ]; then
 
-    xrdb -merge $sysresources
+	xrdb -merge $sysresources
 
 fi
 
 if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
+	xmodmap $sysmodmap
 fi
 
 if [ -f "$userresources" ]; then
 
-    xrdb -merge "$userresources"
+	xrdb -merge "$userresources"
 
 fi
 
 if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
+	xmodmap "$usermodmap"
 fi
 
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f "$userprofile" ] && . "$userprofile"
 
-
 # start some nice programs
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+	for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
+		[ -x "$f" ] && . "$f"
+	done
+	unset f
 fi
-
 
 xset r rate 180 60 &
 xset r 66
 
-
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xkeymap" ] && xkbcomp "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xkeymap" "$DISPLAY" >/dev/null 2>&1
-
 
 exec picom --experimental-backends --xrender-sync-fence >/dev/null 2>&1 &
 # exec "${XDG_CONFIG_HOME:-$HOME/.config}/wpg/wp_init.sh" &
@@ -55,4 +51,5 @@ exec sxhkd -m 1 &
 exec unclutter &
 exec dwmblocks &
 exec clipster -d >/dev/null 2>&1 &
+exec libinput-gestures &
 exec dwm
