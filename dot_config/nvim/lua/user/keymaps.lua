@@ -19,12 +19,10 @@ keymap("", "gm", "M", opts)
 keymap("n", "{", "{zz", opts)
 keymap("n", "}", "}zz", opts)
 
-vim.cmd([[
-cnoremap <C-n> <Down>
-cnoremap <C-e> <Up>
-cnoremap <C-a> <Home>
-cnoremap <C-k> <End>
-]])
+keymap("c", "<C-n>", "<Down>", opts)
+keymap("c", "<C-e>", "<Up>", opts)
+keymap("c", "<C-a>", "<Home>", opts)
+keymap("c", "<C-k>", "<End>", opts)
 
 keymap("i", "<M-;>", "<Esc>A;<CR>", opts)
 keymap("i", "<M-,>", "<Esc>A,<CR>", opts)
@@ -41,8 +39,10 @@ keymap("i", "?", "?<C-g>u", opts)
 keymap("i", "=", "=<C-g>u", opts)
 
 -- add big relative jumps to jumplist
-vim.cmd([[nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k']])
-vim.cmd([[nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j']])
+vim.cmd([[
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+]])
 
 -- moving text
 keymap("v", "<M-j>", ":m '>+1<Cr>gv=gv", opts)
