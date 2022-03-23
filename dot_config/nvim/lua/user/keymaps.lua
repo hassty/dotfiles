@@ -88,3 +88,8 @@ keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
 
 keymap("n", "<leader>X", "<cmd> lua require'twilight'.setup({context=10})<CR>", opts)
 keymap("n", "<leader>x", "<cmd> lua require'twilight'.setup({context=0})<CR>", opts)
+
+-- keeping it centered
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+keymap("n", "J", "mzJ`z", opts)
