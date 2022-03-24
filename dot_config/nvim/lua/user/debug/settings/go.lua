@@ -1,6 +1,6 @@
 local M = {}
 
-local function setup_nodejs_adapter(dap)
+local function setup_adapter(dap)
 	dap.adapters.go = function(callback, config)
 		local stdout = vim.loop.new_pipe(false)
 		local handle
@@ -34,7 +34,7 @@ local function setup_nodejs_adapter(dap)
 	end
 end
 
-local function setup_nodejs_configuration(dap)
+local function setup_configuration(dap)
 	-- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md
 	dap.configurations.go = {
 		{
@@ -87,8 +87,8 @@ end
 
 function M.setup()
 	local dap = load_module("dap")
-	setup_nodejs_adapter(dap)
-	setup_nodejs_configuration(dap)
+	setup_adapter(dap)
+	setup_configuration(dap)
 end
 
 return M
