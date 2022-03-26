@@ -45,12 +45,12 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 ]])
 
 -- moving text
-keymap("v", "<M-j>", ":m '>+1<Cr>gv=gv", opts)
-keymap("v", "<M-k>", ":m '<-2<Cr>gv=gv", opts)
-keymap("i", "<M-j>", "<Esc>:m .+1<Cr>==a", opts)
-keymap("i", "<M-k>", "<Esc>:m .-2<Cr>==a", opts)
-keymap("n", "<M-j>", ":m .+1<Cr>==", opts)
-keymap("n", "<M-k>", ":m .-2<Cr>==", opts)
+keymap("v", "<M-n>", ":m '>+1<Cr>gv=gv", opts)
+keymap("v", "<M-e>", ":m '<-2<Cr>gv=gv", opts)
+keymap("i", "<M-n>", "<Esc>:m .+1<Cr>==a", opts)
+keymap("i", "<M-e>", "<Esc>:m .-2<Cr>==a", opts)
+keymap("n", "<M-n>", ":m .+1<Cr>==", opts)
+keymap("n", "<M-e>", ":m .-2<Cr>==", opts)
 
 -- better indenting
 keymap("v", "<", "<gv", opts)
