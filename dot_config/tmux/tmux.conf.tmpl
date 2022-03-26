@@ -38,14 +38,15 @@ setw -g monitor-activity on
 bind r source-file '{{ .chezmoi.homeDir }}/.config/tmux/tmux.conf' \; display "tmux.conf reloaded"
 
 bind C-p previous-window
-bind C-n next-window
+bind C-k next-window
 
 bind v split-window -h
-bind h split-window -v
+bind s split-window -v
+bind h choose-session
 bind C-h select-pane -L
-bind C-j select-pane -D
-bind C-k select-pane -U
-bind C-l select-pane -R
+bind C-n select-pane -D
+bind C-e select-pane -U
+bind C-i select-pane -R
 bind o kill-pane -a
 
 bind C-c command-prompt -p "Create window with name:" "new-window; rename-window '%%'"
