@@ -40,7 +40,6 @@ nvim_tree.setup({
 		"dashboard",
 		"alpha",
 	},
-	auto_close = true,
 	open_on_tab = false,
 	hijack_cursor = false,
 	update_cwd = true,
@@ -108,3 +107,7 @@ nvim_tree.setup({
 		tree_width = 30,
 	},
 })
+
+vim.cmd([[
+autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+]])
