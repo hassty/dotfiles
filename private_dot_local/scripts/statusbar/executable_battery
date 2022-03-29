@@ -1,0 +1,22 @@
+#!/bin/bash
+
+capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
+status="$(cat /sys/class/power_supply/BAT0/status)" 
+
+capacities=("" "" "" "" "" "" "" "" "" "" "")
+
+case $BUTTON in
+    1) notify-send "$status" "$capacity%" ;;
+esac
+
+if [ "$capacity" -ge 95 ]; then
+    if [ "$status" = "Discharging" ]; then
+        echo "${capacities[-1]}"
+    else
+        echo ""
+    fi
+else
+    index="$((capacity / 10))"
+    echo "${capacities[$index]}"
+fi
+
