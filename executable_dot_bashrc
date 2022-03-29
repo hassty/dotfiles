@@ -1,52 +1,46 @@
 #!/bin/bash
 
-
 # if not running interactively, don't do anything
 case $- in
-    *i*) ;;
-    *) return;;
+*i*) ;;
+*) return ;;
 esac
-
 
 # import colorscheme from 'wal' asynchronously
 # &   # run the process in the background.
 # ( ) # hide shell job control messages.
 # (/usr/bin/cat $HOME/.config/wpg/sequences &)
 
-
 eval "$(starship init bash)"
 
-
 if [ -f "$XDG_CONFIG_HOME/shell/aliases" ]; then
-    . "$XDG_CONFIG_HOME/shell/aliases"
+	. "$XDG_CONFIG_HOME/shell/aliases"
 fi
 
 if [ -f "$XDG_CONFIG_HOME/shell/functions" ]; then
-    . "$XDG_CONFIG_HOME/shell/functions"
+	. "$XDG_CONFIG_HOME/shell/functions"
 fi
-
 
 # add colors to tty
 if [ "$TERM" = "linux" ]; then
-    echo -en "\e]P0101114" #black
-    echo -en "\e]P1687589" #darkred
-    echo -en "\e]P2758B9E" #darkgreen
-    echo -en "\e]P3929DAD" #brown
-    echo -en "\e]P4C9B8BB" #darkblue
-    echo -en "\e]P597B0C8" #darkmagenta
-    echo -en "\e]P6A9B9CC" #darkcyan
-    echo -en "\e]P7d1d9e2" #lightgrey
-    echo -en "\e]P892979e" #darkgrey
-    echo -en "\e]P9687589" #red
-    echo -en "\e]PA758B9E" #green
-    echo -en "\e]PB929DAD" #yellow
-    echo -en "\e]PCC9B8BB" #blue
-    echo -en "\e]PD97B0C8" #magenta
-    echo -en "\e]PEA9B9CC" #cyan
-    echo -en "\e]PFd1d9e2" #white
-    clear
+	echo -en "\e]P004040A" #black
+	echo -en "\e]P1B8324C" #darkred
+	echo -en "\e]P20E567D" #darkgreen
+	echo -en "\e]P3FFE81F" #brown
+	echo -en "\e]P4036B92" #darkblue
+	echo -en "\e]P5A7595D" #darkmagenta
+	echo -en "\e]P60991AF" #darkcyan
+	echo -en "\e]P79AD1DC" #lightgrey
+	echo -en "\e]P86B929A" #darkgrey
+	echo -en "\e]P9B8324C" #red
+	echo -en "\e]PA0E567D" #green
+	echo -en "\e]PBFFE81F" #yellow
+	echo -en "\e]PC036B92" #blue
+	echo -en "\e]PDA7595D" #magenta
+	echo -en "\e]PE0991AF" #cyan
+	echo -en "\e]PF9AD1DC" #white
+	clear
 fi
-
 
 shopt -s histappend
 shopt -s histverify
@@ -68,25 +62,20 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 # disable scroll lock on ctrl+s
 stty -ixon
 
-
 # change prompt
 # PS1='\[\033[01;34m\]\W\[\033[00m\]\$ '
-
 
 # fzf integration
 [ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
 [ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
 
-
 # autojump
 [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
-
 
 # goto
 [[ -s "/usr/local/share/goto.sh" ]] && source /usr/local/share/goto.sh
 
-
 # autostart tmux on ssh session
 if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
-  tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+	tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
 fi
