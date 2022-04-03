@@ -52,10 +52,6 @@ zen_mode.setup({
 		keymap("x", "n", "j", opts)
 		keymap("x", "e", "k", opts)
 		keymap("x", "i", "l", opts)
-		keymap("n", "N", "<C-d>", { noremap = false, silent = true })
-		keymap("n", "E", "<C-u>", { noremap = false, silent = true })
-		keymap("n", "d", "<C-d>", { noremap = false, silent = true })
-		keymap("n", "u", "<C-u>", { noremap = false, silent = true })
 	end,
 	-- callback where you can add custom code when the Zen window closes
 	on_close = function()
@@ -69,10 +65,6 @@ zen_mode.setup({
 		keymap("x", "n", "n", opts)
 		keymap("x", "e", "e", opts)
 		keymap("x", "i", "i", opts)
-		keymap("n", "N", "N", opts)
-		keymap("n", "E", "E", opts)
-		keymap("n", "u", "u", opts)
-		keymap("n", "d", "d", opts)
 	end,
 })
 
