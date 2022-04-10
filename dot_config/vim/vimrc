@@ -263,13 +263,11 @@ augroup END
 
 
 " use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-if (empty($TMUX))
-    if (has("termguicolors"))
-        set termguicolors
-    endif
-    if ($TERM == "linux")
-        set notermguicolors
-    endif
+if (has("termguicolors"))
+    set termguicolors
+endif
+if ($TERM == "linux")
+    set notermguicolors
 endif
 
 
