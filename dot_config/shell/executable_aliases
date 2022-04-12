@@ -22,6 +22,7 @@ alias \
 	la="exa -1a --color=automatic --group-directories-first --icons" \
 	ll="exa -la --color=automatic --group-directories-first --icons --git" \
 	l="exa -la --color=automatic --group-directories-first --icons --git" \
+	lg="exa -la --color=automatic --group-directories-first --icons --git-ignore" \
 	lt="exa -aT --color=automatic --group-directories-first --icons"
 
 alias cat="bat -p"
