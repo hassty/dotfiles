@@ -1447,7 +1447,7 @@ xkb_symbols "pc+us(colemak)+ru:2+inet(evdev)+group(ctrls_toggle)+shift(both_caps
     key <AB02> {
         type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [               x,               X,       ampersand,      asciitilde ],
+        symbols[Group1]= [               x,               X,               x,               X ],
         symbols[Group2]= [    Cyrillic_che,    Cyrillic_CHE ]
     };
     key <AB03> {
