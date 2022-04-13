@@ -23,6 +23,7 @@ colorbuddy.colorscheme("nord")
 vim.cmd([[
 highlight Normal ctermbg=None guibg=None
 highlight NormalFloat ctermbg=None guibg=None
+highlight Pmenu ctermbg=None guibg=None
 highlight FloatBorder ctermbg=None guibg=None
 highlight WhichKeyFloat ctermbg=None guibg=None
 highlight Conceal ctermbg=None guibg=None
