@@ -66,6 +66,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope'
 Plug 'zhimsel/vim-stay'
+Plug 'lervag/vimtex'
 
 " colorschemes
 Plug 'joshdick/onedark.vim'
