@@ -5,6 +5,7 @@ filetype plugin indent on
 
 local options = {
 	clipboard = "unnamedplus",
+	conceallevel = 2,
 	exrc = true,
 	fileencodings = { "usc-bom", "utf-8", "default", "cp1251", "latin1" },
 	fileformat = "unix",
