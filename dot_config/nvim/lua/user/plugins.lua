@@ -140,6 +140,7 @@ return packer.startup(function(use)
 	use("jeffkreeftmeijer/vim-numbertoggle")
 	use("takac/vim-hardtime")
 	use("stevearc/dressing.nvim")
+	use("lervag/vimtex")
 
 	-- colorschemes
 	use("lunarvim/darkplus.nvim")
