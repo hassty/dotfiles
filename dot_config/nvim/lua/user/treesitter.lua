@@ -15,7 +15,7 @@ configs.setup({
 	},
 	highlight = {
 		enable = true, -- false will disable the whole extension
-		disable = { "" }, -- list of language that will be disabled
+		disable = { "latex" }, -- list of language that will be disabled
 		additional_vim_regex_highlighting = false,
 	},
 	incremental_selection = {
@@ -31,6 +31,7 @@ configs.setup({
 		select = {
 			enable = true,
 			-- Automatically jump forward to textobj, similar to targets.vim
+			disable = { "latex" },
 			lookahead = true,
 			keymaps = {
 				-- You can use the capture groups defined in textobjects.scm
@@ -44,6 +45,7 @@ configs.setup({
 		},
 		swap = {
 			enable = true,
+			disable = { "latex" },
 			swap_next = {
 				["<leader>a"] = "@parameter.inner",
 			},
@@ -53,6 +55,7 @@ configs.setup({
 		},
 		move = {
 			enable = true,
+			disable = { "latex" },
 			set_jumps = true, -- whether to set jumps in the jumplist
 			goto_next_start = {
 				["]m"] = "@function.outer",

@@ -60,9 +60,7 @@ gps.setup({
 			},
 		},
 
-		-- Disable for particular languages
-		-- ["bash"] = false, -- disables nvim-gps for bash
-		-- ["go"] = false,   -- disables nvim-gps for golang
+		["latex"] = false,
 
 		-- Override default setting for particular languages
 		-- ["ruby"] = {
