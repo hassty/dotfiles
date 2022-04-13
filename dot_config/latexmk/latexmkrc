@@ -2,3 +2,4 @@ $pdf_previewer = 'start zathura';
 $pdf_mode = 5;
 $xelatex = 'xelatex -shell-escape';
 $view = 'pdf';
+@default_files = ('main.tex');
