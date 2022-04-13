@@ -16,6 +16,7 @@ local options = {
 	pumblend = 10,
 	pumheight = 10,
 	relativenumber = true,
+	selection = "old",
 	scrolloff = 1,
 	sidescrolloff = 5,
 	expandtab = true,
