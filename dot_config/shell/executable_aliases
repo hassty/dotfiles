@@ -56,6 +56,7 @@ alias \
 	gb="git branch" \
 	gc="git commit" \
 	gca="git commit --amend" \
+	gcn="git commit --amend --no-edit" \
 	gd="git diff" \
 	gds="git diff --staged" \
 	gco="git checkout" \
