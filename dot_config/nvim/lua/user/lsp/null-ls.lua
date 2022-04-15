@@ -12,10 +12,9 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.black,
-		formatting.clang_format.with({
-			disabled_filetypes = { "cs" },
-		}),
+		formatting.clang_format.with({ disabled_filetypes = { "cs" } }),
 		formatting.cmake_format,
+		formatting.eslint_d.with({ prefer_local = "node_modules/.bin" }),
 		formatting.goimports,
 		formatting.prettierd.with({
 			disabled_filetypes = {
@@ -32,22 +31,15 @@ null_ls.setup({
 		formatting.sqlformat,
 		formatting.stylua,
 		formatting.xmllint,
-		formatting.eslint_d.with({
-			prefer_local = "node_modules/.bin",
-		}),
 
-		diagnostics.eslint_d.with({
-			prefer_local = "node_modules/.bin",
-		}),
 		diagnostics.checkmake,
+		diagnostics.eslint_d.with({ prefer_local = "node_modules/.bin" }),
 		diagnostics.golangci_lint,
 		diagnostics.hadolint,
 		diagnostics.shellcheck,
 		diagnostics.tsc,
 
-		code_actions.eslint_d.with({
-			prefer_local = "node_modules/.bin",
-		}),
+		code_actions.eslint_d.with({ prefer_local = "node_modules/.bin" }),
 	},
 
 	on_attach = function(client)
