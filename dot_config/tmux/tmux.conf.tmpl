@@ -42,8 +42,8 @@ bind r source-file '{{ .chezmoi.homeDir }}/.config/tmux/tmux.conf' \; display "t
 bind C-p previous-window
 bind C-k next-window
 
-bind v split-window -h
-bind s split-window -v
+bind v split-window -h -c "#{pane_current_path}"
+bind s split-window -v -c "#{pane_current_path}"
 bind h choose-session
 bind C-h select-pane -L
 bind C-n select-pane -D
