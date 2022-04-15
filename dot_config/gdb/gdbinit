@@ -1,1 +1,2 @@
-source ~/.config/gdb/gef.py
+# source ~/.config/gdb/gef.py
+set disassembly-flavor intel
