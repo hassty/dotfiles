@@ -1,4 +1,3 @@
-vim.cmd([[
 noremap <silent><leader>dd :DBUIToggle<Cr>
 noremap <silent><leader>df :DBUIFindBuffer<Cr>
 
@@ -13,4 +12,3 @@ let g:db_ui_auto_execute_table_helpers = 1
 
 autocmd FileType dbout setlocal foldlevel=1
 autocmd FileType sql map <silent><leader><leader> <Plug>(DBUI_ExecuteQuery)
-]])

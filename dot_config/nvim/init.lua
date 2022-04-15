@@ -17,14 +17,16 @@ require("user.impatient")
 require("user.indentline")
 require("user.alpha")
 require("user.whichkey")
-require("user.autocommands")
 require("user.statusline")
 require("user.zen-mode")
-require("user.scrollbar")
-require("user.quickscope")
 require("user.cheatsheet")
-require("user.db")
-require("user.hardtime")
 require("user.debug")
 require("user.dressing")
-require("user.vimtex")
+vim.cmd([[
+runtime vim/autocommands.vim
+runtime vim/vimtex.vim
+runtime vim/hardtime.vim
+runtime vim/db.vim
+runtime vim/scrollview.vim
+runtime vim/quickscope.vim
+]])
