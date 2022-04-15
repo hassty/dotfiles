@@ -86,8 +86,8 @@ keymap(
 keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
 
-vim.api.nvim_set_keymap("n", "]g", '<cmd>lua require "gitsigns".next_hunk()<cr>', opts)
-vim.api.nvim_set_keymap("n", "[g", '<cmd>lua require "gitsigns".prev_hunk()<cr>', opts)
+keymap("n", "]g", '<cmd>lua require "gitsigns".next_hunk()<cr>', opts)
+keymap("n", "[g", '<cmd>lua require "gitsigns".prev_hunk()<cr>', opts)
 
 keymap("n", "<leader>X", "<cmd> lua require'twilight'.setup({context=10})<CR>", opts)
 keymap("n", "<leader>x", "<cmd> lua require'twilight'.setup({context=0})<CR>", opts)
