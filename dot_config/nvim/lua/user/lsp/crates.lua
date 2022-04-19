@@ -35,7 +35,7 @@ crates.setup({
 		copy_register = '"',
 		style = "minimal",
 		border = "none",
-		version_date = false,
+		show_version_date = false,
 		max_height = 30,
 		min_width = 20,
 		text = {
@@ -43,7 +43,7 @@ crates.setup({
 			version = "   %s ",
 			prerelease = "  %s ",
 			yanked = "  %s ",
-			date = " %s ",
+			version_date = " %s ",
 			feature = "   %s ",
 			enabled = "  %s ",
 			transitive = "  %s ",
@@ -63,12 +63,12 @@ crates.setup({
 			select_alt = { "s" },
 			copy_version = { "yy" },
 			toggle_feature = { "<cr>" },
-			goto_feature = { "gd", "K" },
-			jump_forward_feature = { "<c-i>" },
-			jump_back_feature = { "<c-o>" },
+			goto_item = { "gd", "K" },
+			jump_forward = { "<c-i>" },
+			jump_back = { "<c-o>" },
 		},
 	},
-	cmp = {
+	src = {
 		insert_closing_quote = true,
 		text = {
 			prerelease = "  pre-release ",
