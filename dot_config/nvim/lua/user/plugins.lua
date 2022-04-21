@@ -110,13 +110,13 @@ return packer.startup(function(use)
 	use({ "folke/zen-mode.nvim", cmd = "ZenMode" })
 
 	-- db
-	use("kristijanhusak/vim-dadbod-completion")
-	use("tpope/vim-dadbod")
-	use("kristijanhusak/vim-dadbod-ui")
+	use({ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "plsql" } })
+	use({ "tpope/vim-dadbod", ft = { "sql", "plsql" } })
+	use({ "kristijanhusak/vim-dadbod-ui", ft = { "sql", "plsql" } })
 
 	-- note taking
 	use({ "lervag/vimtex", ft = { "tex" } })
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install" })
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", ft = { "markdown" } })
 	use({ "preservim/vim-markdown", ft = { "markdown" } })
 
 	-- misc
@@ -129,14 +129,14 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
-	use("AndrewRadev/switch.vim")
+	use({ "AndrewRadev/switch.vim", cmd = { "Switch" }, keys = { "gs" } })
 	use("norcalli/nvim-colorizer.lua")
 	use("psliwka/vim-smoothie")
 	use("rcarriga/nvim-notify")
 	use("dstein64/nvim-scrollview")
 	use("sunjon/shade.nvim")
 	use("tjdevries/colorbuddy.nvim")
-	use("unblevable/quick-scope")
+	use({ "unblevable/quick-scope", keys = { "f", "F", "t", "T" } })
 	use("tpope/vim-surround")
 	use("tpope/vim-repeat")
 	use("tpope/vim-abolish")
