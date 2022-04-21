@@ -114,8 +114,12 @@ return packer.startup(function(use)
 	use("tpope/vim-dadbod")
 	use("kristijanhusak/vim-dadbod-ui")
 
-	-- misc
+	-- note taking
+	use({ "lervag/vimtex", ft = { "tex" } })
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install" })
+	use({ "preservim/vim-markdown", ft = { "markdown" } })
+
+	-- misc
 	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
 	use("akinsho/toggleterm.nvim")
@@ -141,7 +145,6 @@ return packer.startup(function(use)
 	use("jeffkreeftmeijer/vim-numbertoggle")
 	use("takac/vim-hardtime")
 	use("stevearc/dressing.nvim")
-	use("lervag/vimtex")
 
 	-- colorschemes
 	use("lunarvim/darkplus.nvim")

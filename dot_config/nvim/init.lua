@@ -1,32 +1,36 @@
 require("user.options")
 require("user.notify")
-require("user.keymaps")
 require("user.plugins")
-require("user.colorscheme")
-require("user.cmp")
-require("user.lsp")
-require("user.telescope")
-require("user.treesitter")
-require("user.autopairs")
-require("user.comment")
-require("user.gitsigns")
-require("user.nvim-tree")
-require("user.toggleterm")
-require("user.project")
-require("user.impatient")
-require("user.indentline")
+require("user.keymaps")
+
 require("user.alpha")
-require("user.whichkey")
-require("user.statusline")
-require("user.zen-mode")
+require("user.autopairs")
 require("user.cheatsheet")
+require("user.cmp")
+require("user.colorscheme")
+require("user.comment")
 require("user.debug")
 require("user.dressing")
+require("user.gitsigns")
+require("user.impatient")
+require("user.indentline")
+require("user.lsp")
+require("user.nvim-tree")
+require("user.project")
+require("user.statusline")
+require("user.telescope")
+require("user.toggleterm")
+require("user.treesitter")
+require("user.whichkey")
+require("user.zen-mode")
+
 vim.cmd([[
 runtime vim/autocommands.vim
-runtime vim/vimtex.vim
-runtime vim/hardtime.vim
 runtime vim/db.vim
-runtime vim/scrollview.vim
+runtime vim/hardtime.vim
 runtime vim/quickscope.vim
+runtime vim/scrollview.vim
+runtime vim/vimtex.vim
+runtime vim/markdown.vim
 ]])
+vim.cmd("source /home/hasty/development/python/maps/rus.vim")
