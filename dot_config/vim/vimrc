@@ -187,7 +187,7 @@ inoremap <M-,> <Esc>A,<CR>
 inoremap <M-.> <Esc>A.<CR>
 inoremap <M-CR> <Esc>o
 inoremap <C-a> <C-o>I
-inoremap <C-k> <C-o>A
+inoremap <C-e> <C-o>A
 
 " undo breakpoints
 inoremap , ,<C-g>u

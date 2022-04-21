@@ -29,18 +29,18 @@ $if mode=vi
     set keymap vi-insert
     "\e[A": history-search-backward
     "\e[B": history-search-forward
-    Control-e: history-search-backward
+    Control-p: history-search-backward
     Control-n: history-search-forward
     Control-l: clear-screen
     Control-a: beginning-of-line
-    Control-k: end-of-line
+    Control-e: end-of-line
 $endif
 
 "\e[A": history-search-backward
 "\e[B": history-search-forward
-Control-e: history-search-backward
+Control-p: history-search-backward
 Control-n: history-search-forward
-Control-k: end-of-line
+Control-e: end-of-line
 
 
 # case insensitive tab

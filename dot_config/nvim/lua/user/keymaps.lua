@@ -19,17 +19,17 @@ keymap("", "gm", "M", opts)
 keymap("n", "{", "{zz", opts)
 keymap("n", "}", "}zz", opts)
 
-keymap("c", "<C-n>", "<Down>", opts)
-keymap("c", "<C-e>", "<Up>", opts)
-keymap("c", "<C-a>", "<Home>", opts)
-keymap("c", "<C-k>", "<End>", opts)
+vim.cmd([[
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+]])
 
 keymap("i", "<M-;>", "<Esc>A;<CR>", opts)
 keymap("i", "<M-,>", "<Esc>A,<CR>", opts)
 keymap("i", "<M-.>", "<Esc>A.<CR>", opts)
 keymap("i", "<M-CR>", "<Esc>o", opts)
 keymap("i", "<C-a>", "<C-o>I", opts)
-keymap("i", "<C-k>", "<C-o>A", opts)
+keymap("i", "<C-e>", "<C-o>A", opts)
 
 -- undo breakpoints
 keymap("i", ",", ",<C-g>u", opts)
