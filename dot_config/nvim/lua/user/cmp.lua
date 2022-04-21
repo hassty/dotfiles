@@ -100,7 +100,6 @@ cmp.setup({
 			vim_item.menu = ({
 				nvim_lsp = "[lsp]",
 				nvim_lua = "[api]",
-				omni = (vim.inspect(vim_item.menu):gsub('%"', "")),
 				luasnip = "[snip]",
 				buffer = "[buf]",
 				path = "[path]",
@@ -111,7 +110,6 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
-		{ name = "omni" },
 		{ name = "luasnip" },
 		{ name = "path" },
 		{ name = "buffer", keyword_length = 5 },
