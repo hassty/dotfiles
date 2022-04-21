@@ -10,15 +10,8 @@ vim.g.nord_disable_background = true
 vim.g.nord_italic = false
 
 -- Load the colorscheme
-require("nord").set()
-
-local colorbuddy_status_ok, colorbuddy = pcall(require, "colorbuddy")
-if not colorbuddy_status_ok then
-	vim.cmd([[colorscheme nord]])
-	return
-end
-
-colorbuddy.colorscheme("nord")
+colorscheme.set()
+vim.cmd([[colorscheme nord]])
 
 vim.cmd([[
 highlight Normal ctermbg=None guibg=None
