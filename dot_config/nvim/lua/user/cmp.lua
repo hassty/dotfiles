@@ -10,9 +10,9 @@ end
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
-local check_backspace = function()
-	local col = vim.fn.col(".") - 1
-	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
+local has_words_before = function()
+	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
 --   פּ ﯟ   some other good icons
@@ -51,35 +51,59 @@ cmp.setup({
 		end,
 	},
 	mapping = {
-		["<C-p>"] = cmp.mapping.select_prev_item(),
-		["<C-n>"] = cmp.mapping.select_next_item(),
-		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-		["<C-y>"] = cmp.config.disable, -- specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-		["<C-e>"] = cmp.mapping({
+		["<C-p>"] = cmp.mapping(function()
+			if cmp.visible() then
+				cmp.select_prev_item()
+			else
+				cmp.complete()
+			end
+		end),
+		["<C-n>"] = cmp.mapping(function()
+			if cmp.visible() then
+				cmp.select_next_item()
+			else
+				cmp.complete()
+			end
+		end),
+		["<C-y>"] = cmp.mapping.scroll_docs(-1),
+		["<C-e>"] = cmp.mapping.scroll_docs(1),
+		["<C-Space>"] = cmp.mapping(function()
+			if cmp.visible() then
+				cmp.close()
+			else
+				cmp.complete()
+			end
+		end, { "i", "c" }),
+		["<C-k>"] = cmp.mapping(function()
+			if luasnip.expand_or_jumpable() then
+				luasnip.expand_or_jump()
+			end
+		end, { "i", "s" }),
+		["<C-j>"] = cmp.mapping(function()
+			if luasnip.jumpable(-1) then
+				luasnip.jump(-1)
+			end
+		end, { "i", "s" }),
+		["<C-l>"] = cmp.mapping(function()
+			if luasnip.choice_active() then
+				luasnip.change_choice(1)
+			end
+		end, { "i", "s" }),
+		["<C-o>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
-		-- Accept currently selected item. If none selected, `select` first item.
-		-- Set `select` to `false` to only confirm explicitly selected items.
-		["<CR>"] = cmp.mapping.confirm({ select = true }),
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			elseif luasnip.expandable() then
-				luasnip.expand()
-			elseif luasnip.expand_or_jumpable() then
+			elseif luasnip.expand_or_locally_jumpable() then
 				luasnip.expand_or_jump()
-			elseif check_backspace() then
-				fallback()
+			elseif has_words_before() then
+				cmp.complete()
 			else
 				fallback()
 			end
-		end, {
-			"i",
-			"s",
-		}),
+		end, { "i", "s" }),
 		["<S-Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_prev_item()
@@ -88,10 +112,8 @@ cmp.setup({
 			else
 				fallback()
 			end
-		end, {
-			"i",
-			"s",
-		}),
+		end, { "i", "s" }),
+		["<CR>"] = cmp.mapping.confirm(),
 	},
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
@@ -118,7 +140,7 @@ cmp.setup({
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
-		select = false,
+		select = true,
 	},
 	experimental = {
 		ghost_text = true,
