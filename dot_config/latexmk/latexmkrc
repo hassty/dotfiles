@@ -1,5 +1,6 @@
 $pdf_previewer = 'start zathura';
 $pdf_mode = 5;
 $xelatex = 'xelatex -shell-escape -interaction=nonstopmode';
+$out_dir = 'pdf';
 $view = 'pdf';
 @default_files = ('main.tex');
