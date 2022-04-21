@@ -1,27 +1,14 @@
 #!/bin/sh
 
-languages="$HOME/.local/scripts/cht-languages.list"
-commands="$HOME/.local/scripts/cht-commands.list"
-
-if [ ! -f "$languages" ]; then
-    echo "specify list of languages in $languages"
-    exit 1
-elif [ ! -f "$commands" ]; then
-    echo "specify list of commands in $commands"
-    exit 1
-fi
-
-selected="$(cat "$languages" "$commands" | fzf)"
+selected="$(curl --silent cht.sh/:list | fzf)"
 [ -z "$selected" ] && exit 0
 
 printf "query: "
 read -r query
 
-if grep -qs "$selected" "$languages"; then
-    query=$(echo "$query" | tr ' ' '+')
-    url="cht.sh/$selected/$query"
-else
-    url="cht.sh/$selected~$query"
-fi
+query=$(echo "$query" | tr ' ' '+')
+url="cht.sh/$selected/$query"
 
-printf "url %s\n" "$url" & curl "$url" & while true; do sleep 1; done
+printf "url %s\n" "$url" &
+curl "$url" &
+while true; do sleep 1; done
