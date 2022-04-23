@@ -35,6 +35,11 @@ set -ga terminal-overrides ",xterm-256color:Tc"
 
 setw -g aggressive-resize on
 setw -g mode-keys vi
+unbind [
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind -T copy-mode-vi v send -X begin-selection
 setw -g monitor-activity on
 
 bind r source-file '{{ .chezmoi.homeDir }}/.config/tmux/tmux.conf' \; display "tmux.conf reloaded"
