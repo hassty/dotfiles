@@ -33,4 +33,3 @@ runtime vim/scrollview.vim
 runtime vim/vimtex.vim
 runtime vim/markdown.vim
 ]])
-vim.cmd("source /home/hasty/development/python/maps/rus.vim")
