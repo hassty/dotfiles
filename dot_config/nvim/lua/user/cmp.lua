@@ -75,7 +75,7 @@ cmp.setup({
 			end
 		end, { "i", "c" }),
 		["<C-k>"] = cmp.mapping(function()
-			if luasnip.expand_or_jumpable() then
+			if luasnip.expand_or_locally_jumpable() then
 				luasnip.expand_or_jump()
 			end
 		end, { "i", "s" }),
@@ -113,7 +113,7 @@ cmp.setup({
 				fallback()
 			end
 		end, { "i", "s" }),
-		["<CR>"] = cmp.mapping.confirm(),
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	},
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
