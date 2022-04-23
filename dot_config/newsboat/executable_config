@@ -17,3 +17,18 @@ bind-key a toggle-article-read
 bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
+
+color background default default
+color listnormal default default
+color listnormal_unread default default bold
+color listfocus color16 cyan
+color listfocus_unread color16 cyan
+color info default black
+color article default default
+
+highlight article "^(Feed|Link):.*$" color6 default bold
+highlight article "^(Title|Date|Author):.*$" color6 default bold
+highlight article "https?://[^ ]+" color10 default underline
+highlight article "\\[[0-9]+\\]" color10 default bold
+highlight article "\\[image\\ [0-9]+\\]" color10 default bold
+highlight feedlist "^─.*$" color6 color0 bold
