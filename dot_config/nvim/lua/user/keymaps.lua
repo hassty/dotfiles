@@ -27,7 +27,6 @@ keymap("", "L", "$", opts)
 keymap("", "M", "%", opts)
 keymap("", "gh", "H", opts)
 keymap("", "gl", "L", opts)
-keymap("", "gm", "M", opts)
 
 keymap("n", "{", "{zz", opts)
 keymap("n", "}", "}zz", opts)
@@ -73,7 +72,7 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-i>", "<C-w>l", opts)
 
 -- calculate expression
 keymap("i", "<M-=>", "<C-O>yiW<End>=<C-R>=<C-R>0<CR>", opts)
@@ -99,8 +98,20 @@ keymap(
 keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
 
+-- gitsigns
 keymap("n", "]g", '<cmd>lua require "gitsigns".next_hunk()<cr>', opts)
 keymap("n", "[g", '<cmd>lua require "gitsigns".prev_hunk()<cr>', opts)
+
+-- lsp
+keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
+keymap("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
+keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+keymap("n", "<M-space>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+keymap("i", "<M-space>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+keymap("n", "gm", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 
 keymap("n", "<leader>X", "<cmd> lua require'twilight'.setup({context=10})<CR>", opts)
 keymap("n", "<leader>x", "<cmd> lua require'twilight'.setup({context=0})<CR>", opts)
