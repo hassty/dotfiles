@@ -18,24 +18,28 @@ local servers = {
 	"intelephense",
 	"jsonls",
 	"lemminx",
+	"omnisharp",
 	"pyright",
 	"rust_analyzer",
 	"spectral",
 	"sumneko_lua",
 	"taplo",
+	"texlab",
 	"tsserver",
 	"vimls",
 	"yamlls",
-	"sqls",
 }
 
--- for _, name in pairs(servers) do
--- 	local server_is_found, server = lsp_installer.get_server(name)
--- 	if server_is_found and not server:is_installed() then
--- 		print("Installing " .. name)
--- 		server:install()
--- 	end
--- end
+local function install_missing()
+	for _, name in pairs(servers) do
+		local server_is_found, server = lsp_installer.get_server(name)
+		if server_is_found and not server:is_installed() then
+			print("Installing " .. name)
+			server:install()
+		end
+	end
+end
+vim.api.nvim_create_user_command("LspInstallMissing", install_missing, {})
 
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
