@@ -73,7 +73,6 @@ local mappings = {
 	["w"] = { "<cmd>silent write!<CR>", "Save" },
 	["q"] = { "<cmd>quit!<CR>", "Quit" },
 	["c"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
-	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	["?"] = { "<cmd>Cheatsheet<CR>", "Cheatsheet" },
