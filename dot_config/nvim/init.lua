@@ -19,7 +19,6 @@ require("user.nvim-tree")
 require("user.project")
 require("user.statusline")
 require("user.telescope")
-require("user.toggleterm")
 require("user.treesitter")
 require("user.whichkey")
 require("user.zen-mode")
@@ -32,4 +31,5 @@ runtime vim/quickscope.vim
 runtime vim/scrollview.vim
 runtime vim/vimtex.vim
 runtime vim/markdown.vim
+runtime vim/floaterm.vim
 ]])
