@@ -24,6 +24,7 @@ local options = {
 	tabstop = 4,
 	softtabstop = 4,
 	shiftwidth = 4,
+	smartcase = true,
 	smartindent = true,
 	smarttab = true,
 	showmode = false,
