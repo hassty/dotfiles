@@ -1,5 +1,6 @@
 local M = {}
 
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local lsp_formatting = function(bufnr)
 	vim.lsp.buf.format({
 		filter = function(clients)
@@ -26,7 +27,19 @@ local lsp_formatting = function(bufnr)
 	})
 end
 
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local highlight_augroup = vim.api.nvim_create_augroup("LspHighlight", { clear = true })
+local function lsp_highlight_document(client)
+	if client.supports_method("textDocument/documentHighlight") then
+		vim.api.nvim_create_autocmd("CursorHold", {
+			group = highlight_augroup,
+			callback = vim.lsp.buf.document_highlight,
+		})
+		vim.api.nvim_create_autocmd("CursorMoved", {
+			group = highlight_augroup,
+			callback = vim.lsp.buf.clear_references,
+		})
+	end
+end
 
 M.setup = function()
 	local signs = {
@@ -70,22 +83,6 @@ M.setup = function()
 		border = "rounded",
 		close_events = { "CursorMoved", "BufHidden", "InsertCharPre" },
 	})
-end
-
-local function lsp_highlight_document(client)
-	-- Set autocommands conditional on server_capabilities
-	if client.server_capabilities.documentHiglightProvider then
-		vim.api.nvim_exec(
-			[[
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]],
-			false
-		)
-	end
 end
 
 M.on_attach = function(client, bufnr)
