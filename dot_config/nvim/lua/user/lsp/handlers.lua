@@ -1,6 +1,33 @@
 local M = {}
 
--- TODO: backfill this to template
+local lsp_formatting = function(bufnr)
+	vim.lsp.buf.format({
+		filter = function(clients)
+			-- filter out clients that you don't want to use
+			return vim.tbl_filter(function(client)
+				if
+					client.name == "tsserver"
+					or client.name == "gopls"
+					or client.name == "rust_analyzer"
+					or client.name == "sumneko_lua"
+					or client.name == "clangd"
+					or client.name == "sqls"
+					or client.name == "lemminx"
+					or client.name == "jsonls"
+					or client.name == "csharp_ls"
+				then
+					return false
+				else
+					return true
+				end
+			end, clients)
+		end,
+		bufnr = bufnr,
+	})
+end
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 M.setup = function()
 	local signs = {
 		{ name = "DiagnosticSignError", text = "" },
@@ -47,7 +74,7 @@ end
 
 local function lsp_highlight_document(client)
 	-- Set autocommands conditional on server_capabilities
-	if client.resolved_capabilities.document_highlight then
+	if client.server_capabilities.documentHiglightProvider then
 		vim.api.nvim_exec(
 			[[
       augroup lsp_document_highlight
@@ -61,31 +88,17 @@ local function lsp_highlight_document(client)
 	end
 end
 
-vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting, {})
-
 M.on_attach = function(client, bufnr)
-	if
-		client.name == "tsserver"
-		or client.name == "gopls"
-		or client.name == "rust_analyzer"
-		or client.name == "sumneko_lua"
-		or client.name == "clangd"
-		or client.name == "sqls"
-		or client.name == "lemminx"
-		or client.name == "jsonls"
-		or client.name == "csharp_ls"
-	then
-		client.resolved_capabilities.document_formatting = false
-		client.resolved_capabilities.document_range_formatting = false
-	end
-
-	if client.resolved_capabilities.document_formatting then
-		vim.cmd([[
-            augroup LspFormatting
-            autocmd! * <buffer>
-            autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-            augroup END
-            ]])
+	if client.supports_method("textDocument/formatting") then
+		vim.api.nvim_buf_create_user_command(bufnr, "LspFormat", function()
+			lsp_formatting(bufnr)
+		end, {})
+		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			group = augroup,
+			buffer = bufnr,
+			command = "LspFormat",
+		})
 	end
 
 	lsp_highlight_document(client)
