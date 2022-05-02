@@ -1,32 +1,5 @@
 local M = {}
 
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-local lsp_formatting = function(bufnr)
-	vim.lsp.buf.format({
-		filter = function(clients)
-			-- filter out clients that you don't want to use
-			return vim.tbl_filter(function(client)
-				if
-					client.name == "tsserver"
-					or client.name == "gopls"
-					or client.name == "rust_analyzer"
-					or client.name == "sumneko_lua"
-					or client.name == "clangd"
-					or client.name == "sqls"
-					or client.name == "lemminx"
-					or client.name == "jsonls"
-					or client.name == "csharp_ls"
-				then
-					return false
-				else
-					return true
-				end
-			end, clients)
-		end,
-		bufnr = bufnr,
-	})
-end
-
 local highlight_augroup = vim.api.nvim_create_augroup("LspHighlight", { clear = true })
 local function lsp_highlight_document(client)
 	if client.supports_method("textDocument/documentHighlight") then
@@ -87,19 +60,7 @@ M.setup = function()
 	})
 end
 
-M.on_attach = function(client, bufnr)
-	if client.supports_method("textDocument/formatting") then
-		vim.api.nvim_buf_create_user_command(bufnr, "LspFormat", function()
-			lsp_formatting(bufnr)
-		end, {})
-		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = augroup,
-			buffer = bufnr,
-			command = "LspFormat",
-		})
-	end
-
+M.on_attach = function(client)
 	lsp_highlight_document(client)
 end
 

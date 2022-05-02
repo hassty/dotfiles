@@ -8,6 +8,32 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
 
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local lsp_formatting = function()
+	vim.lsp.buf.format({
+		filter = function(clients)
+			-- filter out clients that you don't want to use
+			return vim.tbl_filter(function(client)
+				if
+					client.name == "tsserver"
+					or client.name == "gopls"
+					or client.name == "rust_analyzer"
+					or client.name == "sumneko_lua"
+					or client.name == "clangd"
+					or client.name == "sqls"
+					or client.name == "lemminx"
+					or client.name == "jsonls"
+					or client.name == "csharp_ls"
+				then
+					return false
+				else
+					return true
+				end
+			end, clients)
+		end,
+	})
+end
+
 local function has_eslint_config(utils)
 	return utils.root_has_file({ ".eslintrc.json" })
 end
@@ -65,4 +91,15 @@ null_ls.setup({
 			prefer_local = "node_modules/.bin",
 		}),
 	},
+
+	on_attach = function(client)
+		if client.supports_method("textDocument/formatting") then
+			vim.api.nvim_create_user_command("LspFormat", lsp_formatting, {})
+			vim.api.nvim_clear_autocmds({ group = augroup })
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = augroup,
+				command = "LspFormat",
+			})
+		end
+	end,
 })
