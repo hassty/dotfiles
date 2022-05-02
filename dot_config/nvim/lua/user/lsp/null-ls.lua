@@ -8,23 +8,25 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
 
+local function has_eslint_config(utils)
+	return utils.root_has_file({ ".eslintrc.json" })
+end
+
 null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.black,
 		formatting.clang_format.with({ disabled_filetypes = { "cs" } }),
 		formatting.cmake_format,
-		formatting.eslint_d.with({ prefer_local = "node_modules/.bin" }),
+		formatting.eslint_d.with({
+			condition = has_eslint_config,
+			prefer_local = "node_modules/.bin",
+		}),
 		formatting.goimports,
 		formatting.prettierd.with({
-			disabled_filetypes = {
-				"javascript",
-				"javascriptreact",
-				"typescript",
-				"typescriptreact",
-				"vue",
-				"html",
-			},
+			condition = function(utils)
+				return not has_eslint_config(utils)
+			end,
 		}),
 		formatting.rustfmt.with({
 			extra_args = function(params)
@@ -49,12 +51,18 @@ null_ls.setup({
 		formatting.xmllint,
 
 		diagnostics.checkmake,
-		diagnostics.eslint_d.with({ prefer_local = "node_modules/.bin" }),
+		diagnostics.eslint_d.with({
+			condition = has_eslint_config,
+			prefer_local = "node_modules/.bin",
+		}),
 		diagnostics.golangci_lint,
 		diagnostics.hadolint,
 		diagnostics.shellcheck,
 		diagnostics.tsc,
 
-		code_actions.eslint_d.with({ prefer_local = "node_modules/.bin" }),
+		code_actions.eslint_d.with({
+			condition = has_eslint_config,
+			prefer_local = "node_modules/.bin",
+		}),
 	},
 })
