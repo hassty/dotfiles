@@ -69,6 +69,10 @@ null_ls.setup({
 			condition = function(utils)
 				return not has_eslint_config(utils)
 			end,
+			filetypes = formatting.eslint_d.filetypes,
+		}),
+		formatting.prettierd.with({
+			filetypes = { "json" },
 		}),
 		formatting.rustfmt.with({ extra_args = rust_edition }),
 		formatting.shfmt,
