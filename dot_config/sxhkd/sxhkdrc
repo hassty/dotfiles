@@ -22,6 +22,9 @@ super+alt+i
 super+l
     this-month
 
+super+j
+    battery-status
+
 super+{BackSpace,grave}
     dunstctl {close-all,history-pop}
 
