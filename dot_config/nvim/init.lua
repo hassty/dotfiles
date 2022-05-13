@@ -22,11 +22,11 @@ require("user.telescope")
 require("user.treesitter")
 require("user.whichkey")
 require("user.zen-mode")
+require("user.hardtime")
 
 vim.cmd([[
 runtime vim/autocommands.vim
 runtime vim/db.vim
-runtime vim/hardtime.vim
 runtime vim/quickscope.vim
 runtime vim/scrollview.vim
 runtime vim/vimtex.vim
