@@ -135,6 +135,7 @@ local mappings = {
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
+		s = { "<cmd>Telescope file_browser<cr>", "File browser" },
 		t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 		o = { "<cmd>Telescope buffers<cr>", "Open Buffers" },
 	},
