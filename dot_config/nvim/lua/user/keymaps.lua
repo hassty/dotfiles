@@ -42,8 +42,10 @@ keymap("i", "<M-;>", "<Esc>A;<CR>", opts)
 keymap("i", "<M-,>", "<Esc>A,<CR>", opts)
 keymap("i", "<M-.>", "<Esc>A.<CR>", opts)
 keymap("i", "<M-CR>", "<Esc>o", opts)
-keymap("i", "<C-a>", "<C-o>I", opts)
-keymap("i", "<C-e>", "<C-o>A", opts)
+keymap("i", "<C-a>", "<Home>", opts)
+keymap("i", "<C-e>", "<End>", opts)
+keymap("i", "<C-f>", "<Right>", opts)
+keymap("i", "<C-b>", "<Left>", opts)
 
 -- undo breakpoints
 keymap("i", ",", ",<C-g>u", opts)
