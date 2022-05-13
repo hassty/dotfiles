@@ -40,6 +40,7 @@ alias \
 	t="tldr " \
 	gt="gotop" \
 	lz="lazygit" \
+	lo="lazydocker" \
 	g="goto" \
 	v="$EDITOR"
 
