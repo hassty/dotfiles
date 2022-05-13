@@ -34,6 +34,8 @@ keymap("n", "}", "}zz", opts)
 vim.cmd([[
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 ]])
 
 keymap("i", "<M-;>", "<Esc>A;<CR>", opts)
