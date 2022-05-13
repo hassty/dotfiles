@@ -72,7 +72,7 @@ null_ls.setup({
 			filetypes = formatting.eslint_d.filetypes,
 		}),
 		formatting.prettierd.with({
-			filetypes = { "json" },
+			filetypes = { "json", "markdown" },
 		}),
 		formatting.rustfmt.with({ extra_args = rust_edition }),
 		formatting.shfmt,
