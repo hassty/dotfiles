@@ -1,24 +1,3 @@
-vim.g.nvim_tree_icons = {
-	default = "",
-	symlink = "",
-	git = {
-		unstaged = "",
-		staged = "S",
-		unmerged = "",
-		renamed = "➜",
-		deleted = "",
-		untracked = "U",
-		ignored = "◌",
-	},
-	folder = {
-		default = "",
-		open = "",
-		empty = "",
-		empty_open = "",
-		symlink = "",
-	},
-}
-
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
 	return
@@ -33,6 +12,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
 	auto_reload_on_write = true,
+	respect_buf_cwd = true,
 	disable_netrw = true,
 	hijack_cursor = true,
 	hijack_netrw = true,
@@ -42,15 +22,15 @@ nvim_tree.setup({
 	open_on_setup_file = false,
 	open_on_tab = false,
 	sort_by = "name",
-	update_cwd = false,
+	update_cwd = true,
 	view = {
 		width = 30,
 		height = 30,
 		hide_root_folder = false,
 		side = "left",
 		preserve_window_proportions = false,
-		number = true,
-		relativenumber = true,
+		number = false,
+		relativenumber = false,
 		signcolumn = "yes",
 		mappings = {
 			custom_only = false,
@@ -72,6 +52,32 @@ nvim_tree.setup({
 		},
 		icons = {
 			webdev_colors = true,
+			show = {
+				git = true,
+				folder = true,
+				file = true,
+				folder_arrow = true,
+			},
+			glyphs = {
+				default = "",
+				symlink = "",
+				git = {
+					unstaged = "",
+					staged = "S",
+					unmerged = "",
+					renamed = "➜",
+					deleted = "",
+					untracked = "U",
+					ignored = "◌",
+				},
+				folder = {
+					default = "",
+					open = "",
+					empty = "",
+					empty_open = "",
+					symlink = "",
+				},
+			},
 		},
 	},
 	hijack_directories = {
@@ -79,8 +85,8 @@ nvim_tree.setup({
 		auto_open = true,
 	},
 	update_focused_file = {
-		enable = false,
-		update_cwd = false,
+		enable = true,
+		update_cwd = true,
 		ignore_list = {},
 	},
 	ignore_ft_on_setup = {

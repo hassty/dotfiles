@@ -40,21 +40,6 @@ project.setup({
 	datapath = vim.fn.stdpath("data"),
 })
 
-vim.g.nvim_tree_respect_buf_cwd = 1
-
-local tree_status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not tree_status_ok then
-	return
-end
-
-nvim_tree.setup({
-	update_cwd = true,
-	update_focused_file = {
-		enable = true,
-		update_cwd = true,
-	},
-})
-
 local tele_status_ok, telescope = pcall(require, "telescope")
 if not tele_status_ok then
 	return
