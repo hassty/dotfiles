@@ -37,7 +37,9 @@ alias \
 	nb="newsboat" \
 	ca="calcurse" \
 	c="cargo" \
-	t="tldr " \
+	t="tldr" \
+	ti="timew" \
+	ts="timew summary" \
 	gt="gotop" \
 	lz="lazygit" \
 	lo="lazydocker" \
