@@ -44,7 +44,15 @@ xset r 66
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xkeymap" ] && xkbcomp "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xkeymap" "$DISPLAY" >/dev/null 2>&1
 
 exec picom --experimental-backends --xrender-sync-fence >/dev/null 2>&1 &
-# exec "${XDG_CONFIG_HOME:-$HOME/.config}/wpg/wp_init.sh" &
+
+intern=LVDS1
+extern=VGA1
+if xrandr | grep "$extern disconnected"; then
+	xrandr --output "$extern" --off --output "$intern" --auto --primary &
+else
+	xrandr --output "$extern" --auto --primary --output "$intern" --auto --left-of "$extern" &
+fi
+
 exec nitrogen --restore &
 exec xsettingsd &
 exec sxhkd -m 1 &
