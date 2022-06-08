@@ -1606,7 +1606,7 @@ xkb_symbols "pc+us(colemak)+ru:2+inet(evdev)+group(ctrls_toggle)+shift(both_caps
     key <HKTG> {         [ Hiragana_Katakana ] };
     key <MUHE> {         [        Muhenkan ] };
     key <KPEN> {         [        KP_Enter ] };
-    key <RCTL> {
+    key <COMP> {
         type= "PC_CONTROL_LEVEL2",
         virtualMods= RControl,
         symbols[Group1]= [       Control_R,  ISO_Next_Group ]
@@ -1650,7 +1650,7 @@ xkb_symbols "pc+us(colemak)+ru:2+inet(evdev)+group(ctrls_toggle)+shift(both_caps
     key <HJCV> {         [    Hangul_Hanja ] };
     key <LWIN> {         [         Super_L ] };
     key <RWIN> {         [         Super_R ] };
-    key <COMP> {         [         Super_R ] };
+    key <RCTL> {         [         Super_R ] };
     key <STOP> {         [          Cancel ] };
     key <AGAI> {         [            Redo ] };
     key <PROP> {         [        SunProps ] };
@@ -1764,9 +1764,9 @@ xkb_symbols "pc+us(colemak)+ru:2+inet(evdev)+group(ctrls_toggle)+shift(both_caps
     modifier_map Mod1 { <LCTL> };
     modifier_map Mod2 { <NMLK> };
     modifier_map Mod5 { <LVL3> };
-    modifier_map Control { <RCTL> };
+    modifier_map Control { <COMP> };
     modifier_map Mod4 { <LWIN> };
-    modifier_map Mod4 { <COMP> };
+    modifier_map Mod4 { <RCTL> };
     modifier_map Mod5 { <MDSW> };
     modifier_map Mod1 { <META> };
     modifier_map Mod4 { <SUPR> };
