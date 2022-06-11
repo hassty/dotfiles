@@ -551,5 +551,5 @@ vnoremap j e
 vnoremap J E
 nnoremap ZX ZQ
 
-command! dragon dragon-drag-and-drop -a -x %f
+command! dragon dragon-drop -a -x %f
 nnoremap <C-s> :dragon<CR>
