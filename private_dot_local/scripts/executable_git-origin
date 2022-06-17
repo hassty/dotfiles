@@ -1,0 +1,5 @@
+#!/bin/sh
+
+root_path=${1:-.}
+
+find "$root_path" -maxdepth 2 -type d -name '.git' -exec git -C {} ls-remote --get-url origin \;
