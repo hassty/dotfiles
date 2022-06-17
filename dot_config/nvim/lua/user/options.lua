@@ -49,3 +49,5 @@ end
 
 vim.opt.display:append("lastline")
 vim.opt.shortmess:append("c")
+
+vim.g.c_syntax_for_h = 1
