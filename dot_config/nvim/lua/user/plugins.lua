@@ -89,6 +89,7 @@ return packer.startup(function(use)
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("p00f/nvim-ts-rainbow")
 	use("windwp/nvim-ts-autotag")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
