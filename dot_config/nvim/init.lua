@@ -23,9 +23,9 @@ require("user.whichkey")
 require("user.hardtime")
 require("user.scrollview")
 require("user.quickscope")
+require("user.db")
 
 vim.cmd([[
 runtime vim/autocommands.vim
-runtime vim/db.vim
 runtime vim/floaterm.vim
 ]])
