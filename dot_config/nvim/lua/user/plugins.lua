@@ -73,6 +73,7 @@ return packer.startup(function(use)
 	use("mfussenegger/nvim-dap")
 	use("rcarriga/nvim-dap-ui")
 	use("theHamsta/nvim-dap-virtual-text")
+	use("rcarriga/cmp-dap")
 
 	-- telescope
 	use("nvim-telescope/telescope.nvim")
