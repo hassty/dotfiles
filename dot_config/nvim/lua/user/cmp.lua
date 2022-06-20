@@ -125,6 +125,7 @@ cmp.setup({
 				luasnip = "[snip]",
 				buffer = "[buf]",
 				path = "[path]",
+				["vim-dadbod-completion"] = "[db]",
 			})[entry.source.name]
 			return vim_item
 		end,

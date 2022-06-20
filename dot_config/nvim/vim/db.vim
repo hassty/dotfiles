@@ -11,4 +11,5 @@ let g:db_ui_force_echo_notifications = 1
 let g:db_ui_auto_execute_table_helpers = 1
 
 autocmd FileType dbout setlocal foldlevel=1
-autocmd FileType sql map <silent><leader><leader> <Plug>(DBUI_ExecuteQuery)
+autocmd FileType sql,mysql,plsql map <silent><leader><leader> <Plug>(DBUI_ExecuteQuery)
+autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })
