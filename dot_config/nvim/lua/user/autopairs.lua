@@ -29,8 +29,15 @@ npairs.setup({
 })
 
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+local ts_utils = require("nvim-treesitter.ts_utils")
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
 	return
 end
-cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
+cmp.event:on("confirm_done", function(event)
+	local name = ts_utils.get_node_at_cursor():type()
+	if name == "named_imports" or name == "use_list" or name == "meta_arguments" then
+		return
+	end
+	cmp_autopairs.on_confirm_done()(event)
+end)
