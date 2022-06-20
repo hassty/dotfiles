@@ -35,7 +35,11 @@ if not cmp_status_ok then
 	return
 end
 cmp.event:on("confirm_done", function(event)
-	local name = ts_utils.get_node_at_cursor():type()
+	local node = ts_utils.get_node_at_cursor()
+	if not node then
+		return
+	end
+	local name = node:type()
 	if name == "named_imports" or name == "use_list" or name == "meta_arguments" then
 		return
 	end
