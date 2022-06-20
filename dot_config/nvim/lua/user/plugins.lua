@@ -134,10 +134,7 @@ return packer.startup(function(use)
 	use("stevearc/dressing.nvim")
 
 	-- colorschemes
-	use("lunarvim/darkplus.nvim")
 	use("marko-cerovac/material.nvim")
-	use("shaunsingh/nord.nvim")
-	use("cocopon/iceberg.vim")
 
 	-- automatically set up your configuration after cloning packer.nvim
 	-- put this at the end after all plugins
