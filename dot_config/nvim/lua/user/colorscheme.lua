@@ -1,5 +1,4 @@
 require("material").setup({
-
 	contrast = {
 		sidebars = false, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
 		floating_windows = false, -- Enable contrast for floating windows
@@ -59,13 +58,3 @@ if not colorizer_status_ok then
 	return
 end
 colorizer.setup()
-
--- require("shade").setup({
--- 	overlay_opacity = 50,
--- 	opacity_step = 1,
--- 	keys = {
--- 		brightness_up = "<C-Up>",
--- 		brightness_down = "<C-Down>",
--- 		toggle = "<Leader>s",
--- 	},
--- })
