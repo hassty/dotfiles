@@ -1,9 +1,8 @@
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local autocmd = vim.api.nvim_create_autocmd
 local group = vim.api.nvim_create_augroup("keymaps", { clear = true })
 
-keymap("", "<Space>", "<Nop>", opts)
+map("", "<Space>", "<Nop>", { expr = true })
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -11,112 +10,100 @@ autocmd("BufEnter", {
 	callback = function()
 		vim.schedule(function()
 			if vim.bo.filetype == "qf" then
-				keymap("", "<CR>", "<CR>", opts)
+				map("", "<CR>", "<CR>")
 			else
-				keymap("", "<CR>", "o<Esc>k", opts)
+				map("", "<CR>", "o<Esc>k")
 			end
 		end)
 	end,
 	group = group,
 })
-keymap("", "<M-CR>", "O<Esc>j", opts)
-keymap("", "ZX", "ZQ", opts)
-keymap("", "Q", "gqq", opts)
-keymap("", "H", "^", opts)
-keymap("", "L", "$", opts)
-keymap("", "M", "%", opts)
-keymap("", "gh", "H", opts)
-keymap("", "gl", "L", opts)
-
-keymap("n", "{", "{zz", opts)
-keymap("n", "}", "}zz", opts)
-
-vim.cmd([[
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
-]])
-
-keymap("i", "<M-;>", "<Esc>A;<CR>", opts)
-keymap("i", "<M-,>", "<Esc>A,<CR>", opts)
-keymap("i", "<M-.>", "<Esc>A.<CR>", opts)
-keymap("i", "<M-CR>", "<Esc>o", opts)
-keymap("i", "<C-a>", "<Home>", opts)
-keymap("i", "<C-e>", "<End>", opts)
-keymap("i", "<C-f>", "<Right>", opts)
-keymap("i", "<C-b>", "<Left>", opts)
-
--- undo breakpoints
-keymap("i", ",", ",<C-g>u", opts)
-keymap("i", ".", ".<C-g>u", opts)
-keymap("i", "!", "!<C-g>u", opts)
-keymap("i", "?", "?<C-g>u", opts)
-keymap("i", "=", "=<C-g>u", opts)
-
--- add big relative jumps to jumplist
-vim.cmd([[
-nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
-nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
-]])
-
--- moving text
-keymap("v", "<M-n>", ":m '>+1<Cr>gv=gv", opts)
-keymap("v", "<M-e>", ":m '<-2<Cr>gv=gv", opts)
-keymap("i", "<M-n>", "<Esc>:m .+1<Cr>==a", opts)
-keymap("i", "<M-e>", "<Esc>:m .-2<Cr>==a", opts)
-keymap("n", "<M-n>", ":m .+1<Cr>==", opts)
-keymap("n", "<M-e>", ":m .-2<Cr>==", opts)
-
--- better indenting
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
-
--- easier split navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-
--- calculate expression
-keymap("i", "<M-=>", "<C-O>yiW<End>=<C-R>=<C-R>0<CR>", opts)
-
-vim.cmd([[nnoremap <Leader>rs :%s/\<<C-r><C-w>\>//g<Left><Left>]])
-vim.cmd([[vnoremap <Leader>rs "hy:%s/<C-r>h//g<Left><Left>]])
-
-keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
-keymap("x", "<leader>/", "<ESC><CMD>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
-
-keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
-keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<CR>", opts)
-keymap("n", "<F11>", "<cmd>lua require'dap'.step_into()<CR>", opts)
-keymap("n", "<F12>", "<cmd>lua require'dap'.step_out()<CR>", opts)
-keymap("n", "<leader>b", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", opts)
-keymap("n", "<leader>B", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
-keymap(
-	"n",
-	"<leader>lp",
-	"<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>",
-	opts
-)
-keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>", opts)
-keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
-
--- gitsigns
-keymap("n", "]g", '<cmd>lua require "gitsigns".next_hunk()<cr>', opts)
-keymap("n", "[g", '<cmd>lua require "gitsigns".prev_hunk()<cr>', opts)
-
--- lsp
-keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-keymap("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
-keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-keymap("n", "<M-space>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-keymap("i", "<M-space>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-keymap("n", "gm", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+map("", "<M-CR>", "O<Esc>j")
+map("", "ZX", "ZQ")
+map("", "Q", "gqq")
+map("", "H", "^")
+map("", "L", "$")
+map("", "M", "%")
+map("", "gh", "H")
+map("", "gl", "L")
 
 -- keeping it centered
-keymap("n", "n", "nzzzv", opts)
-keymap("n", "N", "Nzzzv", opts)
-keymap("n", "J", "mzJ`z", opts)
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+map("n", "J", "mzJ`z")
+map("n", "{", "{zz")
+map("n", "}", "}zz")
+
+map("c", "<C-a>", "<Home>")
+map("c", "<C-e>", "<End>")
+map("c", "<C-p>", "<Up>")
+map("c", "<C-n>", "<Down>")
+
+map("i", "<M-;>", "<Esc>A;<CR>")
+map("i", "<M-,>", "<Esc>A,<CR>")
+map("i", "<M-.>", "<Esc>A.<CR>")
+map("i", "<M-CR>", "<Esc>o")
+map("i", "<C-a>", "<Home>")
+map("i", "<C-e>", "<End>")
+map("i", "<C-f>", "<Right>")
+map("i", "<C-b>", "<Left>")
+
+-- undo breakpoints
+map("i", ",", ",<C-g>u")
+map("i", ".", ".<C-g>u")
+map("i", "!", "!<C-g>u")
+map("i", "?", "?<C-g>u")
+map("i", "=", "=<C-g>u")
+
+-- add big relative jumps to jumplist
+map("n", "k", [[(v:count > 5 ? "m'" . v:count : "") . 'k']], { expr = true })
+map("n", "j", [[(v:count > 5 ? "m'" . v:count : "") . 'j']], { expr = true })
+
+-- moving text
+map("v", "<M-n>", ":m '>+1<CR>gv=gv")
+map("v", "<M-e>", ":m '<-2<CR>gv=gv")
+map("n", "<M-n>", ":m .+1<CR>==")
+map("n", "<M-e>", ":m .-2<CR>==")
+
+-- better indenting
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+
+-- easier split navigation
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+
+-- calculate expression
+map("i", "<M-=>", "<C-O>yiW<End>=<C-R>=<C-R>0<CR>")
+
+map("n", "<leader>rs", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]])
+map("v", "<leader>rs", [["hy:%s/<C-r>h//g<Left><Left>]])
+
+map("n", "<leader>/", "<CMD>lua require('Comment.api').toggle_current_linewise()<CR>")
+map("x", "<leader>/", "<ESC><CMD>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>")
+
+map("n", "<F5>", "<CMD>lua require'dap'.continue()<CR>")
+map("n", "<F10>", "<CMD>lua require'dap'.step_over()<CR>")
+map("n", "<F11>", "<CMD>lua require'dap'.step_into()<CR>")
+map("n", "<F12>", "<CMD>lua require'dap'.step_out()<CR>")
+map("n", "<leader>b", "<CMD>lua require'dap'.toggle_breakpoint()<CR>")
+map("n", "<leader>B", "<CMD>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+map("n", "<leader>lp", "<CMD>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
+map("n", "<leader>dr", "<CMD>lua require'dap'.repl.open()<CR>")
+map("n", "<leader>dl", "<CMD>lua require'dap'.run_last()<CR>")
+
+-- gitsigns
+map("n", "]g", '<CMD>lua require "gitsigns".next_hunk()<CR>')
+map("n", "[g", '<CMD>lua require "gitsigns".prev_hunk()<CR>')
+
+-- lsp
+map("n", "[d", '<CMD>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>')
+map("n", "]d", '<CMD>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>')
+map("n", "K", "<CMD>lua vim.lsp.buf.hover()<CR>")
+map("n", "<M-space>", "<CMD>lua vim.lsp.buf.signature_help()<CR>")
+map("i", "<M-space>", "<CMD>lua vim.lsp.buf.signature_help()<CR>")
+map("n", "gD", "<CMD>lua vim.lsp.buf.declaration()<CR>")
+map("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>")
+map("n", "gr", "<CMD>lua vim.lsp.buf.references()<CR>")
+map("n", "gm", "<CMD>lua vim.lsp.buf.implementation()<CR>")
