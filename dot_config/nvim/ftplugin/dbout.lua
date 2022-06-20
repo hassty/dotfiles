@@ -7,6 +7,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 
 vim.api.nvim_create_autocmd("BufReadPost", {
 	group = augroup,
+	nested = true,
 	pattern = "*.dbout",
 	callback = function()
 		vim.cmd("call db_ui#save_dbout(expand('<afile>'))")
