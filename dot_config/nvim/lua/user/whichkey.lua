@@ -112,7 +112,6 @@ local mappings = {
 			"<cmd>Telescope diagnostics<cr>",
 			"Document Diagnostics",
 		},
-		f = { "<cmd>LspFormat<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
 		n = { "<cmd>NullLsInfo<cr>", "NullLs Info" },

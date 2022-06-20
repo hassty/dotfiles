@@ -1,21 +1,5 @@
 local M = {}
 
-local highlight_augroup = vim.api.nvim_create_augroup("LspHighlight", { clear = true })
-local function lsp_highlight_document(client)
-	if client.supports_method("textDocument/documentHighlight") then
-		vim.api.nvim_create_autocmd("CursorHold", {
-			group = highlight_augroup,
-			callback = vim.lsp.buf.document_highlight,
-			buffer = 0,
-		})
-		vim.api.nvim_create_autocmd("CursorMoved", {
-			group = highlight_augroup,
-			callback = vim.lsp.buf.clear_references,
-			buffer = 0,
-		})
-	end
-end
-
 M.setup = function()
 	local signs = {
 		{ name = "DiagnosticSignError", text = "" },
@@ -58,10 +42,6 @@ M.setup = function()
 		border = "rounded",
 		close_events = { "CursorMoved", "BufHidden", "InsertCharPre" },
 	})
-end
-
-M.on_attach = function(client)
-	lsp_highlight_document(client)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

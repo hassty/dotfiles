@@ -3,7 +3,8 @@ if not null_ls_status_ok then
 	return
 end
 
--- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
+local augroup = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
+
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
@@ -40,7 +41,7 @@ null_ls.setup({
 		}),
 		formatting.goimports,
 		formatting.prettierd.with({
-            condition = function(utils)
+			condition = function(utils)
 				return not has_eslint_config(utils)
 			end,
 			filetypes = formatting.eslint_d.filetypes,
@@ -53,6 +54,7 @@ null_ls.setup({
 		formatting.sqlformat,
 		formatting.stylua,
 		formatting.xmllint,
+		formatting.latexindent,
 
 		diagnostics.checkmake,
 		diagnostics.eslint_d.with({
@@ -69,4 +71,19 @@ null_ls.setup({
 			prefer_local = "node_modules/.bin",
 		}),
 	},
+	on_attach = function(client, bufnr)
+		if client.supports_method("textDocument/formatting") then
+			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+			vim.keymap.set("", "<leader>lf", function()
+				vim.lsp.buf.format({ bufnr = bufnr, async = true })
+			end)
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = augroup,
+				buffer = bufnr,
+				callback = function()
+					vim.lsp.buf.format({ bufnr = bufnr })
+				end,
+			})
+		end
+	end,
 })
