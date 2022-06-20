@@ -21,12 +21,12 @@ require("user.telescope")
 require("user.treesitter")
 require("user.whichkey")
 require("user.hardtime")
+require("user.scrollview")
 
 vim.cmd([[
 runtime vim/autocommands.vim
 runtime vim/db.vim
 runtime vim/quickscope.vim
-runtime vim/scrollview.vim
 runtime vim/vimtex.vim
 runtime vim/floaterm.vim
 ]])
