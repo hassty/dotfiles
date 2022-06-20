@@ -3,6 +3,8 @@ if not status_ok then
 	return
 end
 
+local disabled_ft = {  "latex", "markdown" }
+
 configs.setup({
 	ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 	sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
@@ -15,7 +17,7 @@ configs.setup({
 	},
 	highlight = {
 		enable = true, -- false will disable the whole extension
-		disable = { "latex", "markdown" }, -- list of language that will be disabled
+		disable = disabled_ft, -- list of language that will be disabled
 		additional_vim_regex_highlighting = false,
 	},
 	incremental_selection = {
@@ -31,7 +33,7 @@ configs.setup({
 		select = {
 			enable = true,
 			-- Automatically jump forward to textobj, similar to targets.vim
-			disable = { "latex", "markdown" },
+			disable = disabled_ft,
 			lookahead = true,
 			keymaps = {
 				-- You can use the capture groups defined in textobjects.scm
@@ -45,7 +47,7 @@ configs.setup({
 		},
 		swap = {
 			enable = true,
-			disable = { "latex", "markdown" },
+			disable = disabled_ft,
 			swap_next = {
 				["<leader>a"] = "@parameter.inner",
 			},
@@ -55,7 +57,7 @@ configs.setup({
 		},
 		move = {
 			enable = true,
-			disable = { "latex", "markdown" },
+			disable = disabled_ft,
 			set_jumps = true, -- whether to set jumps in the jumplist
 			goto_next_start = {
 				["]m"] = "@function.outer",
