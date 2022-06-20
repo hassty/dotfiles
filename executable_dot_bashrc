@@ -14,7 +14,7 @@ esac
 eval "$(starship init bash)"
 
 # pyenv
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 if [ -f "$XDG_CONFIG_HOME/shell/aliases" ]; then
 	. "$XDG_CONFIG_HOME/shell/aliases"
