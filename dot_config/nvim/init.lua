@@ -5,7 +5,6 @@ require("user.keymaps")
 
 require("user.alpha")
 require("user.autopairs")
-require("user.cheatsheet")
 require("user.cmp")
 require("user.colorscheme")
 require("user.comment")
