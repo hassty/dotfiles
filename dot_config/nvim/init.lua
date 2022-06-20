@@ -27,6 +27,5 @@ vim.cmd([[
 runtime vim/autocommands.vim
 runtime vim/db.vim
 runtime vim/quickscope.vim
-runtime vim/vimtex.vim
 runtime vim/floaterm.vim
 ]])

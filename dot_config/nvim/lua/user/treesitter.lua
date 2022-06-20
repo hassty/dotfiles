@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-local disabled_ft = {  "latex", "markdown" }
+local disabled_ft = { "latex", "markdown" }
 
 configs.setup({
 	ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
