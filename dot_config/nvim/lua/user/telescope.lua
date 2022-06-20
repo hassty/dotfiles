@@ -39,7 +39,6 @@ telescope.setup({
 				["<PageUp>"] = actions.results_scrolling_up,
 				["<PageDown>"] = actions.results_scrolling_down,
 
-				-- TODO: fix telescope file browser key_func error
 				["<Tab>"] = actions.toggle_selection + actions.move_selection_better,
 				["<S-Tab>"] = actions.toggle_selection + actions.move_selection_worse,
 
@@ -106,4 +105,3 @@ telescope.setup({
 
 require("telescope").load_extension("fzf")
 require("telescope").load_extension("packer")
-require("telescope").load_extension("file_browser")
