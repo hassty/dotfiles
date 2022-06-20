@@ -40,9 +40,11 @@ if not lsp_status_ok then
 end
 
 local capabilities = require("user.lsp.handlers").capabilities
+local formatting = require("user.lsp.handlers").formatting
 
 for _, server in ipairs(lsp_installer.get_installed_servers()) do
 	local settings = {}
+	local on_attach = function() end
 
 	if server.name == "sumneko_lua" then
 		local lua_settings = require("user.lsp.settings.sumneko_lua")
@@ -59,6 +61,10 @@ for _, server in ipairs(lsp_installer.get_installed_servers()) do
 		settings = vim.tbl_deep_extend("force", json_settings, settings)
 	end
 
+	if server.name == "omnisharp" then
+		on_attach = formatting
+	end
+
 	if server.name == "rust_analyzer" then
 		local rust_tools_opts = require("user.lsp.settings.rust_tools")
 		require("rust-tools").setup(rust_tools_opts)
@@ -70,6 +76,7 @@ for _, server in ipairs(lsp_installer.get_installed_servers()) do
 		lspconfig[server.name].setup({
 			settings = settings,
 			capabilities = capabilities,
+			on_attach = on_attach,
 		})
 	end
 end
