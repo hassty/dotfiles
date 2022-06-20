@@ -93,6 +93,7 @@ nvim_tree.setup({
 		"startify",
 		"dashboard",
 		"alpha",
+		"help",
 	},
 	system_open = {
 		cmd = "",
