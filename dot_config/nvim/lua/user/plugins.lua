@@ -113,7 +113,7 @@ return packer.startup(function(use)
 	-- misc
 	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
-	use("voldikss/vim-floaterm")
+	use("akinsho/toggleterm.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")

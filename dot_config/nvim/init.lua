@@ -24,8 +24,8 @@ require("user.hardtime")
 require("user.scrollview")
 require("user.quickscope")
 require("user.db")
+require("user.toggleterm")
 
 vim.cmd([[
 runtime vim/autocommands.vim
-runtime vim/floaterm.vim
 ]])
