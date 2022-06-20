@@ -101,16 +101,9 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 
 	-- db
-	use({ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "plsql" } })
-	use({ "tpope/vim-dadbod", ft = { "sql", "plsql" } })
-	use({
-		"kristijanhusak/vim-dadbod-ui",
-		ft = { "sql", "plsql" },
-		cmd = {
-			"DBUIToggle",
-			"DBUIFindBuffer",
-		},
-	})
+	use("kristijanhusak/vim-dadbod-completion")
+	use("tpope/vim-dadbod")
+	use("kristijanhusak/vim-dadbod-ui")
 
 	-- note taking
 	use({ "lervag/vimtex", ft = { "tex" } })
