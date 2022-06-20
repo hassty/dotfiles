@@ -103,7 +103,14 @@ return packer.startup(function(use)
 	-- db
 	use({ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "plsql" } })
 	use({ "tpope/vim-dadbod", ft = { "sql", "plsql" } })
-	use({ "kristijanhusak/vim-dadbod-ui", ft = { "sql", "plsql" } })
+	use({
+		"kristijanhusak/vim-dadbod-ui",
+		ft = { "sql", "plsql" },
+		cmd = {
+			"DBUIToggle",
+			"DBUIFindBuffer",
+		},
+	})
 
 	-- note taking
 	use({ "lervag/vimtex", ft = { "tex" } })
