@@ -28,6 +28,5 @@ runtime vim/db.vim
 runtime vim/quickscope.vim
 runtime vim/scrollview.vim
 runtime vim/vimtex.vim
-runtime vim/markdown.vim
 runtime vim/floaterm.vim
 ]])
