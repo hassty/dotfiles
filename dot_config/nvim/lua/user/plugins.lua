@@ -100,10 +100,6 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 
-	-- zen-mode
-	use({ "folke/twilight.nvim", cmd = "Twilight" })
-	use({ "folke/zen-mode.nvim", cmd = "ZenMode" })
-
 	-- db
 	use({ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "plsql" } })
 	use({ "tpope/vim-dadbod", ft = { "sql", "plsql" } })

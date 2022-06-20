@@ -20,7 +20,6 @@ require("user.statusline")
 require("user.telescope")
 require("user.treesitter")
 require("user.whichkey")
-require("user.zen-mode")
 require("user.hardtime")
 
 vim.cmd([[

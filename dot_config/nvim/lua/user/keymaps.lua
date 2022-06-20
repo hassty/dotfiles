@@ -116,9 +116,6 @@ keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 keymap("n", "gm", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 
-keymap("n", "<leader>X", "<cmd> lua require'twilight'.setup({context=10})<CR>", opts)
-keymap("n", "<leader>x", "<cmd> lua require'twilight'.setup({context=0})<CR>", opts)
-
 -- keeping it centered
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)

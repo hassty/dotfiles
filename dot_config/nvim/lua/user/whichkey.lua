@@ -72,7 +72,6 @@ local mappings = {
 	["w"] = { "<cmd>silent write!<CR>", "Save" },
 	["c"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
 	["f"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
-	["z"] = { "<cmd>ZenMode<CR>", "Zen Mode" },
 	["<Tab>"] = { "<C-^>", "Alternate file" },
 
 	p = {
