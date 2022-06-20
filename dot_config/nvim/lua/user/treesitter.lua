@@ -77,12 +77,7 @@ configs.setup({
 			},
 		},
 		lsp_interop = {
-			enable = true,
-			border = "rounded",
-			peek_definition_code = {
-				["<leader>df"] = "@function.outer",
-				["<leader>dF"] = "@class.outer",
-			},
+			enable = false,
 		},
 	},
 	indent = { enable = false, disable = { "yaml" } },
