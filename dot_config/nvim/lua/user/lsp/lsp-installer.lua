@@ -45,7 +45,7 @@ local formatting = require("user.lsp.handlers").formatting
 for _, server in ipairs(lsp_installer.get_installed_servers()) do
 	local settings = {}
 	local on_attach = function(client, bufnr)
-		if client.name == "omnisharp" then
+		if client.name == "omnisharp" or client.name == "taplo" then
 			formatting(client, bufnr)
 		end
 
