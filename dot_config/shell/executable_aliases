@@ -51,6 +51,7 @@ alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias info="info --vi-keys"
 alias livereload="browser-sync start --server --files ."
 alias p="sudo pacman"
+alias mpv="DRI_PRIME=1 mpv"
 
 alias \
 	ga="git add" \
