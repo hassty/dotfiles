@@ -34,6 +34,7 @@ $if mode=vi
     Control-l: clear-screen
     Control-a: beginning-of-line
     Control-e: end-of-line
+    Control-k: kill-line
 $endif
 
 "\e[A": history-search-backward
