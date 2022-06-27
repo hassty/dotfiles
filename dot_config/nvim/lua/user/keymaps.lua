@@ -60,10 +60,10 @@ map("n", "k", [[(v:count > 5 ? "m'" . v:count : "") . 'k']], { expr = true })
 map("n", "j", [[(v:count > 5 ? "m'" . v:count : "") . 'j']], { expr = true })
 
 -- moving text
-map("v", "<M-n>", ":m '>+1<CR>gv=gv")
-map("v", "<M-e>", ":m '<-2<CR>gv=gv")
-map("n", "<M-n>", ":m .+1<CR>==")
-map("n", "<M-e>", ":m .-2<CR>==")
+map("v", "<M-n>", ":m '>+1<CR>gv=gv", { silent = true })
+map("v", "<M-e>", ":m '<-2<CR>gv=gv", { silent = true })
+map("n", "<M-n>", ":m .+1<CR>==", { silent = true })
+map("n", "<M-e>", ":m .-2<CR>==", { silent = true })
 
 -- better indenting
 map("v", "<", "<gv")
