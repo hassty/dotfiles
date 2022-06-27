@@ -10,6 +10,7 @@ export XDG_DATA_DIRS="$HOME/.local/share:/usr/local/share/:/usr/share/"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 export GOPATH="$XDG_DATA_HOME"/go
+export PATH="$GOPATH/bin:$PATH"
 export GOPATH="$GOPATH":"$HOME"/development/go
 
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
