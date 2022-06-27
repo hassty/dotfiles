@@ -93,6 +93,7 @@ map("n", "<leader>B", "<CMD>lua require'dap'.set_breakpoint(vim.fn.input('Breakp
 map("n", "<leader>lp", "<CMD>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
 map("n", "<leader>dr", "<CMD>lua require'dap'.repl.open()<CR>")
 map("n", "<leader>dl", "<CMD>lua require'dap'.run_last()<CR>")
+map({ "n", "v" }, "<leader>k", '<CMD>lua require("dapui").eval()<CR>')
 
 -- gitsigns
 map("n", "]g", '<CMD>lua require "gitsigns".next_hunk()<CR>')
