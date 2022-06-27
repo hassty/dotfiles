@@ -68,7 +68,7 @@ local opts = {
 }
 
 local mappings = {
-	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["e"] = { "<cmd>NvimTreeFindFileToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>silent write!<CR>", "Save" },
 	["c"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
 	["f"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
