@@ -76,7 +76,7 @@ stty -ixon
 [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 
 # goto
-[[ -s "/usr/local/share/goto.sh" ]] && source /usr/local/share/goto.sh
+[[ -s "/usr/share/goto/goto.sh" ]] && source /usr/share/goto/goto.sh
 
 # autostart tmux on ssh session
 if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
