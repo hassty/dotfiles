@@ -21,6 +21,7 @@ zshcache_time="$(date +%s%N)"
 autoload -Uz add-zsh-hook
 add-zsh-hook -Uz precmd zsh_update_completion
 
+export HISTFILE="$XDG_DATA_HOME/zsh-history"
 export HISTSIZE=10000000
 export SAVEHIST=10000000
 
