@@ -69,8 +69,8 @@ cmp.setup({
 				cmp.complete()
 			end
 		end),
-		["<C-y>"] = cmp.mapping.scroll_docs(-1),
-		["<C-e>"] = cmp.mapping.scroll_docs(1),
+		["<C-u>"] = cmp.mapping.scroll_docs(-1),
+		["<C-d>"] = cmp.mapping.scroll_docs(1),
 		["<C-Space>"] = cmp.mapping(function()
 			if cmp.visible() then
 				cmp.close()
@@ -93,7 +93,7 @@ cmp.setup({
 				luasnip.change_choice(1)
 			end
 		end, { "i", "s" }),
-		["<C-o>"] = cmp.mapping({
+		["<C-y>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
@@ -117,6 +117,7 @@ cmp.setup({
 				fallback()
 			end
 		end, { "i", "s" }),
+		["<C-e>"] = cmp.mapping.confirm({ select = true }),
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	},
 	formatting = {
