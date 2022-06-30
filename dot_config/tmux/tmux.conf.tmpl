@@ -21,7 +21,6 @@ set -g set-titles-string "#T"
 
 set -g bell-action none
 set -g status-style bg=default
-set -g default-terminal "xterm-256color"
 set -g focus-events on
 set -g history-limit 50000
 set -g mouse on
@@ -31,7 +30,6 @@ set -g visual-activity off
 set -sg escape-time 10
 set -g status-interval 15
 set -g status-right "#(iwgetid -r)"
-set -ga terminal-overrides ",xterm-256color:Tc"
 
 setw -g aggressive-resize on
 setw -g mode-keys vi
