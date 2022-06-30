@@ -50,10 +50,9 @@ for _, server in ipairs(lsp_installer.get_installed_servers()) do
 		end
 
 		local illuminate_status_ok, illuminate = pcall(require, "illuminate")
-		if not illuminate_status_ok then
-			return
+		if illuminate_status_ok then
+			illuminate.on_attach(client)
 		end
-		illuminate.on_attach(client)
 	end
 
 	if server.name == "sumneko_lua" then
