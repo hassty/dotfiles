@@ -31,6 +31,9 @@ export HISTSIZE=
 export HISTFILESIZE=
 export HISTTIMEFORMAT="%F %T "
 
+# display username@hostname:cwd in title
+TITLE='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} $TITLE"
 # after each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 

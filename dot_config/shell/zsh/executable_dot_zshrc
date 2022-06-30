@@ -6,6 +6,11 @@ case $- in
 *) return ;;
 esac
 
+eval "$(starship init zsh)"
+
+# display username@hostname:cwd in title
+precmd () {print -Pn "\e]0;%n@%m:%~\a"}
+
 source "$ZDOTDIR/zsh-functions"
 
 zsh_add_file "$XDG_CONFIG_HOME/shell/common"
@@ -58,5 +63,3 @@ zsh_add_plugin "hlissner/zsh-autopair"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 ZSH_HIGHLIGHT_STYLES[arg0]="none"
 ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=red"
-
-eval "$(starship init zsh)"
