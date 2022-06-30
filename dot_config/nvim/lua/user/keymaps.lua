@@ -19,6 +19,12 @@ autocmd("BufEnter", {
 	group = group,
 })
 map("", "<M-CR>", "O<Esc>j")
+map("", "<leader>O", "O<C-o>O")
+map("", "<leader>o", "o<C-o>o")
+map("", "<leader>$", "$h")
+map("", "<leader>L", "$h")
+map("", "<leader>i", "i <C-g>U<Left>")
+map("", "<leader>I", "I <C-g>U<Left>")
 map("", "ZX", "ZQ")
 map("", "Q", "gqq")
 map("", "H", "^")
