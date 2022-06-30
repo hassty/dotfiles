@@ -40,8 +40,14 @@ cmp.event:on("confirm_done", function(event)
 	if not node then
 		return
 	end
-	local name = node:type()
-	if name == "named_imports" or name == "use_list" or name == "meta_arguments" then
+	local type = node:type()
+	if
+		type == "named_imports"
+		or type == "use_list"
+		or type == "meta_arguments"
+		or type == "use_declaration"
+		or type == "source_file"
+	then
 		return
 	end
 	cmp_autopairs.on_confirm_done()(event)
