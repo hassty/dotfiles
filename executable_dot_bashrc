@@ -43,4 +43,7 @@ stty -ixon
 [ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
 [ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
 
+# goto
+[ -s "/usr/share/goto/goto.sh" ] && . /usr/share/goto/goto.sh
+
 source "$XDG_CONFIG_HOME/shell/common"

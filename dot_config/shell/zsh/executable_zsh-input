@@ -1,0 +1,50 @@
+#!/usr/bin/env zsh
+
+bindkey -v
+export KEYTIMEOUT=1
+
+# change cursor shape for different vi modes.
+norm_cursor='\e[1 q'
+ins_cursor='\e[3 q'
+
+function zle-keymap-select() {
+	case $KEYMAP in
+	vicmd) echo -ne "$norm_cursor" ;;
+	viins | main) echo -ne "$ins_cursor" ;;
+	esac
+}
+zle -N zle-keymap-select
+zle-line-init() {
+	zle -K viins
+	echo -ne "$ins_cursor"
+}
+zle -N zle-line-init
+echo -ne "$ins_cursor"
+preexec() { echo -ne "$ins_cursor"; }
+
+# exit zsh even if the command line is not empty
+exit_zsh() { exit }
+zle -N exit_zsh
+bindkey '^D' exit_zsh
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+bindkey "^p" up-line-or-beginning-search
+bindkey "^n" down-line-or-beginning-search
+bindkey "^a" beginning-of-line
+bindkey "^e" end-of-line
+bindkey "^k" kill-line
+bindkey "^f" forward-char
+bindkey "^b" backward-char
+
+bindkey -M vicmd '^p' up-line-or-beginning-search
+bindkey -M vicmd '^n' down-line-or-beginning-search
+bindkey -M vicmd 'H' vi-beginning-of-line
+bindkey -M vicmd 'L' vi-end-of-line
+bindkey -M vicmd 'M' vi-match-bracket
+
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^o' edit-command-line

@@ -32,9 +32,6 @@ fi
 # autojump
 [ -s /etc/profile.d/autojump.sh ] && . /etc/profile.d/autojump.sh
 
-# goto
-[ -s "/usr/share/goto/goto.sh" ] && . /usr/share/goto/goto.sh
-
 # autostart tmux on ssh session
 if [ -n "$PS1" ] && [ -z "$TMUX" ] && [ -n "$SSH_CONNECTION" ]; then
 	tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux

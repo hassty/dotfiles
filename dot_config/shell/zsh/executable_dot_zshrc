@@ -1,0 +1,61 @@
+#!/usr/bin/env zsh
+
+# if not running interactively, don't do anything
+case $- in
+*i*) ;;
+*) return ;;
+esac
+
+source "$ZDOTDIR/zsh-functions"
+
+zsh_add_file "$XDG_CONFIG_HOME/shell/common"
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:warnings' format '%U%Bno matches%b%u'
+autoload -Uz compinit && compinit -C
+autoload -Uz bashcompinit && bashcompinit
+zsh_add_file "/etc/bash_completion.d/timew"
+
+zshcache_time="$(date +%s%N)"
+autoload -Uz add-zsh-hook
+add-zsh-hook -Uz precmd zsh_update_completion
+
+export HISTSIZE=10000000
+export SAVEHIST=10000000
+
+setopt share_history inc_append_history_time
+setopt hist_verify
+setopt hist_ignore_space hist_ignore_dups hist_ignore_all_dups
+setopt hist_expire_dups_first hist_reduce_blanks hist_save_no_dups
+setopt auto_cd auto_pushd cd_silent pushd_ignore_dups
+setopt glob_dots extended_glob no_case_glob glob_complete
+setopt no_match
+setopt menu_complete
+setopt interactive_comments
+setopt correct_all
+
+zsh_add_file "$ZDOTDIR/zsh-input"
+
+# disable scroll lock on ctrl+s
+stty stop undef
+
+# fzf integration
+zsh_add_file "/usr/share/fzf/completion.zsh"
+zsh_add_file "/usr/share/fzf/key-bindings.zsh"
+
+zsh_add_file "/usr/share/goto/goto.sh"
+
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+bindkey '^ ' autosuggest-accept
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+zsh_add_plugin "tarrasch/zsh-bd"
+
+zsh_add_plugin "hlissner/zsh-autopair"
+
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+ZSH_HIGHLIGHT_STYLES[arg0]="none"
+ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=red"
+
+eval "$(starship init zsh)"
