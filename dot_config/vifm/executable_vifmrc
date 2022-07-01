@@ -501,6 +501,9 @@ nnoremap <a-o> :sync %c<cr>
 " Swap panes
 nnoremap <c-u> <c-w>x
 
+" Icons
+source $HOME/.config/vifm/icons
+
 " ------------------------------------------------------------------------------
 
 " Various customization examples
