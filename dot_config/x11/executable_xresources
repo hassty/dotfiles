@@ -57,6 +57,7 @@ dmenu.outfgcolor  : white
 dmenu.outbgcolor  : magenta
 dmenu.borderpx    : 1
 
-st.alpha        : 0.95
-st.blinktimeout : 215
-st.font         : Hack Nerd Font Mono:pixelsize=20:antialias=true:autohint=true
+st.alpha          : 0.95
+st.alphaUnfocused : 0.85
+st.blinktimeout   : 215
+st.font           : Hack Nerd Font Mono:pixelsize=20:antialias=true:autohint=true
