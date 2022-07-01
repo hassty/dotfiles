@@ -26,6 +26,14 @@ ex() {
 	fi
 }
 
+cv() {
+	dst="$(command vifm --choose-dir - "$@")"
+	if [ -z "$dst" ]; then
+		return 0
+	fi
+	cd "$dst" || exit 1
+}
+
 cdd() {
 	mkdir "$1"
 	cd "$1" || exit 1
@@ -33,7 +41,7 @@ cdd() {
 
 # list git repositories and cd
 gf() {
-	cd "$(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="onefetch --no-bold --no-palette --show-logo never {}")"
+	cd "$(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="onefetch --no-bold --no-palette --show-logo never {}")" || exit 1
 }
 
 qira() {
