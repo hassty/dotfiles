@@ -27,7 +27,7 @@ ex() {
 }
 
 cv() {
-	dst="$(command vifm --choose-dir - "$@")"
+	dst="$(command "$HOME/.config/vifm/scripts/vifmrun" -c 'only' -c 'set millerview' --choose-dir - "$@")"
 	if [ -z "$dst" ]; then
 		return 0
 	fi

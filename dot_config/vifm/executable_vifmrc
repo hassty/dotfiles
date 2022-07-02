@@ -112,6 +112,8 @@ endif
 
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
+set milleroptions=lsize:40,csize:50,rsize:100,rpreview:all
+
 " ------------------------------------------------------------------------------
 
 " :mark mark /full/directory/path [filename]
