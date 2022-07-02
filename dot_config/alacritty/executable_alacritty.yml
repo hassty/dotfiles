@@ -4,7 +4,7 @@ env:
 window:
   padding:
     x: 6
-    y: 6
+    y: 3
   title: Alacritty
   dynamic_title: true
   opacity: 0.95
