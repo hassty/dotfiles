@@ -100,7 +100,7 @@ set incsearch
 
 " Try to leave some space from cursor to upper/lower border in lists
 
-set scrolloff=4
+set scrolloff=0
 
 " Don't do too many requests to slow file systems
 
@@ -112,6 +112,9 @@ endif
 
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
+set timeoutlen=100
+set previewoptions+=graphicsdelay:0
+set dotfiles
 set milleroptions=lsize:40,csize:50,rsize:100,rpreview:all
 
 " ------------------------------------------------------------------------------
@@ -434,7 +437,7 @@ nnoremap w :view<cr>
 vnoremap w :view<cr>gv
 
 " Open file in existing instance of nvim
-nnoremap o :!nvim %f<cr>
+nnoremap o vicmd %f<cr>
 
 " Open file in the background using its default program
 nnoremap gb :file &<cr>l
@@ -531,31 +534,68 @@ source $HOME/.config/vifm/icons
 "
 " let $VIFM_SERVER_NAME = v:servername
 
-nnoremap n j
-nnoremap N J
-nnoremap e k
-nnoremap E K
-nnoremap i l
-nnoremap I L
-nnoremap k n
-nnoremap K N
-nnoremap l i
-nnoremap L I
-nnoremap j e
-nnoremap J E
-vnoremap n j
-vnoremap N J
-vnoremap e k
-vnoremap E K
-vnoremap i l
-vnoremap I L
-vnoremap k n
-vnoremap K N
-vnoremap l i
-vnoremap L I
-vnoremap j e
-vnoremap J E
-nnoremap ZX ZQ
+noremap n j
+noremap N J
+noremap e k
+noremap E K
+noremap i l
+noremap I L
+noremap k n
+noremap K N
+noremap l i
+noremap L I
+noremap j e
+noremap J E
+noremap ZX ZQ
+
+dnoremap n j
+dnoremap N J
+dnoremap e k
+dnoremap E K
+dnoremap i l
+dnoremap I L
+dnoremap k n
+dnoremap K N
+dnoremap l i
+dnoremap L I
+dnoremap j e
+dnoremap J E
+dnoremap ZX ZQ
+
+mnoremap n j
+mnoremap N J
+mnoremap e k
+mnoremap E K
+mnoremap i l
+mnoremap I L
+mnoremap k n
+mnoremap K N
+mnoremap l i
+mnoremap L I
+mnoremap j e
+mnoremap J E
+mnoremap ZX ZQ
+
+qnoremap n j
+qnoremap N J
+qnoremap e k
+qnoremap E K
+qnoremap i l
+qnoremap I L
+qnoremap k n
+qnoremap K N
+qnoremap l i
+qnoremap L I
+qnoremap j e
+qnoremap J E
+qnoremap <C-[> <S-Tab>
+qnoremap ZX <S-Tab>
+
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+noremap <Space> :select<CR>
+noremap <BS> h
 
 command! dragon dragon-drop -a -x %f
 nnoremap <C-s> :dragon<CR>
