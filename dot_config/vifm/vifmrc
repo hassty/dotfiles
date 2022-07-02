@@ -117,6 +117,8 @@ set previewoptions+=graphicsdelay:0
 set dotfiles
 set milleroptions=lsize:40,csize:50,rsize:100,rpreview:all
 
+vsplit
+
 " ------------------------------------------------------------------------------
 
 " :mark mark /full/directory/path [filename]
