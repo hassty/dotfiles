@@ -11,11 +11,7 @@ alias \
     fgrep="fgrep --color=auto" \
     egrep="egrep --color=auto"
 
-# alias \
-#     ls="ls --color=auto --group-directories-first" \
-#     ll="ls -AgFh" \
-#     la="ls -1A" \
-#     l="ls -CF"
+alias ip="ip --color=auto"
 
 alias \
     ls="exa --color=automatic --group-directories-first --icons" \
