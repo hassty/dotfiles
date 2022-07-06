@@ -1,23 +1,18 @@
 local map = vim.keymap.set
-local autocmd = vim.api.nvim_create_autocmd
-local group = vim.api.nvim_create_augroup("keymaps", { clear = true })
 
 map("", "<Space>", "<Nop>", { expr = true })
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-autocmd("BufEnter", {
-	callback = function()
-		vim.schedule(function()
-			if vim.bo.filetype == "qf" then
+local function cr()
+	return vim.bo.filetype == "qf" and "<CR>" or "o<Esc>k"
+end
+
 				map("", "<CR>", "<CR>")
 			else
 				map("", "<CR>", "o<Esc>k")
 			end
-		end)
-	end,
-	group = group,
-})
+map("", "<CR>", cr, { expr = true })
 map("", "<M-CR>", "O<Esc>j")
 map("", "<leader>O", "O<C-o>O")
 map("", "<leader>o", "o<C-o>o")
