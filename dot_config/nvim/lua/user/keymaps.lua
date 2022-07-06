@@ -8,18 +8,21 @@ local function cr()
 	return vim.bo.filetype == "qf" and "<CR>" or "o<Esc>k"
 end
 
-				map("", "<CR>", "<CR>")
-			else
-				map("", "<CR>", "o<Esc>k")
-			end
+local function leader_o()
+	return vim.api.nvim_get_current_line() == "" and "o<C-o>O" or "o<C-o>o"
+end
+
 map("", "<CR>", cr, { expr = true })
 map("", "<M-CR>", "O<Esc>j")
 map("", "<leader>O", "O<C-o>O")
-map("", "<leader>o", "o<C-o>o")
+map("", "<leader>o", leader_o, { expr = true })
 map("", "<leader>$", "$h")
 map("", "<leader>L", "$h")
 map("", "<leader>i", "i <C-g>U<Left>")
 map("", "<leader>I", "I <C-g>U<Left>")
+map("", "<leader>,", "i, <C-g>U<Left><C-g>U<Left>")
+map("", "<leader>'", "i'', <C-g>U<Left><C-g>U<Left><C-g>U<Left>")
+map("", '<leader>"', 'i"", <C-g>U<Left><C-g>U<Left><C-g>U<Left>')
 map("", "ZX", "ZQ")
 map("", "Q", "gqq")
 map("", "H", "^")
@@ -27,6 +30,8 @@ map("", "L", "$")
 map("", "M", "%")
 map("", "gh", "H")
 map("", "gl", "L")
+
+map("", "<leader>x", "<CMD>!chmod +x %<CR>")
 
 -- keeping it centered
 map("n", "n", "nzzzv")
