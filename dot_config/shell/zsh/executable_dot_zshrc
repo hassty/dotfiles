@@ -8,6 +8,9 @@ esac
 
 eval "$(starship init zsh)"
 
+# hide EOL sign ('%')
+PROMPT_EOL_MARK=""
+
 # display username@hostname:cwd in title
 precmd () {print -Pn "\e]0;%n@%m:%~\a"}
 
