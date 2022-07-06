@@ -48,7 +48,7 @@ null_ls.setup({
 			filetypes = { "json", "markdown" },
 		}),
 		formatting.rustfmt.with({ extra_args = rust_edition }),
-		formatting.shfmt,
+		formatting.beautysh,
 		formatting.sqlformat,
 		formatting.stylua,
 		formatting.xmllint,

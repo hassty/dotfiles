@@ -6,4 +6,4 @@ msgTag="mybrightness"
 brightness="$(xbacklight -get | cut -d'.' -f1)"
 # Show the brightness notification
 dunstify -a "brightness" -u low -h string:x-dunst-stack-tag:$msgTag \
--h int:value:"$brightness" "brightness: ${brightness}%"
+    -h int:value:"$brightness" "brightness: ${brightness}%"

@@ -19,10 +19,10 @@ case "$clock" in
 esac
 
 case $BUTTON in
-	1) this-month ;;
-	2) setsid -f "$TERMINAL" -e calcurse ;;
+    1) this-month ;;
+    2) setsid -f "$TERMINAL" -e calcurse ;;
     3) notify-send "Appointments" "$(calcurse -d3)" ;;
-	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+    6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
 date +"$icon %R"

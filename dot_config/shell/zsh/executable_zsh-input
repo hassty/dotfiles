@@ -8,15 +8,15 @@ norm_cursor='\e[1 q'
 ins_cursor='\e[3 q'
 
 function zle-keymap-select() {
-	case $KEYMAP in
-	vicmd) echo -ne "$norm_cursor" ;;
-	viins | main) echo -ne "$ins_cursor" ;;
-	esac
+    case $KEYMAP in
+        vicmd) echo -ne "$norm_cursor" ;;
+        viins | main) echo -ne "$ins_cursor" ;;
+    esac
 }
 zle -N zle-keymap-select
 zle-line-init() {
-	zle -K viins
-	echo -ne "$ins_cursor"
+    zle -K viins
+    echo -ne "$ins_cursor"
 }
 zle -N zle-line-init
 echo -ne "$ins_cursor"

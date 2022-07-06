@@ -3,10 +3,10 @@
 paused=$(dunstctl is-paused)
 
 if [ "$paused" = "true" ]; then
-	dunstctl set-paused false
-	notify-send -u low -t 1000 'notifications' 'enabled'
+    dunstctl set-paused false
+    notify-send -u low -t 1000 'notifications' 'enabled'
 else
-	notify-send -u low -t 1000 'notifications' 'paused'
-	sleep 1
-	dunstctl set-paused true
+    notify-send -u low -t 1000 'notifications' 'paused'
+    sleep 1
+    dunstctl set-paused true
 fi

@@ -43,7 +43,7 @@ send_notification() {
     dunstify -a "volume" -u low -h string:x-dunst-stack-tag:$msgTag \
         -h int:value:"$volume" "volume: ${volume}%" -i "$icon_name"
 
-    }
+}
 
 case $1 in
     up)

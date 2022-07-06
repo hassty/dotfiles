@@ -1,15 +1,15 @@
 #!/bin/sh
 
 alias \
-	cp="cp -irv" \
-	mv="mv -iv" \
-	rm="rm -vI" \
-	mkdir="mkdir -pv"
+    cp="cp -irv" \
+    mv="mv -iv" \
+    rm="rm -vI" \
+    mkdir="mkdir -pv"
 
 alias \
-	grep="grep --color=auto" \
-	fgrep="fgrep --color=auto" \
-	egrep="egrep --color=auto"
+    grep="grep --color=auto" \
+    fgrep="fgrep --color=auto" \
+    egrep="egrep --color=auto"
 
 # alias \
 #     ls="ls --color=auto --group-directories-first" \
@@ -18,33 +18,33 @@ alias \
 #     l="ls -CF"
 
 alias \
-	ls="exa --color=automatic --group-directories-first --icons" \
-	la="exa -1a --color=automatic --group-directories-first --icons" \
-	ll="exa -la --color=automatic --group-directories-first --icons --git" \
-	l="exa -la --color=automatic --group-directories-first --icons --git" \
-	lg="exa -la --color=automatic --group-directories-first --icons --git-ignore" \
-	lt="exa -aT --color=automatic --group-directories-first --icons"
+    ls="exa --color=automatic --group-directories-first --icons" \
+    la="exa -1a --color=automatic --group-directories-first --icons" \
+    ll="exa -la --color=automatic --group-directories-first --icons --git" \
+    l="exa -la --color=automatic --group-directories-first --icons --git" \
+    lg="exa -la --color=automatic --group-directories-first --icons --git-ignore" \
+    lt="exa -aT --color=automatic --group-directories-first --icons"
 
 alias cat="bat -p"
 alias vifm="$HOME/.config/vifm/scripts/vifmrun"
 alias vf="$HOME/.config/vifm/scripts/vifmrun"
 
 alias \
-	mp="ncmpcpp 2>/dev/null" \
-	am="alsamixer" \
-	pm="pulsemixer" \
-	im="nsxiv -t *" \
-	nb="newsboat" \
-	ca="calcurse" \
-	c="cargo" \
-	t="tldr" \
-	ti="timew" \
-	ts="timew summary" \
-	gt="gotop" \
-	lz="lazygit" \
-	lo="lazydocker" \
-	g="goto" \
-	v="$EDITOR"
+    mp="ncmpcpp 2>/dev/null" \
+    am="alsamixer" \
+    pm="pulsemixer" \
+    im="nsxiv -t *" \
+    nb="newsboat" \
+    ca="calcurse" \
+    c="cargo" \
+    t="tldr" \
+    ti="timew" \
+    ts="timew summary" \
+    gt="gotop" \
+    lz="lazygit" \
+    lo="lazydocker" \
+    g="goto" \
+    v="$EDITOR"
 
 alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
@@ -54,23 +54,23 @@ alias p="sudo pacman"
 alias mpv="DRI_PRIME=1 mpv"
 
 alias \
-	ga="git add" \
-	gaa="git add --all" \
-	gs="git status" \
-	gb="git branch" \
-	gc="git commit" \
-	gca="git commit --amend" \
-	gcn="git commit --amend --no-edit" \
-	gd="git diff" \
-	gds="git diff --staged" \
-	gco="git checkout" \
-	gcm="git checkout master" \
-	gl="git log --oneline --graph" \
-	gm="git merge" \
-	gr="git restore"
+    ga="git add" \
+    gaa="git add --all" \
+    gs="git status" \
+    gb="git branch" \
+    gc="git commit" \
+    gca="git commit --amend" \
+    gcn="git commit --amend --no-edit" \
+    gd="git diff" \
+    gds="git diff --staged" \
+    gco="git checkout" \
+    gcm="git checkout master" \
+    gl="git log --oneline --graph" \
+    gm="git merge" \
+    gr="git restore"
 
 alias \
-	tm="tmux" \
-	ta="tmux attach" \
-	tk="tmux kill-server" \
-	tl="tmux ls"
+    tm="tmux" \
+    ta="tmux attach" \
+    tk="tmux kill-server" \
+    tl="tmux ls"
