@@ -77,9 +77,10 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- easier split navigation
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-j>", "<C-w>j")
-map("n", "<C-k>", "<C-w>k")
+map("n", "<C-w><C-h>", "<C-w>h")
+map("n", "<C-w><C-n>", "<C-w>j")
+map("n", "<C-w><C-e>", "<C-w>k")
+map("n", "<C-w><C-i>", "<C-w>l")
 
 -- calculate expression
 map("i", "<M-=>", "<C-O>yiW<End>=<C-R>=<C-R>0<CR>")
