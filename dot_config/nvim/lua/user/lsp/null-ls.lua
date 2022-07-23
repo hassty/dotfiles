@@ -30,6 +30,7 @@ end
 null_ls.setup({
 	debug = false,
 	sources = {
+		formatting.asmfmt,
 		formatting.black,
 		formatting.clang_format.with({ disabled_filetypes = { "cs" } }),
 		formatting.cmake_format,
