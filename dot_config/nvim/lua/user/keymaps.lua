@@ -9,12 +9,12 @@ local function cr()
 end
 
 local function leader_o()
-	return vim.api.nvim_get_current_line() == "" and "o<C-o>O" or "o<C-o>o"
+	return vim.api.nvim_get_current_line() == "" and "o<C-\\><C-o>O" or "o<C-\\><C-o>o"
 end
 
 map("", "<CR>", cr, { expr = true })
 map("", "<M-CR>", "O<Esc>j")
-map("", "<leader>O", "O<C-o>O")
+map("", "<leader>O", "O<C-\\><C-o>O")
 map("", "<leader>o", leader_o, { expr = true })
 map("", "<leader>$", "$h")
 map("", "<leader>L", "$h")
