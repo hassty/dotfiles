@@ -13,9 +13,6 @@ esac
 
 eval "$(starship init bash)"
 
-# pyenv
-# eval "$(pyenv init -)"
-
 shopt -s histappend
 shopt -s histverify
 shopt -s cmdhist
