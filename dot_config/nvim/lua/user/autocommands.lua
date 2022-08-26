@@ -9,6 +9,20 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufReadPost" }, {
+	group = general_settings,
+	pattern = "*",
+	callback = function()
+		local row, column = unpack(vim.api.nvim_buf_get_mark(0, '"'))
+		local buf_line_count = vim.api.nvim_buf_line_count(0)
+
+		if row >= 1 and row <= buf_line_count then
+			vim.api.nvim_win_set_cursor(0, { row, column + 1 })
+			vim.cmd("norm! zz")
+		end
+	end,
+})
+
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = general_settings,
 	pattern = "*",

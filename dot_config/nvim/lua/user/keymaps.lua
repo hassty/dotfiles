@@ -39,7 +39,7 @@ map("n", "N", "Nzzzv")
 map("n", "J", "mzJ`z")
 map("n", "{", "{zz")
 map("n", "}", "}zz")
-map("n", "gi", "gi<Esc>zzi")
+map("n", "gi", "gi<Esc>lzzi")
 
 map("c", "<C-a>", "<Home>")
 map("c", "<C-e>", "<End>")
