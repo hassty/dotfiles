@@ -165,8 +165,9 @@ noremap <CR> o<Esc>k
 noremap <M-CR> O<Esc>j
 noremap <leader><Tab> <C-^>
 noremap Y y$
-noremap ZX ZQ
-noremap ZQ <Nop>
+noremap zx ZQ
+noremap zz ZZ
+noremap ZZ zz
 noremap Q gqq
 noremap H ^
 noremap L $

@@ -548,7 +548,9 @@ noremap l i
 noremap L I
 noremap j e
 noremap J E
-noremap ZX ZQ
+noremap zx ZQ
+noremap zz ZZ
+noremap ZZ zz
 
 dnoremap n j
 dnoremap N J
@@ -562,7 +564,9 @@ dnoremap l i
 dnoremap L I
 dnoremap j e
 dnoremap J E
-dnoremap ZX ZQ
+dnoremap zx ZQ
+dnoremap zz ZZ
+dnoremap ZZ zz
 
 mnoremap n j
 mnoremap N J
@@ -576,7 +580,9 @@ mnoremap l i
 mnoremap L I
 mnoremap j e
 mnoremap J E
-mnoremap ZX ZQ
+mnoremap zx ZQ
+mnoremap zz ZZ
+mnoremap ZZ zz
 
 qnoremap n j
 qnoremap N J
@@ -591,7 +597,9 @@ qnoremap L I
 qnoremap j e
 qnoremap J E
 qnoremap <C-[> <S-Tab>
-qnoremap ZX <S-Tab>
+qnoremap zx <S-Tab>
+qnoremap zz ZZ
+qnoremap ZZ zz
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
