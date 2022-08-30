@@ -42,6 +42,7 @@ $endif
 Control-p: history-search-backward
 Control-n: history-search-forward
 Control-e: end-of-line
+"\C-s": "\C-u\C-d"
 
 
 # case insensitive tab

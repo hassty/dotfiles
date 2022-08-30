@@ -32,6 +32,7 @@ map("", "L", "$")
 map("", "M", "%")
 map("", "gh", "H")
 map("", "gl", "L")
+map("", "<C-s>", '<CMD>call smoothie#do("\\<C-D>")<CR>')
 
 map("", "<leader>x", "<CMD>!chmod +x %<CR>")
 

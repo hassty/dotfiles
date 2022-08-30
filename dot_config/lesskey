@@ -3,5 +3,9 @@ n forw-line
 e back-line
 k repeat-search
 K reverse-search
+s forw-scroll
+^S forw-scroll
+d toggle-option o
+^D toggle-option o
 \e clear-search
 ^L clear-search
