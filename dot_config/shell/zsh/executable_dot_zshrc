@@ -43,6 +43,16 @@ setopt no_match
 setopt menu_complete
 setopt interactive_comments
 
+export HISTORY_IGNORE="(c[d,v]#|..|l|l[z,o]#|am|pm|m[p,pc]#|v|vf|t[m,k]#|vit|(p[f,pf,d]#|gf)|(trans|ru|en|mpv|yt-dlp|j|g|t|ex|mkdir|unhex|hex)*)"
+
+# remove ignored entries from history
+zshaddhistory() {
+    emulate -L zsh
+    # uncomment if HISTORY_IGNORE should use EXTENDED_GLOB syntax
+    # setopt extendedglob
+    [[ $1 != ${~HISTORY_IGNORE} ]]
+}
+
 zsh_add_file "$ZDOTDIR/zsh-input"
 
 # disable scroll lock on ctrl+s
