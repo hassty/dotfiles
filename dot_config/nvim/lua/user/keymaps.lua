@@ -112,7 +112,7 @@ map("n", "[g", '<CMD>lua require "gitsigns".prev_hunk()<CR>')
 -- lsp
 map("n", "[d", '<CMD>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>')
 map("n", "]d", '<CMD>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>')
-map("n", "K", "<CMD>lua vim.lsp.buf.hover()<CR>")
+map("n", "<leader>n", "<CMD>lua vim.lsp.buf.hover()<CR>")
 map("n", "<M-space>", "<CMD>lua vim.lsp.buf.signature_help()<CR>")
 map("i", "<M-space>", "<CMD>lua vim.lsp.buf.signature_help()<CR>")
 map("n", "gD", "<CMD>lua vim.lsp.buf.declaration()<CR>")
