@@ -42,7 +42,6 @@ setopt glob_dots extended_glob no_case_glob glob_complete
 setopt no_match
 setopt menu_complete
 setopt interactive_comments
-setopt correct_all
 
 zsh_add_file "$ZDOTDIR/zsh-input"
 
