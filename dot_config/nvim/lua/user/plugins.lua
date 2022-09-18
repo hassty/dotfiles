@@ -57,8 +57,9 @@ return packer.startup(function(use)
 
 	-- lsp
 	use({
-		{ "williamboman/nvim-lsp-installer" },
-		{ "neovim/nvim-lspconfig", after = "nvim-lsp-installer" },
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
 	})
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-nvim-lua")

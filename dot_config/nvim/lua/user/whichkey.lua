@@ -113,7 +113,7 @@ local mappings = {
 			"Document Diagnostics",
 		},
 		i = { "<cmd>LspInfo<cr>", "Info" },
-		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+		I = { "<cmd>Mason<cr>", "Installer Info" },
 		n = { "<cmd>NullLsInfo<cr>", "NullLs Info" },
 		l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
