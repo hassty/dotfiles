@@ -32,7 +32,19 @@ autocmd("TextYankPost", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("BufWinEnter", {
+autocmd("CursorMoved", {
+	group = general_settings,
+	pattern = "*",
+	callback = function()
+		vim.cmd([[
+            highlight IlluminatedWordRead gui=none guibg=#1f2233
+            highlight IlluminatedWordText gui=none guibg=#1f2233
+            highlight IlluminatedWordWrite gui=none guibg=#1f2233
+        ]])
+	end,
+})
+
+autocmd("BufWinEnter", {
 	group = general_settings,
 	pattern = "*",
 	command = "set formatoptions-=cro",
