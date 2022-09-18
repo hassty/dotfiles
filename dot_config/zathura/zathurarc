@@ -4,6 +4,9 @@ set page-padding 1
 set selection-clipboard clipboard
 set pages-per-row 1
 set incremental-search "true"
+set recolor true
+set recolor-keephue true
+set recolor-reverse-video true
 
 map r reload
 map R rotate
