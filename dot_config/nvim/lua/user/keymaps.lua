@@ -91,8 +91,8 @@ map("i", "<M-=>", "<C-O>yiW<End>=<C-R>=<C-R>0<CR>")
 map("n", "<leader>rs", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]])
 map("v", "<leader>rs", [["hy:%s/<C-r>h//g<Left><Left>]])
 
-map("n", "<leader>/", "<CMD>lua require('Comment.api').toggle_current_linewise()<CR>")
-map("x", "<leader>/", "<ESC><CMD>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>")
+map("n", "<leader>/", "<CMD>lua require('Comment.api').toggle.linewise.current()<CR>")
+map("x", "<leader>/", "<ESC><CMD>lua require('Comment.api').toggle.blockwise(vim.fn.visualmode())<CR>")
 
 map("n", "<F5>", "<CMD>lua require'dap'.continue()<CR>")
 map("n", "<F10>", "<CMD>lua require'dap'.step_over()<CR>")
