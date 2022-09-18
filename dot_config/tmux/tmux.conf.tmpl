@@ -35,15 +35,31 @@ setw -g aggressive-resize on
 setw -g mode-keys vi
 unbind [
 bind Escape copy-mode
+bind c-f copy-mode
 unbind p
 bind p paste-buffer
 bind -T copy-mode-vi v send -X begin-selection
+bind -T copy-mode-vi v send -X begin-selection
+bind -T copy-mode-vi n send Down
+bind -T copy-mode-vi e send Up
+bind -T copy-mode-vi h send Left
+bind -T copy-mode-vi i send Right
+bind -T copy-mode-vi C-n send Down
+bind -T copy-mode-vi C-p send Up
+bind -T copy-mode-vi C-a send ^
+bind -T copy-mode-vi C-s send -X halfpage-down
+bind -T copy-mode-vi H send ^
+bind -T copy-mode-vi L send $
+bind -T copy-mode-vi Escape send C-c
+bind -T copy-mode-vi BSpace send -X clear-selection
+
 setw -g monitor-activity on
 
 bind r source-file '{{ .chezmoi.homeDir }}/.config/tmux/tmux.conf' \; display "tmux.conf reloaded"
 
 bind C-p previous-window
 bind C-k next-window
+bind C-w detach-client
 
 bind v split-window -h -c "#{pane_current_path}"
 bind s split-window -v -c "#{pane_current_path}"
@@ -52,16 +68,26 @@ bind C-h select-pane -L
 bind C-n select-pane -D
 bind C-e select-pane -U
 bind C-i select-pane -R
+bind = select-layout -E
 bind o kill-pane -a
+bind C-o kill-pane -a
+bind x rotate-window -D
+bind ? list-keys -a
 
 bind C-c command-prompt -p "Create window with name:" "new-window; rename-window '%%'"
-bind C-y set-window-option synchronize-panes
+bind a set-window-option synchronize-panes
+bind C-a set-window-option synchronize-panes
 bind b set-option -g status
+
+bind C-u switch-client -p
+bind C-y switch-client -n
+
 
 unbind -T copy-mode-vi v
 bind -T copy-mode-vi v send -X begin-selection
-bind -T copy-mode-vi C-v send -X rectangle-toggle
+bind -T copy-mode-vi C-q send -X rectangle-toggle
 bind -T copy-mode-vi y send -X copy-selection
+bind -T copy-mode-vi C-l send -X clear-selection
 
 bind -r i run-shell "tmux splitw -h cht"
 
