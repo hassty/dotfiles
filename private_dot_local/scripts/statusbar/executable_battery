@@ -1,7 +1,10 @@
 #!/bin/bash
 
-capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
-status="$(cat /sys/class/power_supply/BAT0/status)"
+battery="/sys/class/power_supply/BAT0/capacity"
+[ ! -f "$battery" ] && echo ""
+
+capacity="$(cat $battery)"
+status="$(cat $battery)"
 
 capacities=("" "" "" "" "" "" "" "" "" "" "")
 
