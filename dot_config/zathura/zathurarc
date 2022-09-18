@@ -8,8 +8,9 @@ set recolor true
 set recolor-keephue true
 set recolor-reverse-video true
 
-map r reload
-map R rotate
+map <F5> reload
+map r rotate rotate-cw
+map R rotate rotate-ccw
 
 map n scroll down
 map N navigate next
