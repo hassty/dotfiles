@@ -12,7 +12,7 @@ dressing.setup({
 		default_prompt = "➤ ",
 
 		-- When true, <Esc> will close the modal
-		insert_only = true,
+		insert_only = false,
 
 		-- These are passed to nvim_open_win
 		anchor = "SW",
@@ -30,6 +30,20 @@ dressing.setup({
 		-- Change default highlight groups (see :help winhl)
 		winhighlight = "",
 
+		-- Set to `false` to disable
+		mappings = {
+			n = {
+				["<Esc>"] = "Close",
+				["<CR>"] = "Confirm",
+			},
+			i = {
+				["<C-c>"] = "Close",
+				["<CR>"] = "Confirm",
+				["<C-p>"] = "HistoryPrev",
+				["<C-n>"] = "HistoryNext",
+			},
+		},
+
 		-- see :help dressing_get_config
 		get_config = nil,
 	},
@@ -40,8 +54,13 @@ dressing.setup({
 		-- Priority list of preferred vim.select implementations
 		backend = { "telescope", "fzf_lua", "fzf", "builtin", "nui" },
 
+		-- Trim trailing `:` from prompt
+		trim_prompt = true,
+
 		-- Options for telescope selector
-		theme = require("telescope.themes").get_dropdown({}),
+		-- These are passed into the telescope picker directly. Can be used like:
+		-- telescope = require('telescope.themes').get_ivy({...})
+		telescope = require("telescope.themes").get_dropdown({}),
 
 		-- Options for fzf selector
 		fzf = {
