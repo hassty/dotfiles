@@ -64,12 +64,8 @@ vim.g.material_style = "deep ocean"
 vim.cmd([[colorscheme material]])
 
 vim.cmd([[
-" highlight Normal ctermbg=None guibg=None
-" highlight NormalFloat ctermbg=None guibg=None
-" highlight Pmenu ctermbg=None guibg=None
-" highlight FloatBorder ctermbg=None guibg=None
-" highlight WhichKeyFloat ctermbg=None guibg=None
-" highlight Conceal ctermbg=None guibg=None
+highlight CursorLine guibg=none
+highlight CursorLineNr guifg=#717898
 ]])
 
 local colorizer_status_ok, colorizer = pcall(require, "colorizer")
