@@ -1,6 +1,7 @@
 local general_settings = vim.api.nvim_create_augroup("_general_settings", { clear = true })
+local autocmd = vim.api.nvim_create_autocmd
 
-vim.api.nvim_create_autocmd("FileType", {
+autocmd("FileType", {
 	group = general_settings,
 	pattern = { "qf", "help", "man", "lspinfo" },
 	callback = function()
@@ -9,7 +10,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "BufRead", "BufReadPost" }, {
+autocmd({ "BufRead", "BufReadPost" }, {
 	group = general_settings,
 	pattern = "*",
 	callback = function()
@@ -23,7 +24,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufReadPost" }, {
 	end,
 })
 
-vim.api.nvim_create_autocmd("TextYankPost", {
+autocmd("TextYankPost", {
 	group = general_settings,
 	pattern = "*",
 	callback = function()
@@ -37,7 +38,7 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
 	command = "set formatoptions-=cro",
 })
 
-vim.api.nvim_create_autocmd("FileType", {
+autocmd("FileType", {
 	group = general_settings,
 	pattern = "qf",
 	callback = function()
@@ -45,7 +46,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "VimEnter", "VimResume" }, {
+autocmd({ "VimEnter", "VimResume" }, {
 	group = general_settings,
 	pattern = "*",
 	callback = function()
@@ -55,7 +56,7 @@ vim.api.nvim_create_autocmd({ "VimEnter", "VimResume" }, {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "VimLeave,VimSuspend" }, {
+autocmd({ "VimLeave,VimSuspend" }, {
 	group = general_settings,
 	pattern = "*",
 	callback = function()
@@ -63,21 +64,21 @@ vim.api.nvim_create_autocmd({ "VimLeave,VimSuspend" }, {
 	end,
 })
 
-vim.api.nvim_create_autocmd("BufWritePost", {
+autocmd("BufWritePost", {
 	group = general_settings,
 	pattern = vim.fn.resolve(os.getenv("XDG_DATA_HOME") .. "/chezmoi/*"),
 	command = 'silent !chezmoi apply --source-path "%"',
 })
 
 local auto_resize = vim.api.nvim_create_augroup("_auto_resize", { clear = true })
-vim.api.nvim_create_autocmd("VimResized", {
+autocmd("VimResized", {
 	group = auto_resize,
 	pattern = "*",
 	command = "wincmd =",
 })
 
 local statusline = vim.api.nvim_create_augroup("_status_line", { clear = true })
-vim.api.nvim_create_autocmd("FileType", {
+autocmd("FileType", {
 	group = statusline,
 	pattern = "alpha",
 	callback = function()
@@ -86,7 +87,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("BufUnload", {
+autocmd("BufUnload", {
 	group = statusline,
 	pattern = "<buffer>",
 	callback = function()
