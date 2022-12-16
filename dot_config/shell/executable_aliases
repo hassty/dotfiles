@@ -21,6 +21,15 @@ alias \
     lg="exa -la --color=automatic --group-directories-first --icons --git-ignore" \
     lt="exa -aT --color=automatic --group-directories-first --icons"
 
+alias \
+    i="iex -S mix" \
+    is="iex -S mix phx.server" \
+    ms="mix setup" \
+    mem="mix ecto.migrate" \
+    mer="mix ecto.reset" \
+    mc="mix compile" \
+    mcc="mix clean && mix compile"
+
 alias cat="bat -p"
 alias vifm="$HOME/.config/vifm/scripts/vifmrun"
 alias vf="$HOME/.config/vifm/scripts/vifmrun"
@@ -40,6 +49,7 @@ alias \
     lz="lazygit" \
     lo="lazydocker" \
     g="goto" \
+    xc="xclip -sel clip" \
     v="$EDITOR"
 
 alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
@@ -50,6 +60,7 @@ alias p="sudo pacman"
 alias mpv="DRI_PRIME=1 mpv"
 
 alias \
+    gi="git init" \
     ga="git add" \
     gaa="git add --all" \
     gs="git status" \
