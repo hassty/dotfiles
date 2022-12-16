@@ -68,6 +68,8 @@ map("i", "=", "=<C-g>u")
 -- add big relative jumps to jumplist
 map("n", "k", [[(v:count > 5 ? "m'" . v:count : "") . 'k']], { expr = true })
 map("n", "j", [[(v:count > 5 ? "m'" . v:count : "") . 'j']], { expr = true })
+map("n", "<C-p>", [[(v:count > 5 ? "m'" . v:count : "") . 'k']], { expr = true })
+map("n", "<C-n>", [[(v:count > 5 ? "m'" . v:count : "") . 'j']], { expr = true })
 
 -- moving text
 map("v", "<M-n>", ":m '>+1<CR>gv=gv", { silent = true })
