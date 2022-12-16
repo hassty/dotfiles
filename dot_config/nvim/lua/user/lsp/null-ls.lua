@@ -38,6 +38,7 @@ null_ls.setup({
 			condition = has_eslint_config,
 			prefer_local = "node_modules/.bin",
 		}),
+		formatting.elm_format,
 		formatting.mix,
 		formatting.goimports,
 		formatting.prettierd.with({
