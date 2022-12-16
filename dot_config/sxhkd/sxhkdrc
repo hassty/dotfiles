@@ -13,7 +13,7 @@ Pause
 XF86Display
     toggle-touchpad
 
-super+m
+super+colon
     passmenu
 
 super+alt+i
