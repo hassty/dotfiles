@@ -112,8 +112,30 @@ map("n", "]g", '<CMD>lua require "gitsigns".next_hunk()<CR>')
 map("n", "[g", '<CMD>lua require "gitsigns".prev_hunk()<CR>')
 
 -- lsp
-map("n", "[d", '<CMD>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>')
-map("n", "]d", '<CMD>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>')
+local function next_diag(severity)
+	vim.diagnostic.goto_next({ border = "rounded", severity = severity })
+end
+
+local function prev_diag(severity)
+	vim.diagnostic.goto_prev({ border = "rounded", severity = severity })
+end
+
+local severity = vim.diagnostic.severity
+
+map("n", "[t", function()
+	prev_diag(severity.ERROR)
+end)
+map("n", "]t", function()
+	next_diag(severity.ERROR)
+end)
+map("n", "[s", function()
+	prev_diag(severity.WARN)
+end)
+map("n", "]s", function()
+	next_diag(severity.WARN)
+end)
+map("n", "[a", '<CMD>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>')
+map("n", "]a", '<CMD>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>')
 map("n", "<leader>n", "<CMD>lua vim.lsp.buf.hover()<CR>")
 map("n", "<M-space>", "<CMD>lua vim.lsp.buf.signature_help()<CR>")
 map("i", "<M-space>", "<CMD>lua vim.lsp.buf.signature_help()<CR>")
