@@ -1,0 +1,855 @@
+[
+  {
+    "settings": {
+      "openEditInWindow": false,
+      "openEditInWindow.popup": false,
+      "windowPosition": {},
+      "show-badge": true,
+      "disableAll": false,
+      "exposeIframes": false,
+      "exposeStyleName": false,
+      "newStyleAsUsercss": false,
+      "styleViaXhr": false,
+      "patchCsp": true,
+      "config.autosave": true,
+      "schemeSwitcher.enabled": "dark",
+      "schemeSwitcher.nightStart": "18:00",
+      "schemeSwitcher.nightEnd": "06:00",
+      "popup.breadcrumbs": true,
+      "popup.breadcrumbs.usePath": false,
+      "popup.enabledFirst": true,
+      "popup.stylesFirst": true,
+      "popup.autoResort": false,
+      "popup.borders": false,
+      "popup.findSort": "u",
+      "manage.onlyEnabled": false,
+      "manage.onlyLocal": false,
+      "manage.onlyUsercss": false,
+      "manage.onlyEnabled.invert": false,
+      "manage.onlyLocal.invert": false,
+      "manage.onlyUsercss.invert": false,
+      "manage.actions.expanded": true,
+      "manage.backup.expanded": true,
+      "manage.filters.expanded": true,
+      "manage.newUI": true,
+      "manage.newUI.favicons": false,
+      "manage.newUI.faviconsGray": true,
+      "manage.newUI.targets": 3,
+      "manage.newUI.sort": "title,asc",
+      "editor.options": {},
+      "editor.toc.expanded": true,
+      "editor.options.expanded": true,
+      "editor.lint.expanded": true,
+      "editor.publish.expanded": true,
+      "editor.lineWrapping": true,
+      "editor.smartIndent": true,
+      "editor.indentWithTabs": false,
+      "editor.tabSize": 4,
+      "editor.keyMap": "default",
+      "editor.theme": "default",
+      "editor.beautify": {
+        "selector_separator_newline": true,
+        "newline_before_open_brace": false,
+        "newline_after_open_brace": true,
+        "newline_between_properties": true,
+        "newline_before_close_brace": true,
+        "newline_between_rules": false,
+        "preserve_newlines": true,
+        "end_with_newline": false,
+        "indent_conditional": true,
+        "indent_mozdoc": true
+      },
+      "editor.beautify.hotkey": "",
+      "editor.lintDelay": 300,
+      "editor.linter": "csslint",
+      "editor.lintReportDelay": 500,
+      "editor.matchHighlight": "token",
+      "editor.autoCloseBrackets": true,
+      "editor.autocompleteOnTyping": false,
+      "editor.contextDelete": false,
+      "editor.selectByTokens": true,
+      "editor.appliesToLineWidget": true,
+      "editor.autosaveDraft": 10,
+      "editor.livePreview": true,
+      "editor.colorpicker": true,
+      "editor.colorpicker.hexUppercase": false,
+      "editor.colorpicker.hotkey": "",
+      "editor.colorpicker.color": "",
+      "editor.colorpicker.maxHeight": 300,
+      "hotkey._execute_browser_action": "",
+      "hotkey.openManage": "",
+      "hotkey.styleDisableAll": "",
+      "sync.enabled": "none",
+      "iconset": -1,
+      "badgeDisabled": "#8B0000",
+      "badgeNormal": "#006666",
+      "headerWidth.edit": 280,
+      "headerWidth.install": 280,
+      "headerWidth.manage": 280,
+      "popupWidth": 246,
+      "updateInterval": 24
+    },
+    "order": {
+      "main": [],
+      "prio": []
+    }
+  },
+  {
+    "enabled": true,
+    "installDate": 1630676419533,
+    "name": "www.keybr.com",
+    "sections": [
+      {
+        "code": ".Body-header,\n.Body-aside,\n#Nav {\n    display: none;\n}\n\n.Practice {\n    margin: 0 auto;\n    margin-top: 40px;\n}",
+        "domains": [
+          "www.keybr.com"
+        ]
+      }
+    ],
+    "updateDate": 1630676593182,
+    "_id": "aadc107c-ff79-4b18-a540-be341b2a2ee0",
+    "_rev": 1630676593182,
+    "id": 1
+  },
+  {
+    "enabled": true,
+    "installDate": 1667728995898,
+    "name": "askubuntu.com",
+    "sections": [
+      {
+        "code": ".ff-sans {\n    display: none;\n}",
+        "domains": [
+          "askubuntu.com"
+        ]
+      }
+    ],
+    "updateDate": 1667728995898,
+    "_id": "e00ac1c4-2176-4dbd-abb1-3fbd4c1f3744",
+    "_rev": 1671215663840,
+    "id": 2
+  },
+  {
+    "enabled": true,
+    "installDate": 1666935292046,
+    "name": "superuser.com",
+    "sections": [
+      {
+        "code": ".ff-sans {\n    display: none;\n}",
+        "domains": [
+          "superuser.com"
+        ]
+      }
+    ],
+    "updateDate": 1666935292046,
+    "_id": "4daee4b9-2cb5-41cf-91f4-b11864281195",
+    "_rev": 1671215663752,
+    "id": 3
+  },
+  {
+    "enabled": true,
+    "installDate": 1662202610012,
+    "name": "stackoverflow.com",
+    "sections": [
+      {
+        "code": ".ff-sans,\n.ml12,\n.s-topbar,\n#left-sidebar,\n#sidebar,\n#post-form\n{\n    display: none;\n}\n\n.site-footer--container {\n    display: none !important;\n}\n\n#question-header {\n    text-align: center;\n}\n\nbody {\n    padding-top: 20px;\n}\n\n#content {\n    border: none;\n}\n\n#mainbar {\n    min-width: 100%;\n}",
+        "domains": [
+          "stackoverflow.com"
+        ]
+      }
+    ],
+    "updateDate": 1669147901423,
+    "_id": "dd82ba7a-14c1-44b0-af04-65bbad6d12e3",
+    "_rev": 1671215663046,
+    "id": 4
+  },
+  {
+    "enabled": true,
+    "installDate": 1631110989561,
+    "name": "www.geeksforgeeks.org",
+    "sections": [
+      {
+        "code": ".cookie-consent,\n.shell-container,\n.rightBar,\n.sideBar,\n.header-main__wrapper\n{\n    display: none;\n}\n\n.leftBar {\n    min-width: 95% !important;\n}",
+        "domains": [
+          "www.geeksforgeeks.org"
+        ]
+      }
+    ],
+    "updateDate": 1651821744044,
+    "_id": "9e63a02a-105a-4071-a7fb-761762b89bd0",
+    "_rev": 1651821744044,
+    "id": 5
+  },
+  {
+    "enabled": true,
+    "installDate": 1661768691585,
+    "name": "stackexchange.com",
+    "sections": [
+      {
+        "code": ".ff-sans,\n.ml12,\n.s-topbar,\n#left-sidebar,\n#sidebar,\n#post-form,\n.site-header\n{\n    display: none;\n}\n\n.site-footer--container {\n    display: none !important;\n}\n\n#question-header {\n    text-align: center;\n}\n\nbody {\n    padding-top: 20px;\n}\n\n#content {\n    border: none;\n}\n\n#mainbar {\n    min-width: 100%;\n}\n\n#content {\n    min-width: 90%;\n}\n\n.ws-nowrap {\n    flex: auto;\n}",
+        "domains": [
+          "stackexchange.com"
+        ]
+      }
+    ],
+    "updateDate": 1669312837291,
+    "_id": "c4d3e2c9-3514-42ec-93eb-1d54eebb68ea",
+    "_rev": 1671215663046,
+    "id": 6
+  },
+  {
+    "enabled": true,
+    "installDate": 1631452399634,
+    "name": "serverfault.com",
+    "sections": [
+      {
+        "code": ".ff-sans {\n    display: none;\n}",
+        "domains": [
+          "serverfault.com"
+        ]
+      }
+    ],
+    "updateDate": 1631452399634,
+    "_id": "d2ae5567-e807-492b-b90c-830d8276ea4c",
+    "_rev": 1631452399636,
+    "id": 7
+  },
+  {
+    "enabled": true,
+    "installDate": 1644585911570,
+    "name": "habr.com",
+    "sections": [
+      {
+        "code": ".tm-page__main {\n    min-width: 100%;\n}\n\n.tm-page__sidebar {\n    display: none;\n}",
+        "domains": [
+          "habr.com"
+        ]
+      }
+    ],
+    "updateDate": 1644585911570,
+    "_id": "23dacdb8-3641-4e2e-ae78-120d3818d93d",
+    "_rev": 1668354749201,
+    "id": 8
+  },
+  {
+    "enabled": true,
+    "installDate": 1646068072933,
+    "name": "sqlshack.com",
+    "sections": [
+      {
+        "code": "#cookiesWarningActive {\n    display: none;\n}\n\n#primary {\n    width: 100%;\n}\n\n#secondary {\n    display: none;\n}",
+        "domains": [
+          "sqlshack.com"
+        ]
+      }
+    ],
+    "updateDate": 1646069132865,
+    "_id": "48846b63-359d-4e30-ad65-1a5798885dc8",
+    "_rev": 1646069132865,
+    "id": 9
+  },
+  {
+    "enabled": true,
+    "installDate": 1646903232069,
+    "name": "dave.cheney.net",
+    "sections": [
+      {
+        "code": "body {\n    padding: 0 40px;\n}\n\n#primary {\n    width: 100%;\n}\n\n#secondary {\n    display: none;\n}\n\n#page {\n    min-width: 100%;\n    padding: 0;\n}",
+        "domains": [
+          "dave.cheney.net"
+        ]
+      }
+    ],
+    "updateDate": 1646903577522,
+    "_id": "2eeb80ef-6a91-419a-bd48-29e90ef18664",
+    "_rev": 1646903577522,
+    "id": 10
+  },
+  {
+    "enabled": true,
+    "installDate": 1648019649064,
+    "name": "refactoring.guru",
+    "sections": [
+      {
+        "code": ".announcement-block,\n.sidebar,\n.feature,\n.navigation {\n    display: none;\n}\n\n.main-content {\n    margin-left: 100px;\n    margin-top: 0 !important;\n}\n\n.pattern {\n    min-width: 100% !important;\n}",
+        "domains": [
+          "refactoring.guru"
+        ]
+      }
+    ],
+    "updateDate": 1648019941625,
+    "_id": "0be6ac04-8c67-4025-8093-ff874b5d770a",
+    "_rev": 1648019941625,
+    "id": 11
+  },
+  {
+    "enabled": true,
+    "installDate": 1649437028891,
+    "name": "tutorialspoint.com",
+    "sections": [
+      {
+        "code": "#privacy-banner {\n    display: none !important;\n}",
+        "domains": [
+          "tutorialspoint.com"
+        ]
+      }
+    ],
+    "updateDate": 1649437099813,
+    "_id": "5eb016b1-9d4b-49a3-9528-cf5127894993",
+    "_rev": 1649437099813,
+    "id": 12
+  },
+  {
+    "enabled": true,
+    "installDate": 1669360615856,
+    "name": "docs.opencv.org",
+    "sections": [
+      {
+        "code": "#top,\naddress.footer\n{\n    display: none;\n}\n\nbody,\n.header\n{\n    background: none !important;\n}\n\n.contents {\n    border: none;\n}",
+        "domains": [
+          "docs.opencv.org"
+        ]
+      }
+    ],
+    "updateDate": 1669446340139,
+    "_id": "2f702d00-44ac-4c6b-b21d-f16a629adef0",
+    "_rev": 1671215663840,
+    "id": 13
+  },
+  {
+    "enabled": true,
+    "installDate": 1650191481288,
+    "name": "docs.microsoft.com",
+    "sections": [
+      {
+        "code": "div.font-size-sm {\n    display: none !important;\n}\n\n#main-column {\n    width: 90%;\n}",
+        "domains": [
+          "docs.microsoft.com"
+        ]
+      }
+    ],
+    "updateDate": 1650191531319,
+    "_id": "b9560965-4d58-4a49-bbdf-6a93b5509835",
+    "_rev": 1650191531319,
+    "id": 14
+  },
+  {
+    "enabled": true,
+    "installDate": 1653201318762,
+    "name": "reactjs.org",
+    "sections": [
+      {
+        "code": ".css-1loxuh3 {\n    display: none;\n}",
+        "domains": [
+          "reactjs.org"
+        ]
+      }
+    ],
+    "updateDate": 1653201318762,
+    "_id": "3d47695d-19ae-4db1-bdfb-6c873e29a96b",
+    "_rev": 1653201318762,
+    "id": 15
+  },
+  {
+    "enabled": true,
+    "installDate": 1653249766612,
+    "name": "blog.logrocket.com",
+    "sections": [
+      {
+        "code": "div.code-block:nth-child(1)\n{\n    display: none;\n}",
+        "domains": [
+          "blog.logrocket.com"
+        ]
+      }
+    ],
+    "updateDate": 1653249766612,
+    "_id": "64fd0e61-950a-47ac-8fd4-7580ab76090e",
+    "_rev": 1653249766613,
+    "id": 16
+  },
+  {
+    "enabled": true,
+    "installDate": 1653257833932,
+    "name": "mui.com",
+    "sections": [
+      {
+        "code": ".css-1b6sdty,\n.BaseBadge-badge\n{\n    display: none;\n}",
+        "domains": [
+          "mui.com"
+        ]
+      }
+    ],
+    "updateDate": 1653257856447,
+    "_id": "1f45d037-2793-425c-bc8b-ea73bfe2aa1e",
+    "_rev": 1653257856448,
+    "id": 18
+  },
+  {
+    "enabled": false,
+    "installDate": 1657377027116,
+    "name": "www.startpage.com",
+    "sections": [
+      {
+        "code": ".layout-web__mainline {\n    min-width: 100%;\n}\n\n.layout-web__body {\n    margin: 0 auto;\n    margin-top: 100px;\n    max-width: 644px;\n}",
+        "domains": [
+          "www.startpage.com"
+        ]
+      }
+    ],
+    "updateDate": 1657377089399,
+    "_id": "2989843d-48ac-446a-bdf8-812ecc9bf368",
+    "_rev": 1657377145991,
+    "id": 19
+  },
+  {
+    "enabled": true,
+    "installDate": 1657989098313,
+    "name": "pwntools.com",
+    "sections": [
+      {
+        "code": ".highlight {\n    background: #222;\n}",
+        "domains": [
+          "pwntools.com"
+        ]
+      }
+    ],
+    "updateDate": 1658053098970,
+    "_id": "23f4725c-e259-4775-b185-b7a092187b4b",
+    "_rev": 1658053098971,
+    "id": 20
+  },
+  {
+    "enabled": true,
+    "installDate": 1669312365690,
+    "name": "news.ycombinator.com",
+    "sections": [
+      {
+        "code": "#hnmain {\n    background-color: #11111B !important;\n}\n\n#hnmain > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1),\n#hnmain > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1)\n{\n    display: none;\n}",
+        "domains": [
+          "news.ycombinator.com"
+        ]
+      }
+    ],
+    "updateDate": 1669924119659,
+    "_id": "ec265457-1fdb-49a6-b064-5ffe1560460f",
+    "_rev": 1671215663840,
+    "id": 22
+  },
+  {
+    "enabled": true,
+    "installDate": 1661023998516,
+    "name": "readthedocs.io",
+    "sections": [
+      {
+        "code": ".highlight {\n    background-color: #333;\n}",
+        "domains": [
+          "readthedocs.io"
+        ]
+      }
+    ],
+    "updateDate": 1661023998516,
+    "_id": "6abf1671-075b-4c06-96ab-d978c68d02b1",
+    "_rev": 1661023998516,
+    "id": 23
+  },
+  {
+    "enabled": true,
+    "installDate": 1662280727996,
+    "name": "cairo-lang.org",
+    "sections": [
+      {
+        "code": ".body,\nbody {\n    background-color: #181a1b !important;\n}",
+        "domains": [
+          "cairo-lang.org"
+        ]
+      }
+    ],
+    "updateDate": 1662280727996,
+    "_id": "e2315824-9466-4fd2-b09a-6bdec6be62bc",
+    "_rev": 1662280727996,
+    "id": 24
+  },
+  {
+    "enabled": true,
+    "updateUrl": "https://github.com/catppuccin/github/raw/main/catppuccin.user.css",
+    "installDate": 1664654375594,
+    "sections": [
+      {
+        "code": ""
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           Github Catppuccin\n@namespace      github.com/catppuccin/github\n@version        1.1.7\n@description    Soothing pastel theme for GitHub\n@author         Catppuccin\n@updateURL      https://github.com/catppuccin/github/raw/main/catppuccin.user.css\n@preprocessor   stylus\n@var select theme \"Theme\" [\"Latte\", \"Frappe\", \"Macchiato\", \"Mocha*\"]\n@var checkbox topbar \"Topbar colors\" 1\n@var checkbox blueaccent \"Blue Accent\" 0\n@var checkbox usefont \"Use Inter font\" 0\n==/UserStyle== */\n@-moz-document regexp(\"https://(gist\\\\.)*github.com(?!/marketplace)(?!/organizations/plan).*\") {\n  if (theme==\"Latte\") {\n      $type = light\n\n      $rosewater = #dc8a78\n      $flamingo = #dd7878\n      $pink = #ea76cb\n      $mauve = #8839ef\n      $red = #d20f39\n      $maroon = #e64553\n      $peach = #fe640b\n      $yellow = #df8e1d\n      $green = #40a02b\n      $teal = #179299\n      $sky = #04a5e5\n      $sapphire = #209fb5\n      $blue = #1e66f5\n      $lavender = #7287fd\n      $text = #4c4f69\n      $subtext1 = #5c5f77\n      $subtext0 = #6c6f85\n      $overlay2 = #7c7f93\n      $overlay1 = #8c8fa1\n      $overlay0 = #9ca0b0\n      $surface2 = #acb0be\n      $surface1 = #bcc0cc\n      $surface0 = #ccd0da\n      $base = #eff1f5\n      $mantle = #e6e9ef\n      $crust = #dce0e8\n      $shadow = #dbdfef\n  }\n  else if (theme==\"Frappe\") {\n      $type = dark\n\n      $rosewater = #f2d5cf\n      $flamingo = #eebebe\n      $pink = #f4b8e4\n      $mauve = #ca9ee6\n      $red = #e78284\n      $maroon = #ea999c\n      $peach = #ef9f76\n      $yellow = #e5c890\n      $green = #a6d189\n      $teal = #81c8be\n      $sky = #99d1db\n      $sapphire = #85c1dc\n      $blue = #8caaee\n      $lavender = #babbf1\n      $text = #c6d0f5\n      $subtext1 = #b5bfe2\n      $subtext0 = #a5adce\n      $overlay2 = #949cbb\n      $overlay1 = #838ba7\n      $overlay0 = #737994\n      $surface2 = #626880\n      $surface1 = #51576d\n      $surface0 = #414559\n      $base = #303446\n      $mantle = #292c3c\n      $crust = #232634\n      $shadow = #010409\n  }\n  else if (theme==\"Macchiato\") {\n      $type = dark\n\n      $rosewater = #f4dbd6\n      $flamingo = #f0c6c6\n      $pink = #f5bde6\n      $mauve = #c6a0f6\n      $red = #ed8796\n      $maroon = #ee99a0\n      $peach = #f5a97f\n      $yellow = #eed49f\n      $green = #a6da95\n      $teal = #8bd5ca\n      $sky = #91d7e3\n      $sapphire = #7dc4e4\n      $blue = #8aadf4\n      $lavender = #b7bdf8\n      $text = #cad3f5\n      $subtext1 = #b8c0e0\n      $subtext0 = #a5adcb\n      $overlay2 = #939ab7\n      $overlay1 = #8087a2\n      $overlay0 = #6e738d\n      $surface2 = #5b6078\n      $surface1 = #494d64\n      $surface0 = #363a4f\n      $base = #24273a\n      $mantle = #1e2030\n      $crust = #181926\n      $shadow = #010409\n  }\n  else if (theme==\"Mocha\") {\n      $type = dark\n\n      $rosewater = #f5e0dc\n      $flamingo = #f2cdcd\n      $pink = #f5c2e7\n      $mauve = #cba6f7\n      $red = #f38ba8\n      $maroon = #eba0ac\n      $peach = #fab387\n      $yellow = #f9e2af\n      $green = #a6e3a1\n      $teal = #94e2d5\n      $sky = #89dceb\n      $sapphire = #74c7ec\n      $lavender = #b4befe\n      $blue = #89b4fa\n      $text = #cdd6f4\n      $subtext1 = #bac2de\n      $subtext0 = #a6adc8\n      $overlay2 = #9399b2\n      $overlay1 = #7f849c\n      $overlay0 = #6c7086\n      $surface2 = #585b70\n      $surface1 = #45475a\n      $surface0 = #313244\n      $base = #1e1e2e\n      $mantle = #181825\n      $crust = #11111b\n      $shadow = #010409\n  }\n\n  /* Functions */\n  hoverColor(col) {\n      return blend(alpha(col, 0.7), $text)\n  }\n\n  activeColor(col) {\n      return blend(alpha(col, 0.5), $text)\n  }\n\n  disabledColor(col) {\n      return blend(alpha(col, 0.4), $base)\n  }\n\n  [data-color-mode=\"light\"][data-light-theme*=\"dark\"],\n  [data-color-mode=\"light\"][data-light-theme*=\"light\"],\n  [data-color-mode=\"dark\"][data-dark-theme*=\"dark\"],\n  [data-color-mode=\"dark\"][data-dark-theme*=\"light\"],\n  [data-color-mode=\"auto\"][data-dark-theme*=\"dark\"],\n  [data-color-mode=\"auto\"][data-dark-theme*=\"light\"] {\n      color-scheme: $type;\n\n      --color-canvas-default-transparent: rgba(13, 17, 23, 0);\n      --color-page-header-bg:  $base;\n      --color-marketing-icon-primary: $sky;\n      --color-marketing-icon-secondary: $blue;\n      --color-diff-blob-addition-num-text: $text;\n      --color-diff-blob-addition-fg: $text;\n      --color-diff-blob-addition-num-bg: alpha($green, 0.3);\n      --color-diff-blob-addition-line-bg: alpha($green, 0.15);\n      --color-diff-blob-addition-word-bg: alpha($green, 0.3);\n      --color-diff-blob-deletion-num-text: $text;\n      --color-diff-blob-deletion-fg: $text;\n      --color-diff-blob-deletion-num-bg: alpha($red, 0.3);\n      --color-diff-blob-deletion-line-bg: alpha($red, 0.15);\n      --color-diff-blob-deletion-word-bg: alpha($red, 0.3);\n      --color-diff-blob-hunk-num-bg: alpha($blue, 0.4);\n      --color-diff-blob-expander-icon: #8b949e;\n      --color-diff-blob-selected-line-highlight-mix-blend-mode: screen;\n      --color-diffstat-deletion-border: rgba(240, 246, 252, 0.1);\n      --color-diffstat-addition-border: rgba(240, 246, 252, 0.1);\n      --color-diffstat-addition-bg: $green;\n      --color-search-keyword-hl: rgba(210, 153, 34, 0.4);\n      --color-prettylights-syntax-comment: $overlay1;\n      --color-prettylights-syntax-constant: $blue;\n      --color-prettylights-syntax-entity: $blue;\n      --color-prettylights-syntax-storage-modifier-import: $peach;\n      --color-prettylights-syntax-entity-tag: $teal;\n      --color-prettylights-syntax-keyword: $pink;\n      --color-prettylights-syntax-string: $green;\n      --color-prettylights-syntax-variable: $peach;\n      --color-prettylights-syntax-brackethighlighter-unmatched: #f0f;\n      --color-prettylights-syntax-invalid-illegal-text: $red;\n      --color-prettylights-syntax-invalid-illegal-bg: alpha($red, 0.15);\n      --color-prettylights-syntax-carriage-return-text: #f0f;\n      --color-prettylights-syntax-carriage-return-bg: #f0f;\n      --color-prettylights-syntax-string-regexp: #f0f;\n      --color-prettylights-syntax-markup-list: #f0f;\n      --color-prettylights-syntax-markup-heading: $teal;\n      --color-prettylights-syntax-markup-italic: $yellow;\n      --color-prettylights-syntax-markup-bold: $yellow;\n      --color-prettylights-syntax-markup-deleted-text: $text;\n      --color-prettylights-syntax-markup-deleted-bg: alpha($red, 0.4);\n      --color-prettylights-syntax-markup-inserted-text: $text;\n      --color-prettylights-syntax-markup-inserted-bg: alpha($green, 0.4);\n      --color-prettylights-syntax-markup-changed-text: $text;\n      --color-prettylights-syntax-markup-changed-bg: alpha($yellow, 0.4);\n      --color-prettylights-syntax-markup-ignored-text: $text;\n      --color-prettylights-syntax-markup-ignored-bg: #f0f;\n      --color-prettylights-syntax-meta-diff-range: $mauve;\n      --color-prettylights-syntax-brackethighlighter-angle: #f0f;\n      --color-prettylights-syntax-sublimelinter-gutter-mark: #f0f;\n      --color-prettylights-syntax-constant-other-reference-link: #f0f;\n      --color-codemirror-text: $text;\n      --color-codemirror-bg: $base;\n      --color-codemirror-gutters-bg: $base;\n      --color-codemirror-guttermarker-text: $base;\n      --color-codemirror-guttermarker-subtle-text: #6e7681;\n      --color-codemirror-linenumber-text: #8b949e;\n      --color-codemirror-cursor: #c9d1d9;\n      --color-codemirror-selection-bg: rgba(56, 139, 253, 0.4);\n      --color-codemirror-activeline-bg: rgba(110, 118, 129, 0.1);\n      --color-codemirror-matchingbracket-text: #c9d1d9;\n      --color-codemirror-lines-bg: $base;\n      --color-codemirror-syntax-comment: #8b949e;\n      --color-codemirror-syntax-constant: #79c0ff;\n      --color-codemirror-syntax-entity: #d2a8ff;\n      --color-codemirror-syntax-keyword: #ff7b72;\n      --color-codemirror-syntax-storage: #ff7b72;\n      --color-codemirror-syntax-string: #a5d6ff;\n      --color-codemirror-syntax-support: #79c0ff;\n      --color-codemirror-syntax-variable: #ffa657;\n      --color-checks-bg: $mantle;\n      --color-checks-run-border-width: 1px;\n      --color-checks-container-border-width: 1px;\n      --color-checks-text-primary: #c9d1d9;\n      --color-checks-text-secondary: #8b949e;\n      --color-checks-text-link: #58a6ff;\n      --color-checks-btn-icon: #8b949e;\n      --color-checks-btn-hover-icon: #c9d1d9;\n      --color-checks-btn-hover-bg: rgba(110, 118, 129, 0.1);\n      --color-checks-input-text: #8b949e;\n      --color-checks-input-placeholder-text: #6e7681;\n      --color-checks-input-focus-text: #c9d1d9;\n      --color-checks-input-bg: #161b22;\n      --color-checks-input-shadow: 0 0 0 1px;\n      --color-checks-donut-error: $red;\n      --color-checks-donut-pending: $peach;\n      --color-checks-donut-success: $green;\n      --color-checks-donut-neutral: $overlay2;\n      --color-checks-dropdown-text: #c9d1d9;\n      --color-checks-dropdown-bg: #161b22;\n      --color-checks-dropdown-border: #30363d;\n      --color-checks-dropdown-shadow: rgba(1, 4, 9, 0.3);\n      --color-checks-dropdown-hover-text: #c9d1d9;\n      --color-checks-dropdown-hover-bg: rgba(110, 118, 129, 0.1);\n      --color-checks-dropdown-btn-hover-text: #c9d1d9;\n      --color-checks-dropdown-btn-hover-bg: rgba(110, 118, 129, 0.1);\n      --color-checks-scrollbar-thumb-bg: rgba(110, 118, 129, 0.4);\n      --color-checks-header-label-text: #8b949e;\n      --color-checks-header-label-open-text: #c9d1d9;\n      --color-checks-header-border: #21262d;\n      --color-checks-header-icon: #8b949e;\n      --color-checks-line-text: #8b949e;\n      --color-checks-line-num-text: #6e7681;\n      --color-checks-line-timestamp-text: #6e7681;\n      --color-checks-line-hover-bg: rgba(110, 118, 129, 0.1);\n      --color-checks-line-selected-bg: rgba(56, 139, 253, 0.15);\n      --color-checks-line-selected-num-text: #58a6ff;\n      --color-checks-line-dt-fm-text: #ffffff;\n      --color-checks-line-dt-fm-bg: #9e6a03;\n      --color-checks-gate-bg: rgba(187, 128, 9, 0.15);\n      --color-checks-gate-text: #8b949e;\n      --color-checks-gate-waiting-text: #d29922;\n      --color-checks-step-header-open-bg: $surface0;\n      --color-checks-step-error-text: $maroon;\n      --color-checks-step-warning-text: $peach;\n      --color-checks-logline-text: #8b949e;\n      --color-checks-logline-num-text: #6e7681;\n      --color-checks-logline-debug-text: $mauve;\n      --color-checks-logline-error-text: #8b949e;\n      --color-checks-logline-error-num-text: #6e7681;\n      --color-checks-logline-error-bg: alpha($maroon, 0.15);\n      --color-checks-logline-warning-text: $subtext1;\n      --color-checks-logline-warning-num-text: $peach;\n      --color-checks-logline-warning-bg: alpha($peach, 0.15);\n      --color-checks-logline-command-text: $blue;\n      --color-checks-logline-section-text: $green;\n      if ($type == \"dark\") {\n          --color-checks-ansi-black: $surface1;\n          --color-checks-ansi-black-bright: $surface2;\n          --color-checks-ansi-white: $subtext1;\n          --color-checks-ansi-white-bright: $subtext0;\n      } else {\n          --color-checks-ansi-black: $subtext1;\n          --color-checks-ansi-black-bright: $subtext0;\n          --color-checks-ansi-white: $surface2;\n          --color-checks-ansi-white-bright: $surface1;\n      }\n      --color-checks-ansi-gray: #f0f;\n      --color-checks-ansi-red: $red;\n      --color-checks-ansi-red-bright: $red;\n      --color-checks-ansi-green: $green;\n      --color-checks-ansi-green-bright: $green;\n      --color-checks-ansi-yellow: $yellow;\n      --color-checks-ansi-yellow-bright: $yellow;\n      --color-checks-ansi-blue: $blue;\n      --color-checks-ansi-blue-bright: $blue;\n      --color-checks-ansi-magenta: $pink;\n      --color-checks-ansi-magenta-bright: $pink;\n      --color-checks-ansi-cyan: $teal;\n      --color-checks-ansi-cyan-bright: $teal;\n      --color-project-header-bg: #0d1117;\n      --color-project-sidebar-bg: #161b22;\n      --color-project-gradient-in: #161b22;\n      --color-project-gradient-out: rgba(22, 27, 34, 0);\n      --color-mktg-btn-bg: #f6f8fa;\n      --color-mktg-btn-shadow-outline: rgb(255 255 255 / 25%) 0 0 0 1px inset;\n      --color-mktg-btn-shadow-focus: rgb(255 255 255 / 25%) 0 0 0 4px;\n      --color-mktg-btn-shadow-hover: 0 4px 7px rgba(0, 0, 0, 0.15), 0 100px 80px rgba(255, 255, 255, 0.02), 0 42px 33px rgba(255, 255, 255, 0.024), 0 22px 18px rgba(255, 255, 255, 0.028), 0 12px 10px rgba(255, 255, 255, 0.034), 0 7px 5px rgba(255, 255, 255, 0.04), 0 3px 2px rgba(255, 255, 255, 0.07);\n      --color-mktg-btn-shadow-hover-muted: rgb(255 255 255) 0 0 0 2px inset;\n      --color-avatar-bg: rgba(255, 255, 255, 0.1);\n      --color-avatar-border: rgba(240, 246, 252, 0.1);\n      --color-avatar-stack-fade: #30363d;\n      --color-avatar-stack-fade-more: #21262d;\n      --color-avatar-child-shadow: -2px -2px 0 #0d1117;\n      --color-topic-tag-border: rgba(0, 0, 0, 0);\n      --color-counter-border: rgba(0, 0, 0, 0);\n      --color-select-menu-backdrop-border: #484f58;\n      --color-select-menu-tap-highlight: rgba(48, 54, 61, 0.5);\n      --color-select-menu-tap-focus-bg: #0c2d6b;\n      --color-overlay-shadow: 0 0 0 1px #30363d, 0 16px 32px rgba(1, 4, 9, 0.85);\n      --color-header-text: var(--subtext2);\n      if (topbar) {\n          --color-header-bg:  $mantle;\n      } else {\n          --color-header-bg:  $base;\n      }\n      --color-header-divider: #8b949e;\n      --color-header-logo:  $text;\n      --color-header-search-bg:  $surface0;\n      --color-header-search-border:  $surface1;\n      --color-sidenav-selected-bg:  $surface1;\n      --color-menu-bg-active: $surface2;\n      --color-input-disabled-bg: rgba(110, 118, 129, 0);\n      --color-timeline-badge-bg:  $surface0;\n      --color-ansi-black: #484f58;\n      --color-ansi-black-bright: #6e7681;\n      --color-ansi-white: #b1bac4;\n      --color-ansi-white-bright: #ffffff;\n      --color-ansi-gray: #6e7681;\n      --color-ansi-red: #ff7b72;\n      --color-ansi-red-bright: #ffa198;\n      --color-ansi-green: #3fb950;\n      --color-ansi-green-bright: #56d364;\n      --color-ansi-yellow: #d29922;\n      --color-ansi-yellow-bright: #e3b341;\n      --color-ansi-blue: #58a6ff;\n      --color-ansi-blue-bright: #79c0ff;\n      --color-ansi-magenta: #bc8cff;\n      --color-ansi-magenta-bright: #d2a8ff;\n      --color-ansi-cyan: #39c5cf;\n      --color-ansi-cyan-bright: #56d4dd;\n      --color-btn-text:  $text;\n      --color-btn-bg:  $surface0;\n      --color-btn-border: transparent;\n      --color-btn-shadow: 0 0 transparent;\n      --color-btn-inset-shadow: 0 0 transparent;\n      --color-btn-hover-bg:  $surface1;\n      --color-btn-hover-border: transparent;\n      --color-btn-active-bg:  $surface2;\n      --color-btn-active-border: transparent;\n      --color-btn-selected-bg: $surface2;\n      --color-btn-focus-bg: #21262d;\n      --color-btn-focus-border: #8b949e;\n      --color-btn-focus-shadow: 0 0 0 3px rgba(139, 148, 158, 0.3);\n      --color-btn-shadow-active: inset 0 0.15em 0.3em rgba(1, 4, 9, 0.15);\n      --color-btn-shadow-input-focus: 0 0 0 0.2em rgba(31, 111, 235, 0.3);\n      --color-btn-counter-bg:  $surface2;\n      --color-btn-primary-text:  $base;\n      --color-btn-primary-bg:  $green;\n      --color-btn-primary-border: transparent;\n      --color-btn-primary-shadow: 0 0 transparent;\n      --color-btn-primary-inset-shadow: 0 0 transparent;\n      --color-btn-primary-hover-bg: hoverColor($green);\n      --color-btn-primary-hover-border: rgba(240, 246, 252, 0.1);\n      --color-btn-primary-selected-bg: activeColor($green);\n      --color-btn-primary-selected-shadow: 0 0 transparent;\n      --color-btn-primary-disabled-text: $crust;\n      --color-btn-primary-disabled-bg: disabledColor($green);\n      --color-btn-primary-disabled-border: transparent;\n      --color-btn-primary-focus-bg: #238636;\n      --color-btn-primary-focus-border: rgba(240, 246, 252, 0.1);\n      --color-btn-primary-focus-shadow: 0 0 0 3px rgba(46, 164, 79, 0.4);\n      --color-btn-primary-icon:  $base;\n      --color-btn-primary-counter-bg: rgba(255, 255, 255, 0.2);\n      --color-btn-outline-text: #58a6ff;\n      --color-btn-outline-hover-text: #58a6ff;\n      --color-btn-outline-hover-bg: #30363d;\n      --color-btn-outline-hover-border: rgba(240, 246, 252, 0.1);\n      --color-btn-outline-hover-shadow: 0 1px 0 rgba(1, 4, 9, 0.1);\n      --color-btn-outline-hover-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);\n      --color-btn-outline-hover-counter-bg: rgba(255, 255, 255, 0.2);\n      --color-btn-outline-selected-text: #ffffff;\n      --color-btn-outline-selected-bg: #0d419d;\n      --color-btn-outline-selected-border: rgba(240, 246, 252, 0.1);\n      --color-btn-outline-selected-shadow: 0 0 transparent;\n      --color-btn-outline-disabled-text: $subtext0;\n      --color-btn-outline-disabled-bg: $surface2;\n      --color-btn-outline-disabled-counter-bg: rgba(31, 111, 235, 0.05);\n      --color-btn-outline-focus-border: rgba(240, 246, 252, 0.1);\n      --color-btn-outline-focus-shadow: 0 0 0 3px rgba(17, 88, 199, 0.4);\n      --color-btn-outline-counter-bg: rgba(31, 111, 235, 0.1);\n      --color-btn-danger-text: $base;\n      --color-btn-danger-bg: $red;\n      --color-btn-danger-hover-text: $base;\n      --color-btn-danger-hover-bg: hoverColor($red);\n      --color-btn-danger-hover-border: transparent;\n      --color-btn-danger-hover-shadow: 0 0 transparent;\n      --color-btn-danger-hover-inset-shadow: 0 0 transparent;\n      --color-btn-danger-hover-icon: $base;\n      --color-btn-danger-hover-counter-bg: rgba(255, 255, 255, 0.2);\n      --color-btn-danger-selected-text: $base;\n      --color-btn-danger-selected-bg: activeColor($red);\n      --color-btn-danger-selected-border: transparent;\n      --color-btn-danger-selected-shadow: 0 0 transparent;\n      --color-btn-danger-disabled-text: $crust;\n      --color-btn-danger-disabled-bg: disabledColor($red);\n      --color-btn-danger-disabled-counter-bg: rgba(218, 54, 51, 0.05);\n      --color-btn-danger-focus-border: #f85149;\n      --color-btn-danger-focus-shadow: 0 0 0 3px rgba(248, 81, 73, 0.4);\n      --color-btn-danger-counter-bg: rgba(218, 54, 51, 0.1);\n      --color-btn-danger-icon: #f85149;\n      --color-underlinenav-icon: #6e7681;\n      --color-underlinenav-border-hover: rgba(110, 118, 129, 0.4);\n      --color-action-list-item-inline-divider: rgba(48, 54, 61, 0.48);\n      --color-action-list-item-default-hover-bg:  $surface0;\n      --color-action-list-item-default-hover-border: rgba(0, 0, 0, 0);\n      --color-action-list-item-default-active-bg: rgba(177, 186, 196, 0.2);\n      --color-action-list-item-default-active-border: rgba(0, 0, 0, 0);\n      --color-action-list-item-default-selected-bg: $surface1;\n      --color-action-list-item-danger-hover-bg: rgba(248, 81, 73, 0.16);\n      --color-action-list-item-danger-active-bg: rgba(248, 81, 73, 0.24);\n      --color-action-list-item-danger-hover-text: #ff7b72;\n      --color-switch-track-bg: #010409;\n      --color-switch-track-border: #6e7681;\n      --color-switch-track-checked-bg: rgba(31, 111, 235, 0.35);\n      --color-switch-track-checked-hover-bg: rgba(31, 111, 235, 0.5);\n      --color-switch-track-checked-active-bg: rgba(31, 111, 235, 0.65);\n      --color-switch-track-checked-border: #58a6ff;\n      --color-switch-knob-checked-bg: #1f6feb;\n      --color-switch-knob-checked-disabled-bg: #484f58;\n      --color-fg-default:  $text;\n      --color-fg-muted: $subtext1;\n      --color-fg-subtle: $subtext1;\n      --color-fg-on-emphasis:  $base;\n      --color-canvas-default:  $base;\n      --color-canvas-overlay:  $mantle;\n      --color-canvas-inset: $surface0;\n      --color-canvas-subtle:  $mantle;\n      --color-border-default:  $surface1;\n      --color-border-muted:  $surface0;\n      --color-border-subtle: rgba(240, 246, 252, 0.1);\n      --color-shadow-small: 0 0 transparent;\n      --color-shadow-medium: 0 3px 6px $shadow;\n      --color-shadow-large: 0 8px 24px $shadow;\n      --color-shadow-extra-large: 0 12px 48px $shadow;\n      --color-neutral-emphasis-plus: #6e7681;\n      --color-neutral-emphasis: $overlay2;\n      --color-neutral-muted: rgba(110, 118, 129, 0.4);\n      --color-neutral-subtle: rgba(110, 118, 129, 0.1);\n      if (blueaccent) {\n          --color-accent-fg:  $blue;\n          --color-accent-emphasis:  $blue;\n          --color-accent-muted: alpha($blue, 0.4);\n          --color-accent-subtle: alpha($blue, 0.15);\n      } else {\n          --color-accent-fg:  $rosewater;\n          --color-accent-emphasis:  $rosewater;\n          --color-accent-muted: alpha($rosewater, 0.4);\n          --color-accent-subtle: alpha($rosewater, 0.15);\n      }\n      --color-success-fg:  $green;\n      --color-success-emphasis:  $green;\n      --color-success-muted: rgba(46, 160, 67, 0.4);\n      --color-success-subtle: rgba(46, 160, 67, 0.15);\n      --color-attention-fg: $peach;\n      --color-attention-emphasis: $peach;\n      --color-attention-muted: rgba(187, 128, 9, 0.4);\n      --color-attention-subtle: rgba(187, 128, 9, 0.15);\n      --color-severe-fg: $maroon;\n      --color-severe-emphasis: $maroon;\n      --color-severe-muted: rgba(219, 109, 40, 0.4);\n      --color-severe-subtle: rgba(219, 109, 40, 0.15);\n      --color-danger-fg: $red;\n      --color-danger-emphasis:  $red;\n      --color-danger-muted: rgba(248, 81, 73, 0.4);\n      --color-danger-subtle: rgba(248, 81, 73, 0.15);\n      --color-open-fg:  $green;\n      --color-open-emphasis:  $green;\n      --color-open-muted: rgba(46, 160, 67, 0.4);\n      --color-open-subtle: rgba(46, 160, 67, 0.15);\n      --color-closed-fg:  $red;\n      --color-closed-emphasis:  $red;\n      --color-closed-muted: rgba(248, 81, 73, 0.4);\n      --color-closed-subtle: rgba(248, 81, 73, 0.15);\n      --color-done-fg:  $mauve;\n      --color-done-emphasis:  $mauve;\n      --color-done-muted: rgba(163, 113, 247, 0.4);\n      --color-done-subtle: rgba(163, 113, 247, 0.15);\n      --color-sponsors-fg: $mauve;\n      --color-sponsors-emphasis: $mauve;\n      --color-sponsors-muted: rgba(219, 97, 162, 0.4);\n      --color-sponsors-subtle: rgba(219, 97, 162, 0.15);\n      if (blueaccent) {\n        --color-primer-fg-disabled: alpha($blue, .5);\n      } else {\n        --color-primer-fg-disabled: alpha($rosewater, .5);\n      }\n      --color-primer-canvas-backdrop: rgba(1, 4, 9, 0.8);\n      --color-primer-canvas-sticky: rgba(13, 17, 23, 0.95);\n      --color-primer-border-active:  $red;\n      --color-primer-border-contrast: rgba(255, 255, 255, 0.2);\n      --color-primer-shadow-highlight: 0 0 transparent;\n      --color-primer-shadow-inset: 0 0 transparent;\n      --color-primer-shadow-focus: 0 0 0 3px #0c2d6b;\n      --color-scale-black: #010409;\n      --color-scale-white: #ffffff;\n      --color-scale-gray-0: #f0f6fc;\n      --color-scale-gray-1: #c9d1d9;\n      --color-scale-gray-2: #b1bac4;\n      --color-scale-gray-3: #8b949e;\n      --color-scale-gray-4: #6e7681;\n      --color-scale-gray-5: #484f58;\n      --color-scale-gray-6: #30363d;\n      --color-scale-gray-7: #21262d;\n      --color-scale-gray-8: #161b22;\n      --color-scale-gray-9: #0d1117;\n      --color-scale-blue-0: #cae8ff;\n      --color-scale-blue-1: #a5d6ff;\n      --color-scale-blue-2: #79c0ff;\n      --color-scale-blue-3: #58a6ff;\n      --color-scale-blue-4: #388bfd;\n      --color-scale-blue-5: #1f6feb;\n      --color-scale-blue-6: #1158c7;\n      --color-scale-blue-7: #0d419d;\n      --color-scale-blue-8: #0c2d6b;\n      --color-scale-blue-9: #051d4d;\n      --color-scale-green-0: #aff5b4;\n      --color-scale-green-1: #7ee787;\n      --color-scale-green-2: #56d364;\n      --color-scale-green-3: #3fb950;\n      --color-scale-green-4: #2ea043;\n      --color-scale-green-5: #238636;\n      --color-scale-green-6: #196c2e;\n      --color-scale-green-7: #0f5323;\n      --color-scale-green-8: #033a16;\n      --color-scale-green-9: #04260f;\n      --color-scale-yellow-0: #f8e3a1;\n      --color-scale-yellow-1: #f2cc60;\n      --color-scale-yellow-2: #e3b341;\n      --color-scale-yellow-3: #d29922;\n      --color-scale-yellow-4: #bb8009;\n      --color-scale-yellow-5: #9e6a03;\n      --color-scale-yellow-6: #845306;\n      --color-scale-yellow-7: #693e00;\n      --color-scale-yellow-8: #4b2900;\n      --color-scale-yellow-9: #341a00;\n      --color-scale-orange-0: #ffdfb6;\n      --color-scale-orange-1: #ffc680;\n      --color-scale-orange-2: #ffa657;\n      --color-scale-orange-3: #f0883e;\n      --color-scale-orange-4: #db6d28;\n      --color-scale-orange-5: #bd561d;\n      --color-scale-orange-6: #9b4215;\n      --color-scale-orange-7: #762d0a;\n      --color-scale-orange-8: #5a1e02;\n      --color-scale-orange-9: #3d1300;\n      --color-scale-red-0: #ffdcd7;\n      --color-scale-red-1: #ffc1ba;\n      --color-scale-red-2: #ffa198;\n      --color-scale-red-3: #ff7b72;\n      --color-scale-red-4: #f85149;\n      --color-scale-red-5: #da3633;\n      --color-scale-red-6: #b62324;\n      --color-scale-red-7: #8e1519;\n      --color-scale-red-8: #67060c;\n      --color-scale-red-9: #490202;\n      --color-scale-purple-0: #eddeff;\n      --color-scale-purple-1: #e2c5ff;\n      --color-scale-purple-2: #d2a8ff;\n      --color-scale-purple-3: #bc8cff;\n      --color-scale-purple-4: #a371f7;\n      --color-scale-purple-5: #8957e5;\n      --color-scale-purple-6: #6e40c9;\n      --color-scale-purple-7: #553098;\n      --color-scale-purple-8: #3c1e70;\n      --color-scale-purple-9: #271052;\n      --color-scale-pink-0: #ffdaec;\n      --color-scale-pink-1: #ffbedd;\n      --color-scale-pink-2: #ff9bce;\n      --color-scale-pink-3: #f778ba;\n      --color-scale-pink-4: #db61a2;\n      --color-scale-pink-5: #bf4b8a;\n      --color-scale-pink-6: #9e3670;\n      --color-scale-pink-7: #7d2457;\n      --color-scale-pink-8: #5e103e;\n      --color-scale-pink-9: #42062a;\n      --color-scale-coral-0: #FFDDD2;\n      --color-scale-coral-1: #FFC2B2;\n      --color-scale-coral-2: #FFA28B;\n      --color-scale-coral-3: #F78166;\n      --color-scale-coral-4: #EA6045;\n      --color-scale-coral-5: #CF462D;\n      --color-scale-coral-6: #AC3220;\n      --color-scale-coral-7: #872012;\n      --color-scale-coral-8: #640D04;\n      --color-scale-coral-9: #460701;\n  }\n\n\n  [data-color-mode=\"light\"][data-light-theme*=\"dark\"],\n  [data-color-mode=\"light\"][data-light-theme*=\"light\"],\n  [data-color-mode=\"dark\"][data-dark-theme*=\"dark\"],\n  [data-color-mode=\"dark\"][data-dark-theme*=\"light\"],\n  [data-color-mode=\"auto\"][data-dark-theme*=\"dark\"],\n  [data-color-mode=\"auto\"][data-dark-theme*=\"light\"] {\n      --color-workflow-card-connector: var(--color-scale-gray-5);\n      --color-workflow-card-connector-bg: var(--color-scale-gray-5);\n      --color-workflow-card-connector-inactive: var(--color-border-default);\n      --color-workflow-card-connector-inactive-bg: var(--color-border-default);\n      --color-workflow-card-connector-highlight: var(--color-scale-blue-5);\n      --color-workflow-card-connector-highlight-bg: var(--color-scale-blue-5);\n      --color-workflow-card-bg: var(--color-scale-gray-7);\n      --color-workflow-card-inactive-bg: var(--color-canvas-inset);\n      --color-workflow-card-header-shadow: rgba(27, 31, 35, 0.04);\n      --color-workflow-card-progress-complete-bg: var(--color-scale-blue-5);\n      --color-workflow-card-progress-incomplete-bg: var(--color-scale-gray-6);\n      --color-discussions-state-answered-icon: var(--color-scale-green-3);\n      --color-bg-discussions-row-emoji-box: var(--color-scale-gray-6);\n      --color-notifications-button-text: var(--color-scale-white);\n      --color-notifications-button-hover-text: var(--color-scale-white);\n      --color-notifications-button-hover-bg: var(--color-scale-blue-4);\n      --color-notifications-row-read-bg: var(--color-canvas-default);\n      --color-notifications-row-bg: var(--color-canvas-subtle);\n      --color-icon-directory: $text;\n      --color-checks-step-error-icon: var(--color-scale-red-4);\n      --color-calendar-halloween-graph-day-L1-bg: #631c03;\n      --color-calendar-halloween-graph-day-L2-bg: #bd561d;\n      --color-calendar-halloween-graph-day-L3-bg: #fa7a18;\n      --color-calendar-halloween-graph-day-L4-bg: #fddf68;\n      --color-calendar-graph-day-bg:  $surface0;\n      --color-calendar-graph-day-border: transparent;\n      /* These could do with a bit of refining */\n      --color-calendar-graph-day-L1-bg: spin(rgba($green, 40%), 15deg);\n      --color-calendar-graph-day-L2-bg: spin(rgba($green, 60%), 10deg);\n      --color-calendar-graph-day-L3-bg: spin(rgba($green, 80%), 5deg);\n      --color-calendar-graph-day-L4-bg: $green;\n      --color-calendar-graph-day-L1-border: transparent;\n      --color-calendar-graph-day-L2-border: transparent;\n      --color-calendar-graph-day-L3-border: transparent;\n      --color-calendar-graph-day-L4-border: transparent;\n      --color-user-mention-fg: var(--color-scale-yellow-0);\n      --color-user-mention-bg: var(--color-scale-yellow-8);\n      --color-text-white:  $text;\n  }\n\n  /* Buttons */\n  .btn-danger {\n      background: var(--color-btn-danger-bg)\n  }\n\n  /* Issue tags */\n  .hx_IssueLabel {\n      --text: $text;\n  }\n  if ($type == light) { /* Maybe we could make a custom algorithm that converts the colors to be more catppuccin like? */\n      @css {\n          .hx_IssueLabel {\n              --lightness-threshold: 0.453;\n              --border-threshold: 0.96;\n              --border-alpha: max(0, min(calc((var(--perceived-lightness) - var(--border-threshold)) * 100), 1));\n              //color: hsl(0deg, 0%, calc(var(--lightness-switch) * 100%)) !important;\n              color: var(--text) !important;\n              background: rgb(var(--label-r), var(--label-g), var(--label-b)) !important;\n              border-color: hsla(var(--label-h), calc(var(--label-s) * 1%), calc((var(--label-l) - 25) * 1%), var(--border-alpha)) !important;\n          }\n      }\n  } else {\n      @css {\n          .hx_IssueLabel {\n              --lightness-threshold: 0.6;\n              --background-alpha: 0.18;\n              --border-alpha: 0.3;\n              --lighten-by: calc(((var(--lightness-threshold) - var(--perceived-lightness)) * 100) * var(--lightness-switch));\n              color: hsl(var(--label-h), calc(var(--label-s) * 1%), calc((var(--label-l) + var(--lighten-by)) * 1%)) !important;\n              background: rgba(var(--label-r), var(--label-g), var(--label-b), var(--background-alpha)) !important;\n              border-color: hsla(var(--label-h), calc(var(--label-s) * 1%), calc((var(--label-l) + var(--lighten-by)) * 1%), var(--border-alpha)) !important;\n          }\n      }\n  }\n\n  /* Labels */\n  .Label {\n      color:  $base;\n      border-color: transparent;\n  }\n\n  .Label--secondary {\n      background-color:  $surface0;\n      color:  $text;\n  }\n\n  .Label--success {\n      background-color:  $green;\n  }\n\n  .timeline-comment-header .Label,\n  .timeline-comment .Label {\n      color: var(--color-fg-muted);\n  }\n\n  /* Search */\n  .header-search-input {\n      color:  $text !important;\n  }\n  .header-search-input::placeholder {\n      color: $subtext1 !important;\n  }\n\n  /* Tags */\n  .topic-tag {\n      --color-accent-fg:  $blue;\n      --color-accent-emphasis:  $blue;\n      --color-accent-muted: alpha($blue, 0.4);\n      --color-accent-subtle: alpha($blue, 0.15);\n  }\n\n  /* Misc */\n  .col-md-8 {\n      background-color:  $base;\n  }\n\n  /* Large notification */\n  .flash {\n      background:  $mantle;\n      border-color: transparent;\n  }\n\n  /* Button Fix */\n  .color-bg-subtle {\n      background-color: transparent !important;\n  }\n  .command-palette-details-dialog .color-bg-subtle {\n    background-color: $surface0 !important;\n  }\n  /* Button selection Fix */\n  .navigation-item[aria-selected=\"true\"] .color-fg-muted {\n      color: $base !important;\n  }\n  /* Headers */\n  h1, h2, h3, h4, h5, h6 {\n      color: $subtext1\n  }\n\n  if (usefont) {\n      body,\n      .markdown-body {\n          font-family: inter;\n      }\n  }\n\n  ::selection {\n      background: $surface2 !important;\n  }\n}\n",
+    "usercssData": {
+      "name": "Github Catppuccin",
+      "namespace": "github.com/catppuccin/github",
+      "version": "1.1.7",
+      "description": "Soothing pastel theme for GitHub",
+      "author": "Catppuccin",
+      "updateURL": "https://github.com/catppuccin/github/raw/main/catppuccin.user.css",
+      "preprocessor": "stylus",
+      "vars": {
+        "theme": {
+          "type": "select",
+          "label": "Theme",
+          "name": "theme",
+          "value": null,
+          "default": "Mocha",
+          "options": [
+            {
+              "name": "Latte",
+              "label": "Latte",
+              "value": "Latte"
+            },
+            {
+              "name": "Frappe",
+              "label": "Frappe",
+              "value": "Frappe"
+            },
+            {
+              "name": "Macchiato",
+              "label": "Macchiato",
+              "value": "Macchiato"
+            },
+            {
+              "name": "Mocha",
+              "label": "Mocha",
+              "value": "Mocha"
+            }
+          ]
+        },
+        "topbar": {
+          "type": "checkbox",
+          "label": "Topbar colors",
+          "name": "topbar",
+          "value": null,
+          "default": "1",
+          "options": null
+        },
+        "blueaccent": {
+          "type": "checkbox",
+          "label": "Blue Accent",
+          "name": "blueaccent",
+          "value": null,
+          "default": "0",
+          "options": null
+        },
+        "usefont": {
+          "type": "checkbox",
+          "label": "Use Inter font",
+          "name": "usefont",
+          "value": null,
+          "default": "0",
+          "options": null
+        }
+      }
+    },
+    "author": "Catppuccin",
+    "description": "Soothing pastel theme for GitHub",
+    "name": "Github Catppuccin",
+    "originalDigest": "5b411d2edc6ee1176b4695c4350e3b966f4025e0",
+    "_id": "fb1e566d-7485-4431-bc8e-3da08d403bf6",
+    "_rev": 1671215663046,
+    "etag": "W/\"1f09b136a1c180aa436bb049dd9671b1f4a9d8511940ed2f0b92bba1fae5a169\"",
+    "updateDate": 1669901006365,
+    "id": 25
+  },
+  {
+    "enabled": true,
+    "updateUrl": "https://github.com/catppuccin/libreddit/raw/main/catppuccin.user.css",
+    "installDate": 1664646531342,
+    "sections": [
+      {
+        "code": ""
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           Libreddit Catppuccin\n@namespace      github.com/catppuccin/libreddit\n@version        2.0.2\n@description    Soothing pastel theme for Libreddit\n@author         Catppuccin\n@updateURL      https://github.com/catppuccin/libreddit/raw/main/catppuccin.user.css\n@preprocessor   stylus\n@var select theme \"Theme\" [\"Latte\", \"Frappe\", \"Macchiato\", \"Mocha*\"]\n==/UserStyle== */\n@-moz-document domain(\"libredd.it\"), domain(\"libreddit.spike.codes\"), domain(\"libreddit.dothq.co\"), domain(\"libreddit.kavin.rocks\"), domain(\"reddit.invak.id\"), domain(\"reddit.phii.me\"), domain(\"lr.riverside.rocks\"), domain(\"libreddit.strongthany.cc\"), domain(\"libreddit.database.red\"), domain(\"libreddit.privacy.com.de\"), domain(\"libreddit.domain.glass\"), domain(\"libreddit.sugoma.tk\"), domain(\"libreddit.jamiethalacker.dev\"), domain(\"reddit.artemislena.eu\"), domain(\"r.nf\"), domain(\"libreddit.some-things.org\"), domain(\"reddit.stuehieyr.com\"), domain(\"lr.mint.lgbt\"), domain(\"libreddit.igna.rocks\"), domain(\"libreddit.autarkic.org\"), domain(\"libreddit.flux.industries\"), domain(\"libreddit.drivet.xyz\"), domain(\"lr.oversold.host\"), domain(\"libreddit.de\"), domain(\"libreddit.pussthecat.org\"), domain(\"libreddit.mutahar.rocks\"), domain(\"libreddit.northboot.xyz\"), domain(\"leddit.xyz\"), domain(\"de.leddit.xyz\"), domain(\"lr.cowfee.moe\"), domain(\"libreddit.hu\"), domain(\"libreddit.totaldarkness.net\"), domain(\"libreddit.esmailelbob.xyz\"), domain(\"lr.vern.cc\"), domain(\"libreddit.nl\"), domain(\"lr.stilic.ml\"), domain(\"reddi.tk\"), domain(\"libreddit.bus-hit.me\"), domain(\"libreddit.datatunnel.xyz\"), domain(\"libreddit.crewz.me\"), domain(\"r.walkx.org\"), domain(\"libreddit.kylrth.com\"), domain(\"libreddit.yonalee.eu\"), domain(\"libreddit.winscloud.net\"), domain(\"libreddit.tiekoetter.com\"), domain(\"reddit.rtrace.io\"), domain(\"libreddit.lunar.icu\"), domain(\"libreddit.privacydev.net\"), domain(\"libreddit.notyourcomputer.net\"), domain(\"r.ahwx.org\"), domain(\"bob.fr.to\"), domain(\"reddit.beparanoid.de\"), domain(\"libreddit.dcs0.hu\"), domain(\"reddit.dr460nf1r3.org\"), domain(\"rd.jae.su\"), domain(\"libreddit.mha.fi\"), domain(\"libreddit.foss.wtf\"), domain(\"libreddit.encrypted-data.xyz\"), domain(\"libreddit.eu.org\"), domain(\"l.opnxng.com\") {\n\n\tif (theme==\"Latte\") {\n\n\t\t$type = light\n\n\t\t$rosewater = #dc8a78\n\t\t$flamingo = #dd7878\n\t\t$pink = #ea76cb\n\t\t$mauve = #8839ef\n\t\t$red = #d20f39\n\t\t$maroon = #e64553\n\t\t$peach = #fe640b\n\t\t$yellow = #df8e1d\n\t\t$green = #40a02b\n\t\t$teal = #179299\n\t\t$sky = #04a5e5\n\t\t$sapphire = #209fb5\n\t\t$blue = #1e66f5\n\t\t$lavender = #7287fd\n\n\t\t$text = #4c4f69\n\t\t$subtext1 = #5c5f77\n\t\t$subtext0 = #6c6f85\n\t\t$overlay2 = #7c7f93\n\t\t$overlay1 = #8c8fa1\n\t\t$overlay0 = #9ca0b0\n\t\t$surface2 = #acb0be\n\t\t$surface1 = #bcc0cc\n\t\t$surface0 = #ccd0da\n\t\t$base = #eff1f5\n\t\t$mantle = #e6e9ef\n\t\t$crust = #dce0e8\n\n\t}\n\n\telse if (theme==\"Frappe\") {\n\n\t\t$type = dark\n\n\t\t$rosewater = #f2d5cf\n\t\t$flamingo = #eebebe\n\t\t$pink = #f4b8e4\n\t\t$mauve = #ca9ee6\n\t\t$red = #e78284\n\t\t$maroon = #ea999c\n\t\t$peach = #ef9f76\n\t\t$yellow = #e5c890\n\t\t$green = #a6d189\n\t\t$teal = #81c8be\n\t\t$sky = #99d1db\n\t\t$sapphire = #85c1dc\n\t\t$blue = #8caaee\n\t\t$lavender = #babbf1\n\n\t\t$text = #c6d0f5\n\t\t$subtext1 = #b5bfe2\n\t\t$subtext0 = #a5adce\n\t\t$overlay2 = #949cbb\n\t\t$overlay1 = #838ba7\n\t\t$overlay0 = #737994\n\t\t$surface2 = #626880\n\t\t$surface1 = #51576d\n\t\t$surface0 = #414559\n\t\t$base = #303446\n\t\t$mantle = #292c3c\n\t\t$crust = #232634\n\n\t}\n\n\telse if (theme==\"Macchiato\") {\n\n\t\t$type = dark\n\n\t\t$rosewater = #f4dbd6\n\t\t$flamingo = #f0c6c6\n\t\t$pink = #f5bde6\n\t\t$mauve = #c6a0f6\n\t\t$red = #ed8796\n\t\t$maroon = #ee99a0\n\t\t$peach = #f5a97f\n\t\t$yellow = #eed49f\n\t\t$green = #a6da95\n\t\t$teal = #8bd5ca\n\t\t$sky = #91d7e3\n\t\t$sapphire = #7dc4e4\n\t\t$blue = #8aadf4\n\t\t$lavender = #b7bdf8\n\n\t\t$text = #cad3f5\n\t\t$subtext1 = #b8c0e0\n\t\t$subtext0 = #a5adcb\n\t\t$overlay2 = #939ab7\n\t\t$overlay1 = #8087a2\n\t\t$overlay0 = #6e738d\n\t\t$surface2 = #5b6078\n\t\t$surface1 = #494d64\n\t\t$surface0 = #363a4f\n\t\t$base = #24273a\n\t\t$mantle = #1e2030\n\t\t$crust = #181926\n\n\t}\n\n\telse if (theme==\"Mocha\") {\n\n\t\t$type = dark\n\n\t\t$rosewater = #f5e0dc\n\t\t$flamingo = #f2cdcd\n\t\t$pink = #f5c2e7\n\t\t$mauve = #cba6f7\n\t\t$red = #f38ba8\n\t\t$maroon = #eba0ac\n\t\t$peach = #fab387\n\t\t$yellow = #f9e2af\n\t\t$green = #a6e3a1\n\t\t$teal = #94e2d5\n\t\t$sky = #89dceb\n\t\t$sapphire = #74c7ec\n\t\t$lavender = #b4befe\n\t\t$blue = #89b4fa\n\n\t\t$text = #cdd6f4\n\t\t$subtext1 = #bac2de\n\t\t$subtext0 = #a6adc8\n\t\t$overlay2 = #9399b2\n\t\t$overlay1 = #7f849c\n\t\t$overlay0 = #6c7086\n\t\t$surface2 = #585b70\n\t\t$surface1 = #45475a\n\t\t$surface0 = #313244\n\t\t$base = #1e1e2e\n\t\t$mantle = #181825\n\t\t$crust = #11111b\n\n\t}\n\n\n\t.light,\n\t.dark,\n    .black,\n    .dracula,\n    .gold,\n    .laserwave,\n    .nord,\n    .rosebox,\n    .violet,\n    :root, .dark,\n    :root, .light {\n\t\t--accent: $lavender;\n\t\t--green: $green;\n\t\t--text: $text;\n\t\t--foreground: $crust;\n\t\t--background: $base;\n\t\t--outside: $mantle;\n\t\t--post: $mantle;\n\t\t--panel-border: none;\n\t\t--highlighted: $surface0;\n\t\t--visited: $overlay0;\n\t\t--shadow: 0 5px 15px 0 transparent;\n\n\t\t--nsfw: $peach;\n\t\t--admin: $maroon;\n\n\t}\n\n}\n",
+    "usercssData": {
+      "name": "Libreddit Catppuccin",
+      "namespace": "github.com/catppuccin/libreddit",
+      "version": "2.0.2",
+      "description": "Soothing pastel theme for Libreddit",
+      "author": "Catppuccin",
+      "updateURL": "https://github.com/catppuccin/libreddit/raw/main/catppuccin.user.css",
+      "preprocessor": "stylus",
+      "vars": {
+        "theme": {
+          "type": "select",
+          "label": "Theme",
+          "name": "theme",
+          "value": null,
+          "default": "Mocha",
+          "options": [
+            {
+              "name": "Latte",
+              "label": "Latte",
+              "value": "Latte"
+            },
+            {
+              "name": "Frappe",
+              "label": "Frappe",
+              "value": "Frappe"
+            },
+            {
+              "name": "Macchiato",
+              "label": "Macchiato",
+              "value": "Macchiato"
+            },
+            {
+              "name": "Mocha",
+              "label": "Mocha",
+              "value": "Mocha"
+            }
+          ]
+        }
+      }
+    },
+    "author": "Catppuccin",
+    "description": "Soothing pastel theme for Libreddit",
+    "name": "Libreddit Catppuccin",
+    "originalDigest": "bd295eca868ea47f7b2c3032931e2bfae1ebe600",
+    "_id": "b73fd220-8363-460b-ab3b-6facb505fc71",
+    "_rev": 1664646531350,
+    "id": 26
+  },
+  {
+    "enabled": true,
+    "installDate": 1666525518984,
+    "name": "wiki.c2.com",
+    "sections": [
+      {
+        "code": ".page {\n    min-width: 90%;\n    margin-left: 4%;\n}",
+        "domains": [
+          "wiki.c2.com"
+        ]
+      }
+    ],
+    "updateDate": 1666525518984,
+    "_id": "a3b7be52-6c81-4423-b864-d109eef83e58",
+    "_rev": 1666525518984,
+    "id": 27
+  },
+  {
+    "enabled": true,
+    "installDate": 1664523580333,
+    "name": "overleaf.com",
+    "sections": [
+      {
+        "code": ".cookie-banner {\n    display: none;\n}",
+        "domains": [
+          "overleaf.com"
+        ]
+      }
+    ],
+    "updateDate": 1664523580333,
+    "_id": "136d6695-e4b0-43f1-b81d-b6ab5b340e1b",
+    "_rev": 1671215663046,
+    "id": 28
+  },
+  {
+    "enabled": true,
+    "installDate": 1665240042591,
+    "name": "elmprogramming.com",
+    "sections": [
+      {
+        "code": "#breadcrumb {\n    background: #11111B !important;\n}\n\n.page-hero {\n    background: none;\n}",
+        "domains": [
+          "elmprogramming.com"
+        ]
+      }
+    ],
+    "updateDate": 1667660155281,
+    "_id": "bbd25447-06d3-4632-8805-f9011bd0e190",
+    "_rev": 1671215663752,
+    "id": 29
+  },
+  {
+    "enabled": true,
+    "installDate": 1666849418391,
+    "name": "elixir-lang.org",
+    "sections": [
+      {
+        "code": ".highlight,\n.highlighter-rouge {\n    background-color: #1A1A2A;\n    border-color: #11111B;\n}",
+        "domains": [
+          "elixir-lang.org"
+        ]
+      }
+    ],
+    "updateDate": 1666849682987,
+    "_id": "cab300ec-bb03-40eb-977e-a23f1147f3ca",
+    "_rev": 1671215663752,
+    "id": 30
+  },
+  {
+    "enabled": true,
+    "updateUrl": "https://raw.githubusercontent.com/catppuccin/startpage/main/catpuccin.user.css",
+    "url": "https://github.com/catppuccin/startpage",
+    "installDate": 1667657273058,
+    "sections": [
+      {
+        "code": ""
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name         Startpage Catppuccin\n@namespace    github.com/catppuccin/startpage\n@homepageURL  https://github.com/catppuccin/startpage\n@version      0.1.0\n@description  Catppuccin-based theme for Startpage.com.\n@author       Bart Libert\n@preprocessor stylus\n@var select lighttheme \"Light Theme\" [\"Latte*\", \"Frappe\", \"Macchiato\", \"Mocha\"]\n@var select darktheme \"Dark Theme\" [\"Latte\", \"Frappe\", \"Macchiato\", \"Mocha*\"]\n==/UserStyle== */\n@-moz-document domain(\"startpage.com\") {\n\n  set_colours(flavour) {\n    if (flavour==\"Latte\") {\n      --ctp-rosewater: #dc8a78;\n      --ctp-flamingo: #dd7878;\n      --ctp-green: #40a02b;\n      --ctp-blue: #1e66f5;\n      --ctp-lavender: #7287fd;\n      --ctp-text: #4c4f69;\n      --ctp-subtext1: #5c5f77;\n      --ctp-base: #eff1f5;\n      --ctp-mantle: #e6e9ef;\n    }\n\n    if (flavour==\"Frappe\") {\n      --ctp-rosewater: #f2d5cf;\n      --ctp-flamingo: #eebebe;\n      --ctp-green: #a6d189;\n      --ctp-blue: #8caaee;\n      --ctp-lavender: #babbf1;\n      --ctp-text: #c6d0f5;\n      --ctp-subtext1: #b5bfe2;\n      --ctp-base: #303446;\n      --ctp-mantle: #292c3c;\n    }\n\n    if (flavour==\"Macchiato\") {\n      --ctp-rosewater: #f4dbd6;\n      --ctp-flamingo: #f0c6c6;\n      --ctp-green: #a6da95;\n      --ctp-blue: #8aadf4;\n      --ctp-lavender: #b4befe;\n      --ctp-text: #cad3f5;\n      --ctp-subtext1: #b8c0e0;\n      --ctp-base: #24273a;\n      --ctp-mantle: #1e2030;\n    }\n\n    if (flavour==\"Mocha\") {\n      --ctp-rosewater: #f5e0dc;\n      --ctp-flamingo: #f2cdcd;\n      --ctp-green: #a6e3a1;\n      --ctp-blue: #89b4fa;\n      --ctp-lavender: #cba6f7;\n      --ctp-text: #cdd6f4;\n      --ctp-subtext1: #bac2de;\n      --ctp-base: #11111B;\n      --ctp-mantle: #1E1E2E;\n    }\n  }\n\n  @media (prefers-color-scheme: light) {\n    :root {\n      if (lighttheme==\"Frappe\") {\n        set_colours(Frappe)\n      }\n      else if (lighttheme==\"Macchiato\") {\n        set_colours(Macchiato)\n      }\n      else if (lighttheme==\"Mocha\") {\n        set_colours(Mocha)\n      }\n      else {\n        set_colours(Latte)\n      }\n    }\n  }\n\n  @media (prefers-color-scheme: dark) {\n    :root {\n      if (darktheme==\"Latte\") {\n        set_colours(Latte)\n      }\n      else if (darktheme==\"Frappe\") {\n        set_colours(Frappe)\n      }\n      else if (darktheme==\"Macchiato\") {\n        set_colours(Macchiato)\n      }\n      else {\n        set_colours(Mocha)\n      }\n    }\n  }\n\n  .header,\n  .wp-qi-sb__result,\n  .linkHover,\n  .footer__container {\n    background: var(--ctp-mantle);\n  }\n\n  .layout-web,\n  .layout-web__body,\n  .w-gl {\n    background: var(--ctp-mantle) !important;\n  }\n  .wp-qi-sb__result {\n    border: 1px solid var(--ctp-mantle) !important;\n  }\n  .wp-qi-sb__top-square-img {\n    border-bottom: 1px solid (--ctp-mantle) !important;\n  }\n\n  /* fonts */\n  .w-gl__result-title,\n  .inline-nav-menu__link,\n  .wp-qi-sb__title {\n    color: var(--ctp-text) !important;\n  }\n  .w-gl__result,\n  .search-filter-time__dropdown,\n  .search-filter-region__dropdown,\n  .search-filter-family__field-label,\n  .wp-qi-sb__extract {\n    color: var(--ctp-subtext1) !important;\n  }\n  .w-gl__result-url {\n    color: var(--ctp-blue) !important;\n  }\n  .wp-qi-sb__expand-text,\n  .inline-nav-menu__link__active,\n  .inline-nav-menu__link:hover {\n    color: var(--ctp-green) !important;\n  }\n  .inline-nav-menu__link__active,\n  .inline-nav-menu__link__post-link:hover {\n    border-bottom: 2px solid var(--ctp-green) !important;\n  }\n  .pagination .num--active {\n    background: var(--ctp-flamingo) !important;\n    border: 1px dashed var(--ctp-flamingo) !important;\n  }\n\n  .pagination__num:hover,\n  .pagination__next-prev-button:hover {\n    background: var(--ctp-blue) !important;\n    border: 1px solid var(--ctp-blue) !important;\n  }\n\n  header {\n    background-color: var(--ctp-mantle) !important;\n  }\n\n  .w-gl__result-title:visited {\n    color: var(--ctp-lavender) !important;\n  }\n}\n\n.w-gl__label,\n.layout-web__footer,\n#feedback-button-container,\n.top-nav-container,\n.home-btn-logo\n{\n    display: none;\n}\n\n.layout-web__mainline,\n.mainline-results,\n.layout-web__search-filters-container \n{\n    min-width: 95%;\n}\n\n.css-ve33fw {\n    display: flex;\n    padding: 10px;\n    padding-right: 100px;\n}\n\n.header-inner-container {\n    flex: content;\n    margin-left: 102px;\n    padding-left: 1rem;\n}\n\n.layout-web__body {\n    margin-top: 60px;\n}\n",
+    "usercssData": {
+      "name": "Startpage Catppuccin",
+      "namespace": "github.com/catppuccin/startpage",
+      "homepageURL": "https://github.com/catppuccin/startpage",
+      "version": "0.1.0",
+      "description": "Catppuccin-based theme for Startpage.com.",
+      "author": "Bart Libert",
+      "preprocessor": "stylus",
+      "vars": {
+        "lighttheme": {
+          "type": "select",
+          "label": "Light Theme",
+          "name": "lighttheme",
+          "value": "Frappe",
+          "default": "Latte",
+          "options": [
+            {
+              "name": "Latte",
+              "label": "Latte",
+              "value": "Latte"
+            },
+            {
+              "name": "Frappe",
+              "label": "Frappe",
+              "value": "Frappe"
+            },
+            {
+              "name": "Macchiato",
+              "label": "Macchiato",
+              "value": "Macchiato"
+            },
+            {
+              "name": "Mocha",
+              "label": "Mocha",
+              "value": "Mocha"
+            }
+          ]
+        },
+        "darktheme": {
+          "type": "select",
+          "label": "Dark Theme",
+          "name": "darktheme",
+          "value": "Mocha",
+          "default": "Mocha",
+          "options": [
+            {
+              "name": "Latte",
+              "label": "Latte",
+              "value": "Latte"
+            },
+            {
+              "name": "Frappe",
+              "label": "Frappe",
+              "value": "Frappe"
+            },
+            {
+              "name": "Macchiato",
+              "label": "Macchiato",
+              "value": "Macchiato"
+            },
+            {
+              "name": "Mocha",
+              "label": "Mocha",
+              "value": "Mocha"
+            }
+          ]
+        }
+      }
+    },
+    "author": "Bart Libert",
+    "description": "Catppuccin-based theme for Startpage.com.",
+    "name": "Startpage Catppuccin",
+    "originalDigest": "b8b4937814119b63981e412892e4e3465774b9d8",
+    "_id": "942b7f7d-f121-40dd-aa5b-f85f62f539e5",
+    "_rev": 1671219424464,
+    "updateDate": 1671219424464,
+    "id": 31
+  },
+  {
+    "enabled": true,
+    "installDate": 1669227331939,
+    "name": "gchq.github.io",
+    "sections": [
+      {
+        "code": "#banner {\n    background-color: white;\n}",
+        "domains": [
+          "gchq.github.io"
+        ]
+      }
+    ],
+    "updateDate": 1669227331940,
+    "_id": "b9554027-fc8f-4b18-9140-c0c84023aefe",
+    "_rev": 1671215663840,
+    "id": 32
+  },
+  {
+    "enabled": true,
+    "installDate": 1669311817415,
+    "name": "reddit.com",
+    "sections": [
+      {
+        "code": "._1tvdSTbdxaK-BnUbzUIqIY,\n._3Kd8DQpBIbsr5E1JcrMFTY,\n._20fGT0XJD3MvX9yBsVeKMn,\n._2L5G9B5yaoqW3IegiYN-FL,\n._1gVVmSnHZpkUgVShsn7-ua,\n._1r4smTyOEZFO91uFIdWW6T\n{\n    display: none !important;\n}\n\n._1OVBBWLtHoSPfGCRaPzpTf {\n    min-width: 100%;\n}\n\n#AppRouter-main-content {\n    padding: 0;\n}\n\n._31N0dvxfpsO6Ur5AKx4O5d {\n    background: #1e1e2e;\n}",
+        "domains": [
+          "reddit.com"
+        ]
+      }
+    ],
+    "updateDate": 1670307491447,
+    "_id": "d26ce446-3b66-4cdc-9310-4babe02a347f",
+    "_rev": 1671215663840,
+    "id": 33
+  },
+  {
+    "enabled": true,
+    "installDate": 1669967072432,
+    "name": "hexdocs.pm",
+    "sections": [
+      {
+        "code": ".sidebar,\n.sidebar-header,\n.search-input,\ncode\n{\n    background-color: #1e1e2e !important;\n}\n\n.sidebar {\n    border-width: 2px;\n    border-right-style: solid;\n    border-color: #1e1e2e !important;\n}\n\n.sidebar,\n#content,\n.content-outer\n{\n    background-color: #11111b !important;\n}\n\n.gradient {\n    display: none;\n}",
+        "domains": [
+          "hexdocs.pm"
+        ]
+      }
+    ],
+    "updateDate": 1670266034756,
+    "_id": "c4ce9b85-6801-4cce-a293-4661932ef946",
+    "_rev": 1671215663840,
+    "id": 34
+  },
+  {
+    "enabled": true,
+    "installDate": 1670401890678,
+    "name": "medium.com",
+    "sections": [
+      {
+        "code": "div.ah:nth-child(3) > div:nth-child(1) {\n    display: none !important;\n}\n\n.gb > div:nth-child(1) > div:nth-child(1) {\n    min-width: 85% !important;\n}",
+        "domains": [
+          "medium.com"
+        ]
+      }
+    ],
+    "updateDate": 1670401953370,
+    "_id": "0b040ce9-c4fd-4df7-bbb8-2f97b02edae3",
+    "_rev": 1671215663840,
+    "id": 35
+  },
+  {
+    "enabled": true,
+    "installDate": 1670402167676,
+    "name": "blog.appsignal.com",
+    "sections": [
+      {
+        "code": "header {\n    display: none !important;\n}",
+        "domains": [
+          "blog.appsignal.com"
+        ]
+      }
+    ],
+    "updateDate": 1670402562482,
+    "_id": "81b5abcb-655e-4cc2-85bc-a8bd28a9a471",
+    "_rev": 1671215663840,
+    "id": 36
+  }
+]
