@@ -112,6 +112,7 @@ return packer.startup(function(use)
 	use({ "lervag/vimtex", ft = { "tex" } })
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", ft = { "markdown" } })
 	use({ "preservim/vim-markdown", ft = { "markdown" } })
+	use("Pocco81/auto-save.nvim")
 
 	-- misc
 	use("windwp/nvim-autopairs")
