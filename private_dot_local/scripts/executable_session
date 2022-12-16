@@ -1,0 +1,9 @@
+#!/bin/sh
+
+choice=$(printf "poweroff\nreboot\nlogout" | dmenu -c -l 3)
+case "$choice" in
+    logout) pidof dwm | xargs kill -9
+        ;;
+    *) sudo "$choice"
+        ;;
+esac
