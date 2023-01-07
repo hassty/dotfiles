@@ -1,7 +1,9 @@
 #!/bin/sh
 
+input="$*"
+
 if [ "$TERM" = "linux" ]; then
-    notify-send 'translation' "$(trans -b -j en:ru -show-original n -show-original-phonetics n -show-translation-phonetics n -show-prompt-message n -show-languages n -no-ansi "$@")"
+    notify-send "$input" "$(trans -b -j en:ru -show-original n -show-original-phonetics n -show-translation-phonetics n -show-prompt-message n -show-languages n -no-ansi "$input")"
 else
-    trans en:ru -j "$@"
+    trans en:ru -j "$input"
 fi
