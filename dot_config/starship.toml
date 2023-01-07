@@ -95,6 +95,10 @@ symbol = ""
 style = "bold yellow"
 symbol = " "
 
+[shlvl]
+disabled = false
+symbol = " "
+
 [git_status]
 disabled = false
 format = '([$all_status$ahead_behind]($style)) '
