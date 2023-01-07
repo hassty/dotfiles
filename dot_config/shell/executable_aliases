@@ -61,19 +61,19 @@ alias mpv="DRI_PRIME=1 mpv"
 
 alias \
     gi="git init" \
+    gc="git clone" \
     ga="git add" \
     gaa="git add --all" \
     gs="git status" \
     gb="git branch" \
-    gc="git commit" \
-    gca="git commit --amend" \
-    gcn="git commit --amend --no-edit" \
+    gm="git commit" \
+    gma="git commit --amend" \
+    gmn="git commit --amend --no-edit" \
     gd="git diff" \
     gds="git diff --staged" \
     gco="git checkout" \
     gcm="git checkout master" \
     gl="git log --oneline --graph" \
-    gm="git merge" \
     gr="git restore"
 
 alias \
