@@ -59,7 +59,7 @@ dmenu.outfgcolor  : accent
 dmenu.outbgcolor  : accent
 dmenu.borderpx    : 1
 
-st.alpha          : 0.95
-st.alphaUnfocused : 0.85
+st.alpha          : 0.98
+st.alphaUnfocused : 0.90
 st.blinktimeout   : 215
 st.font           : Hack Nerd Font Mono:pixelsize=20:antialias=true:autohint=true
