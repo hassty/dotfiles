@@ -45,10 +45,10 @@ dwm.selbgcolor      : accent
 dwm.selbordercolor  : accent
 dwm.selfgcolor      : black
 dwm.borderpx        : 1
-dwm.gappih          : 11
-dwm.gappiv          : 11
-dwm.gappoh          : 12
-dwm.gappov          : 12
+dwm.gappih          : 10
+dwm.gappiv          : 10
+dwm.gappoh          : 11
+dwm.gappov          : 11
 dwm.smartgaps       : 0
 
 dmenu.normfgcolor : accent
