@@ -1322,19 +1322,19 @@ xkb_symbols "pc+us(colemak)+ru:2+inet(evdev)+group(ctrls_toggle)+shift(both_caps
     key <AD07> {
         type[group1]= "FOUR_LEVEL_ALPHABETIC",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [               l,               L,       ampersand,         Lstroke ],
+        symbols[Group1]= [               l,               L,     asciicircum,         Lstroke ],
         symbols[Group2]= [    Cyrillic_ghe,    Cyrillic_GHE ]
     };
     key <AD08> {
         type[group1]= "FOUR_LEVEL_ALPHABETIC",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [               u,               U,        asterisk,          Uacute ],
+        symbols[Group1]= [               u,               U,       ampersand,          Uacute ],
         symbols[Group2]= [    Cyrillic_sha,    Cyrillic_SHA ]
     };
     key <AD09> {
         type[group1]= "FOUR_LEVEL_ALPHABETIC",
         type[group2]= "ALPHABETIC",
-        symbols[Group1]= [               y,               Y,       parenleft,      Udiaeresis ],
+        symbols[Group1]= [               y,               Y,        asterisk,      Udiaeresis ],
         symbols[Group2]= [  Cyrillic_shcha,  Cyrillic_SHCHA ]
     };
     key <AD10> {
