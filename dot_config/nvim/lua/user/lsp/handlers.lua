@@ -44,16 +44,6 @@ M.setup = function()
 	})
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not status_ok then
-	return
-end
-
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
-
 local augroup = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
 M.formatting = function(client, bufnr)
 	if client.supports_method("textDocument/formatting") then
