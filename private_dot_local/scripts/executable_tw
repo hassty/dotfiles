@@ -1,5 +1,5 @@
 #!/bin/sh
 
-streamer="$(wtwitch check | grep ': ' | sed 's/^\s*//g; s/\x1b//g; s/\[[0-9]*m//g' | dmenu -c -i -l 15 -h 20 | cut -d':' -f1)"
+streamer="$(wtwitch check | grep ': ' | sed 's/^\s*//g; s/\x1b//g; s/\[[0-9]*m//g' | dmenu -n -c -i -l 15 | cut -d':' -f1)"
 [ -z "$streamer" ] && exit
 wtwitch watch "$streamer" && notify-send "watching $streamer"
