@@ -17,7 +17,7 @@
 
 #define accent   white
 
-*.fontMain:RobotoMono Nerd Font Mono:size=11
+*.fontMain:RobotoMono Nerd Font Mono:size=12
 
 *.background : black
 *.foreground : white
@@ -42,14 +42,14 @@ dwm.normbgcolor     : black
 dwm.normbordercolor : black
 dwm.normfgcolor     : accent
 dwm.selbgcolor      : accent
-dwm.selbordercolor  : accent
+dwm.selbordercolor  : #1e1e2e
 dwm.selfgcolor      : black
-dwm.borderpx        : 1
+dwm.borderpx        : 2
 dwm.gappih          : 10
 dwm.gappiv          : 10
 dwm.gappoh          : 11
 dwm.gappov          : 11
-dwm.smartgaps       : 0
+dwm.smartgaps       : 1
 
 dmenu.normfgcolor : accent
 dmenu.normbgcolor : black
@@ -57,9 +57,10 @@ dmenu.selfgcolor  : black
 dmenu.selbgcolor  : accent
 dmenu.outfgcolor  : accent
 dmenu.outbgcolor  : accent
-dmenu.borderpx    : 1
+dmenu.borderpx    : 2
+dmenu.fontMain    : RobotoMono Nerd Font Mono:size=13
 
 st.alpha          : 0.98
-st.alphaUnfocused : 0.90
+st.alphaUnfocused : 0.80
 st.blinktimeout   : 215
 st.font           : Hack Nerd Font Mono:pixelsize=20:antialias=true:autohint=true
