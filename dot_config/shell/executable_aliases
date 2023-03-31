@@ -50,14 +50,16 @@ alias \
     lo="lazydocker" \
     g="goto" \
     xc="xclip -sel clip" \
-    v="$EDITOR"
+    v="$EDITOR" \
+    vn="$EDITOR -u NONE" \
+    py="python -q" \
+    ppy="ipython --no-banner --no-confirm-exit"
 
 alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias info="info --vi-keys"
 alias livereload="browser-sync start --server --files ."
 alias p="sudo pacman"
-alias mpv="DRI_PRIME=1 mpv"
 
 alias \
     gi="git init" \
