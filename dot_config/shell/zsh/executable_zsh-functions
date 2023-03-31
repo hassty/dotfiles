@@ -45,3 +45,14 @@ function zsh_add_completion() {
     completion_file="$(basename "${completion_file_path}")"
     if [ "$2" = true ] && compinit "${completion_file:1}"
 }
+
+function ch() {
+    dirs_num="$(dirs -v | wc -l)"
+    if [ "$dirs_num" -le 2 ]; then
+        pushd > /dev/null
+    elif [ "$dirs_num" -le 10 ]; then
+        dirs -v && read -s -k 1 dir_num && pushd +"$dir_num" > /dev/null 2>&1 || printf "senpai, ne tuda((\n"
+    else
+        dirs -v && read -r dir_num && pushd +"$dir_num" > /dev/null 2>&1 || printf "senpai, ne tuda((\n"
+    fi
+}
