@@ -35,20 +35,56 @@ local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
 	return
 end
-cmp.event:on("confirm_done", function(event)
-	local node = ts_utils.get_node_at_cursor()
-	if not node then
-		return
-	end
-	local type = node:type()
-	if
-		type == "named_imports"
-		or type == "use_list"
-		or type == "meta_arguments"
-		or type == "use_declaration"
-		or type == "source_file"
-	then
-		return
-	end
-	cmp_autopairs.on_confirm_done()(event)
-end)
+
+local handlers = require("nvim-autopairs.completion.handlers")
+cmp.event:on(
+	"confirm_done",
+	cmp_autopairs.on_confirm_done({
+		filetypes = {
+			-- "*" is a alias to all filetypes
+			["*"] = {
+				["("] = {
+					kind = {
+						cmp.lsp.CompletionItemKind.Function,
+						cmp.lsp.CompletionItemKind.Method,
+					},
+					handler = handlers["*"],
+				},
+			},
+			lua = {
+				["("] = {
+					kind = {
+						cmp.lsp.CompletionItemKind.Function,
+						cmp.lsp.CompletionItemKind.Method,
+					},
+					---@param char string
+					---@param item item completion
+					---@param bufnr buffer number
+					handler = function(char, item, bufnr)
+						-- Your handler function. Inpect with print(vim.inspect{char, item, bufnr})
+					end,
+				},
+			},
+			tex = false,
+			elm = false,
+		},
+	})
+)
+
+-- function(event)
+-- 	local node = ts_utils.get_node_at_cursor()
+-- 	if not node then
+-- 		return
+-- 	end
+-- 	local type = node:type()
+-- 	if
+-- 		type == "named_imports"
+-- 		or type == "use_list"
+-- 		or type == "meta_arguments"
+-- 		or type == "use_declaration"
+-- 		or type == "source_file"
+-- 	then
+-- 		return
+-- 	end
+-- 	cmp_autopairs.on_confirm_done()(event)
+-- end
