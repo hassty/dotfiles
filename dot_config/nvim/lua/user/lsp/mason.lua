@@ -22,13 +22,10 @@ require("mason").setup({
 			apply_language_filter = "<C-f>",
 		},
 	},
-
 	--[[ install_root_dir = path.concat({ vim.fn.stdpath("data"), "mason" }), ]]
 
 	log_level = vim.log.levels.INFO,
-
 	max_concurrent_installers = 4,
-
 	github = {
 		-- The template URL to use when downloading assets from GitHub.
 		-- The placeholders are the following (in order):
@@ -80,7 +77,6 @@ require("mason-lspconfig").setup_handlers({
 					},
 				},
 			}, -- rust-analyer options
-
 			-- debugging stuff
 			dap = {
 				adapter = {
@@ -106,9 +102,9 @@ require("mason-lspconfig").setup_handlers({
 			settings = settings,
 		})
 	end,
-	["sumneko_lua"] = function()
-		local settings = require("user.lsp.settings.sumneko_lua")
-		lspconfig.sumneko_lua.setup({
+	["lua_ls"] = function()
+		local settings = require("user.lsp.settings.lua_ls")
+		lspconfig.lua_ls.setup({
 			settings = settings,
 		})
 	end,
