@@ -94,7 +94,6 @@ return packer.startup(function(use)
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
-	use("SmiteshP/nvim-gps")
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
