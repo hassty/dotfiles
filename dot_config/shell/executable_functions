@@ -55,6 +55,15 @@ lr() {
     /usr/bin/ls "$fullpath" | eval "$command $fullpath"
 }
 
+# tldr
+t() {
+    if [ $# -gt 0 ]; then
+        tldr "$@"
+    else
+        tldr --list | tr -d "\[\]'' " | tr ',' '\n' | fzf --preview "tldr {1}" --preview-window=right,70% | xargs -ro tldr
+    fi
+}
+
 # i use arch btw
 pf() {
     pacman -Slq | fzf --multi --preview-window '55%,wrap' --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S

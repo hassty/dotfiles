@@ -42,7 +42,6 @@ alias \
     nb="newsboat" \
     ca="calcurse" \
     c="cargo" \
-    t="tldr" \
     ti="timew" \
     ts="timew summary" \
     gt="gotop" \
