@@ -63,7 +63,7 @@ alias p="sudo pacman"
 
 alias \
     gi="git init" \
-    gc="git clone" \
+    gc="git clone --depth 1" \
     ga="git add" \
     gaa="git add --all" \
     gs="git status" \
