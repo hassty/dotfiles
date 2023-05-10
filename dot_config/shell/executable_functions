@@ -48,6 +48,10 @@ qira() {
     docker run --rm -v "$PWD":/mnt -p 3002:3002 -p 4000:4000 -ti qira bash
 }
 
+odump() {
+    objdump --disassembler-color=on -M intel-mnemonic -d "$1" | less --LINE-NUMBERS --chop-long-lines
+}
+
 lr() {
     fullpath="$(readlink -f "$1")"
     command="entr -ccr"
