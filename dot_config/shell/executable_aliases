@@ -31,6 +31,7 @@ alias \
     mcc="mix clean && mix compile"
 
 alias cat="bat -p"
+# alias le="less -R --LINE-NUMBERS --line-num-width=4 -S --shift=1 --quit-if-one-screen -J --status-col-width=1"
 alias vifm="$HOME/.config/vifm/scripts/vifmrun"
 alias vf="$HOME/.config/vifm/scripts/vifmrun"
 
