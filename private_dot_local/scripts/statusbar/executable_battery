@@ -6,7 +6,7 @@ battery="/sys/class/power_supply/BAT0/capacity"
 capacity="$(cat $battery)"
 status="$(cat $battery)"
 
-capacities=("" "" "" "" "" "" "" "" "" "" "")
+capacities=("󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹")
 
 case $BUTTON in
     1) notify-send "$status" "$capacity%" ;;
