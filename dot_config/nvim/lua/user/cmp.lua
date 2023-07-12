@@ -117,7 +117,6 @@ cmp.setup({
 				fallback()
 			end
 		end, { "i", "s" }),
-		["<C-e>"] = cmp.mapping.confirm({ select = true }),
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	},
 	formatting = {
