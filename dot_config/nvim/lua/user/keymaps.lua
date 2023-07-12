@@ -89,8 +89,8 @@ map("n", "<C-w><C-i>", "<C-w>l")
 -- calculate expression
 map("i", "<M-=>", "<C-O>yiW<End>=<C-R>=<C-R>0<CR>")
 
-map("n", "<leader>rs", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]])
-map("v", "<leader>rs", [["hy:%s/<C-r>h//g<Left><Left>]])
+map("n", "<leader>rs", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+map("v", "<leader>rs", [["hy:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 map("n", "<leader>/", "<CMD>lua require('Comment.api').toggle.linewise.current()<CR>")
 map("x", "<leader>/", "<ESC><CMD>lua require('Comment.api').toggle.blockwise(vim.fn.visualmode())<CR>")
