@@ -74,16 +74,6 @@ local mappings = {
 	["f"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
 	["<Tab>"] = { "<C-^>", "Alternate file" },
 
-	p = {
-		name = "Packer",
-		c = { "<cmd>PackerCompile<cr>", "Compile" },
-		f = { "<cmd>Telescope packer<cr>", "Search plugins" },
-		i = { "<cmd>PackerInstall<cr>", "Install" },
-		s = { "<cmd>PackerSync<cr>", "Sync" },
-		S = { "<cmd>PackerStatus<cr>", "Status" },
-		u = { "<cmd>PackerUpdate<cr>", "Update" },
-	},
-
 	g = {
 		name = "Git",
 		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
