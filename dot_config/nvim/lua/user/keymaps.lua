@@ -34,6 +34,10 @@ map("", "gh", "H")
 map("", "gl", "L")
 map("", "<C-s>", '<CMD>call smoothie#do("\\<C-D>")<CR>')
 
+map("n", "<leader>p", [["+p]])
+map({ "n", "v" }, "<leader>y", [["+y]])
+map("n", "<leader>Y", [["+y$]])
+
 map("", "<leader>x", "<CMD>!chmod +x %<CR>")
 
 -- keeping it centered

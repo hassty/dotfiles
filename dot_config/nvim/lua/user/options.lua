@@ -4,7 +4,6 @@ filetype plugin indent on
 ]])
 
 local options = {
-	clipboard = "unnamedplus",
 	conceallevel = 2,
 	cursorline = true,
 	exrc = true,
