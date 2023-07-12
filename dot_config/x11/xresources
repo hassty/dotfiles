@@ -17,7 +17,7 @@
 
 #define accent   white
 
-*.fontMain:RobotoMono Nerd Font Mono:size=12
+*.fontMain:RobotoMono Nerd Font Mono:size=11
 
 *.background : black
 *.foreground : white
