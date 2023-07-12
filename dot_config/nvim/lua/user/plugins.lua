@@ -91,6 +91,7 @@ return packer.startup(function(use)
 	use("p00f/nvim-ts-rainbow")
 	use("windwp/nvim-ts-autotag")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
+	use("nvim-treesitter/nvim-treesitter-context")
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")

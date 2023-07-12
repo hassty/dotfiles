@@ -143,3 +143,7 @@ map("n", "gD", vim.lsp.buf.declaration)
 map("n", "gd", vim.lsp.buf.definition)
 map("n", "gr", require("telescope.builtin").lsp_references)
 map("n", "gm", vim.lsp.buf.implementation)
+
+map("n", "[c", function()
+	require("treesitter-context").go_to_context()
+end, { silent = true })
