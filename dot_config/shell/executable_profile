@@ -57,9 +57,6 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export XINITRC="$XDG_CONFIG_HOME"/x11/xinitrc
 export ZDOTDIR="$XDG_CONFIG_HOME"/shell/zsh
 
-export GVIMINIT='let $MYGVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/gvimrc" : "$XDG_CONFIG_HOME/nvim/init.gvim" | so $MYGVIMRC'
-export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.lua" | so $MYVIMRC'
-
 # use dedicated graphics for hardware acceleration
 export LIBVA_DRIVER_NAME=r600
 
