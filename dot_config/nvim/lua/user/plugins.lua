@@ -29,8 +29,12 @@ if not status_ok then
 	return
 end
 
+local util = require("packer.util")
+
 -- have packer use a popup window
 packer.init({
+	snapshot = "just-works-tm",
+	snapshot_path = util.join_paths(vim.fn.stdpath("config")),
 	display = {
 		open_fn = function()
 			return require("packer.util").float({ border = "rounded" })
