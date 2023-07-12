@@ -146,7 +146,7 @@ cmp.setup({
 		{ name = "crates" },
 	},
 	confirm_opts = {
-		behavior = cmp.ConfirmBehavior.Replace,
+		behavior = cmp.ConfirmBehavior.Insert,
 		select = true,
 	},
 	experimental = {
