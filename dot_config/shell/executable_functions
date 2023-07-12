@@ -41,7 +41,8 @@ cdd() {
 
 # list git repositories and cd
 gf() {
-    cd "$(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="onefetch --no-bold --no-color-palette --show-logo never {}")" || exit 1
+    preview="onefetch --no-bold --no-color-palette --no-art {} 2>/dev/null || echo 'no commits'"
+    cd "$(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="$preview")" || exit 1
 }
 
 qira() {
