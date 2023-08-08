@@ -32,7 +32,6 @@ add-zsh-hook -Uz precmd zsh_update_completion
 export HISTFILE="$XDG_DATA_HOME/zsh-history"
 export HISTSIZE=10000000
 export SAVEHIST=10000000
-export PATH="/home/hasty/.local/share/cargo/bin/:$PATH"
 
 setopt share_history inc_append_history_time
 setopt hist_verify
