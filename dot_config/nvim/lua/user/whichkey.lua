@@ -95,7 +95,7 @@ local mappings = {
 		},
 	},
 
-	u = {
+	l = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 		d = {
