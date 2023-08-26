@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 scrollview.setup({
-	excluded_filetypes = { "NvimTree", "alpha" },
+	excluded_filetypes = { "netrw", "alpha" },
 	current_only = true,
 	winblend = 10,
 	base = "right",

@@ -104,9 +104,7 @@ return packer.startup(function(use)
 	-- git
 	use("lewis6991/gitsigns.nvim")
 
-	-- nvim-tree
-	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua")
+	use("tpope/vim-eunuch")
 
 	-- db
 	use("kristijanhusak/vim-dadbod-completion")

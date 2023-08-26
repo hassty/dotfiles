@@ -69,6 +69,14 @@ t() {
     fi
 }
 
+v() {
+    if [ $# -gt 0 ]; then
+        "${EDITOR}" "$@"
+    else
+        "${EDITOR}" .
+    fi
+}
+
 # i use arch btw
 pf() {
     pacman -Slq | fzf --multi --preview-window '55%,wrap' --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S
