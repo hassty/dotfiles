@@ -52,7 +52,7 @@ null_ls.setup({
 		}),
 		formatting.rustfmt.with({ extra_args = rust_edition }),
 		formatting.beautysh,
-		formatting.sqlformat,
+		formatting.sqlfluff.with({ extra_args = { "--dialect", "postgres" } }),
 		formatting.stylua,
 		formatting.xmllint,
 		formatting.latexindent,
@@ -65,6 +65,7 @@ null_ls.setup({
 		diagnostics.golangci_lint,
 		diagnostics.hadolint,
 		diagnostics.shellcheck,
+		diagnostics.sqlfluff.with({ extra_args = { "--dialect", "postgres" } }),
 		diagnostics.tsc,
 
 		code_actions.eslint_d.with({
