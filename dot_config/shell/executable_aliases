@@ -61,6 +61,10 @@ alias info="info --vi-keys"
 alias livereload="browser-sync start --server --files ."
 alias p="sudo pacman"
 
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 alias \
     gi="git init" \
     gc="git clone --depth 1" \
