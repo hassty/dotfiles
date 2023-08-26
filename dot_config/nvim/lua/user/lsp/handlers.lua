@@ -13,17 +13,16 @@ M.setup = function()
 	end
 
 	local config = {
-		-- disable virtual text
-		virtual_text = false,
+		virtual_text = true,
 		-- show signs
 		signs = {
 			active = signs,
 		},
-		update_in_insert = true,
+		update_in_insert = false,
 		underline = true,
 		severity_sort = true,
 		float = {
-			focusable = false,
+			focusable = true,
 			style = "minimal",
 			border = "rounded",
 			source = "always",
@@ -48,7 +47,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
 M.formatting = function(client, bufnr)
 	if client.supports_method("textDocument/formatting") then
 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-		vim.keymap.set("", "<leader>uf", function()
+		vim.keymap.set("", "<leader>lf", function()
 			vim.lsp.buf.format({ bufnr = bufnr, async = true })
 		end)
 		vim.api.nvim_create_autocmd("BufWritePre", {
