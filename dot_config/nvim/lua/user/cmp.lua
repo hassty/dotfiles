@@ -156,6 +156,8 @@ cmp.setup({
 		comparators = {
 			cmp.config.compare.offset,
 			cmp.config.compare.exact,
+			cmp.config.compare.recently_used,
+			require("clangd_extensions.cmp_scores"),
 			cmp.config.compare.score,
 			require("cmp-under-comparator").under,
 			cmp.config.compare.kind,

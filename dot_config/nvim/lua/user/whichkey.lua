@@ -68,10 +68,12 @@ local opts = {
 }
 
 local mappings = {
-	["e"] = { "<cmd>NvimTreeFindFileToggle<cr>", "Explorer" },
-	["w"] = { "<cmd>silent write!<CR>", "Save" },
-	["c"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
-	["f"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
+	e = { "<cmd>Lexplore<cr>", "Explorer" },
+	w = { "<cmd>silent write!<CR>", "Save" },
+	W = { "<cmd>silent wall!<CR>", "Save All" },
+	c = { "<cmd>bdelete!<CR>", "Close Buffer" },
+	f = { "<cmd>Telescope find_files<cr>", "Find Files" },
+	m = { "<cmd>ClangdSwitchSourceHeader<cr>", "Switch source/header" },
 	["<Tab>"] = { "<C-^>", "Alternate file" },
 
 	g = {

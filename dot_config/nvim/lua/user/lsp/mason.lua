@@ -90,9 +90,14 @@ require("mason-lspconfig").setup_handlers({
 		-- TODO: rust settings
 	end,
 	["clangd"] = function()
+		require("user.lsp.settings.clangd")
 		capabilities = { offsetEncoding = { "utf-16" } }
 		lspconfig.clangd.setup({
 			capabilities = capabilities,
+			on_attach = function()
+				require("clangd_extensions.inlay_hints").setup_autocmd()
+				require("clangd_extensions.inlay_hints").set_inlay_hints()
+			end,
 		})
 	end,
 	["jsonls"] = function()
