@@ -88,22 +88,3 @@ autocmd("VimResized", {
 	pattern = "*",
 	command = "wincmd =",
 })
-
-local statusline = vim.api.nvim_create_augroup("_status_line", { clear = true })
-autocmd("FileType", {
-	group = statusline,
-	pattern = "alpha",
-	callback = function()
-		vim.opt.laststatus = 0
-		vim.opt.ruler = false
-	end,
-})
-
-autocmd("BufUnload", {
-	group = statusline,
-	pattern = "<buffer>",
-	callback = function()
-		vim.opt.laststatus = 3
-		vim.opt.ruler = true
-	end,
-})

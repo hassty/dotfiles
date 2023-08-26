@@ -101,8 +101,16 @@ local mappings = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 		d = {
-			"<cmd>Telescope diagnostics<cr>",
+			function()
+				require("telescope.builtin").diagnostics({ bufnr = 0 })
+			end,
 			"Document Diagnostics",
+		},
+		w = {
+			function()
+				require("telescope.builtin").diagnostics({ bufnr = nil })
+			end,
+			"Workspace Diagnostics",
 		},
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>Mason<cr>", "Installer Info" },

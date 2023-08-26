@@ -77,23 +77,16 @@ return packer.startup(function(use)
 	use("simrat39/rust-tools.nvim")
 	use("Saecki/crates.nvim")
 
-	-- debugging
-	use("mfussenegger/nvim-dap")
-	use("rcarriga/nvim-dap-ui")
-	use("theHamsta/nvim-dap-virtual-text")
-	use("rcarriga/cmp-dap")
 	use("p00f/clangd_extensions.nvim")
 
 	-- telescope
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-	use("nvim-telescope/telescope-packer.nvim")
+	use("nvim-telescope/telescope-ui-select.nvim")
 
 	-- treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("nvim-treesitter/playground")
 	use("nvim-treesitter/nvim-treesitter-textobjects")
-	use("p00f/nvim-ts-rainbow")
 	use("windwp/nvim-ts-autotag")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("nvim-treesitter/nvim-treesitter-context")
@@ -117,18 +110,11 @@ return packer.startup(function(use)
 	use({ "preservim/vim-markdown", ft = { "markdown" } })
 
 	-- misc
-	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
-	use("akinsho/toggleterm.nvim")
-	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
-	use("lukas-reineke/indent-blankline.nvim")
-	use("goolord/alpha-nvim")
 	use("folke/which-key.nvim")
-	use("AndrewRadev/switch.vim")
 	use("norcalli/nvim-colorizer.lua")
 	use("psliwka/vim-smoothie")
-	use("rcarriga/nvim-notify")
 	use("dstein64/nvim-scrollview")
 	use("unblevable/quick-scope")
 	use("tpope/vim-surround")
@@ -136,8 +122,6 @@ return packer.startup(function(use)
 	use("tpope/vim-abolish")
 	use("alker0/chezmoi.vim")
 	use("jeffkreeftmeijer/vim-numbertoggle")
-	use("takac/vim-hardtime")
-	use("stevearc/dressing.nvim")
 
 	-- colorschemes
 	use("marko-cerovac/material.nvim")

@@ -47,7 +47,7 @@ local kind_icons = {
 cmp.setup({
 	-- nvim-cmp by defaults disables autocomplete for prompt buffers
 	enabled = function()
-		return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" or require("cmp_dap").is_dap_buffer()
+		return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt"
 	end,
 	snippet = {
 		expand = function(args)
@@ -127,7 +127,6 @@ cmp.setup({
 				nvim_lsp = "[lsp]",
 				nvim_lua = "[api]",
 				luasnip = "[snip]",
-				dap = "[dap]",
 				buffer = "[buf]",
 				path = "[path]",
 				["vim-dadbod-completion"] = "[db]",
@@ -138,7 +137,6 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
-		{ name = "dap" },
 		{ name = "luasnip" },
 		{ name = "path" },
 		{ name = "buffer", keyword_length = 5 },

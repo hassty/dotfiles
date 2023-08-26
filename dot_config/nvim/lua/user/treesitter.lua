@@ -86,7 +86,7 @@ configs.setup({
 		enable_autocmd = false,
 	},
 	rainbow = {
-		enable = true,
+		enable = false,
 		disable = { "html" }, -- list of languages you want to disable the plugin for
 		extended_mode = true, -- also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
 		max_file_lines = nil, -- do not enable for files with more than n lines, int
