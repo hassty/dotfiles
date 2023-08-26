@@ -9,7 +9,7 @@ require("material").setup({
 	},
 
 	styles = { -- Give comments style such as bold, italic, underline etc.
-		comments = { italic = true },
+		comments = { italic = false },
 		strings = { --[[ bold = true ]]
 		},
 		keywords = { --[[ underline = true ]]
@@ -68,6 +68,7 @@ vim.cmd("colorscheme material")
 vim.cmd([[
 highlight CursorLine guibg=none
 highlight CursorLineNr guifg=#717898
+highlight TreesitterContext guibg=#1f2233
 ]])
 
 local colorizer_status_ok, colorizer = pcall(require, "colorizer")
