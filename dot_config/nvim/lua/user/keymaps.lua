@@ -61,6 +61,9 @@ map("i", "<C-e>", "<End>")
 map("i", "<C-f>", "<Right>")
 map("i", "<C-b>", "<Left>")
 
+map("", "<C-j>", "<CMD>cnext<CR>")
+map("", "<C-k>", "<CMD>cprev<CR>")
+
 -- undo breakpoints
 map("i", ",", ",<C-g>u")
 map("i", ".", ".<C-g>u")
@@ -89,6 +92,8 @@ map("n", "<C-w><C-h>", "<C-w>h")
 map("n", "<C-w><C-n>", "<C-w>j")
 map("n", "<C-w><C-e>", "<C-w>k")
 map("n", "<C-w><C-i>", "<C-w>l")
+
+map("n", "<C-w>d", "<CMD>bwipeout<CR>")
 
 -- calculate expression
 map("i", "<M-=>", "<C-O>yiW<End>=<C-R>=<C-R>0<CR>")
