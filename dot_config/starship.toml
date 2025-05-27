@@ -80,10 +80,10 @@ disabled = true
 truncation_length = 5
 truncation_symbol = "/"
 style = "bold white"
-home_symbol = ""
+home_symbol = "󰋜"
 
 [golang]
-symbol = "ﳑ "
+symbol = "󰟓 "
 
 [rust]
 symbol = " "
@@ -102,12 +102,12 @@ symbol = " "
 [git_status]
 disabled = false
 format = '([$all_status$ahead_behind]($style)) '
-conflicted = '\[ [$count](bright-white bold)\]'
-ahead = '\[[﯁ ](bright-blue)[$count](bright-white bold)\]'
-behind = '\[[﮾ ](white)[$count](bright-white bold)\]'
-diverged = '\[[ ](purple)|[ ﯁ ](bright-blue)[$ahead_count](bright-white bold)[ ﮾ ](white)[$behind_count](bright-white)\]'
+conflicted = '\[󰌺 [$count](bright-white bold)\]'
+ahead = '\[[󰛃 ](bright-blue)[$count](bright-white bold)\]'
+behind = '\[[󰛀 ](white)[$count](bright-white bold)\]'
+diverged = '\[[ ](purple)|[ 󰛃 ](bright-blue)[$ahead_count](bright-white bold)[ 󰛀 ](white)[$behind_count](bright-white)\]'
 untracked = '\[ [$count](bright-white bold)\]'
-stashed = '\[[](yellow) [$count](bright-white bold)\]'
+stashed = '\[[󰏗](yellow) [$count](bright-white bold)\]'
 modified = '\[[ ](bright-yellow)[$count](bright-white bold)\]'
 staged = '\[[ ](bright-green)[$count](bright-white bold)\]'
 renamed = '\[[ ](bright-cyan) [$count](bright-white bold)\]'
@@ -125,7 +125,7 @@ elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
 elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
     GIT_REMOTE_SYMBOL=" "
 elif [[ "$GIT_REMOTE" =~ "git" ]]; then
-    GIT_REMOTE_SYMBOL=" "
+    GIT_REMOTE_SYMBOL="󰊢 "
 else
     GIT_REMOTE_SYMBOL=" "
 fi
