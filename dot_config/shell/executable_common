@@ -9,25 +9,25 @@ if [ -f "$XDG_CONFIG_HOME/shell/functions" ]; then
 fi
 
 # add colors to tty
-if [ "$TERM" = "linux" ]; then
-    printf "\e]P004040A" #black
-    printf "\e]P1B8324C" #darkred
-    printf "\e]P20E567D" #darkgreen
-    printf "\e]P3FFE81F" #brown
-    printf "\e]P4036B92" #darkblue
-    printf "\e]P5A7595D" #darkmagenta
-    printf "\e]P60991AF" #darkcyan
-    printf "\e]P79AD1DC" #lightgrey
-    printf "\e]P86B929A" #darkgrey
-    printf "\e]P9B8324C" #red
-    printf "\e]PA0E567D" #green
-    printf "\e]PBFFE81F" #yellow
-    printf "\e]PC036B92" #blue
-    printf "\e]PDA7595D" #magenta
-    printf "\e]PE0991AF" #cyan
-    printf "\e]PF9AD1DC" #white
-    clear
-fi
+#if [ "$TERM" = "linux" ]; then
+#    printf "\e]P004040A" #black
+#    printf "\e]P1B8324C" #darkred
+#    printf "\e]P20E567D" #darkgreen
+#    printf "\e]P3FFE81F" #brown
+#    printf "\e]P4036B92" #darkblue
+#    printf "\e]P5A7595D" #darkmagenta
+#    printf "\e]P60991AF" #darkcyan
+#    printf "\e]P79AD1DC" #lightgrey
+#    printf "\e]P86B929A" #darkgrey
+#    printf "\e]P9B8324C" #red
+#    printf "\e]PA0E567D" #green
+#    printf "\e]PBFFE81F" #yellow
+#    printf "\e]PC036B92" #blue
+#    printf "\e]PDA7595D" #magenta
+#    printf "\e]PE0991AF" #cyan
+#    printf "\e]PF9AD1DC" #white
+#    clear
+#fi
 
 # autojump
 [ -s /etc/profile.d/autojump.sh ] && . /etc/profile.d/autojump.sh

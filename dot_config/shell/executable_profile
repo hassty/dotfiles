@@ -2,7 +2,7 @@
 
 # set default programs
 export EDITOR="nvim"
-export TERMINAL="st"
+export TERMINAL="ghostty"
 
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -50,16 +50,18 @@ export INPUTRC="$XDG_CONFIG_HOME"/shell/inputrc
 export LESSHISTFILE="$XDG_DATA_HOME"/less/history
 export LESSKEY="$XDG_CONFIG_HOME"/lesskey
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/password-store
-export SUDO_ASKPASS="$HOME"/.local/scripts/dmenupass
+export SUDO_ASKPASS="$HOME"/.local/scripts/wofipass
 export TIMEWARRIORDB="$XDG_CONFIG_HOME"/timewarrior
 export WGETRC="$XDG_CONFIG_HOME"/wget/wgetrc
 export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export XINITRC="$XDG_CONFIG_HOME"/x11/xinitrc
 export ZDOTDIR="$XDG_CONFIG_HOME"/shell/zsh
+export W3M_DIR="$XDG_CONFIG_HOME/w3m"
+export R2_RCFILE="$XDG_CONFIG_HOME/radare2/radare2rc"
 
 # use dedicated graphics for hardware acceleration
-export LIBVA_DRIVER_NAME=r600
+# export LIBVA_DRIVER_NAME=r600
 
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude '.git'"
 export FZF_DEFAULT_OPTS="--bind=ctrl-n:down,ctrl-e:up,ctrl-k:end-of-line,ctrl-j:kill-line --cycle"
@@ -75,11 +77,11 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 # setup PATH
 if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
+  PATH="$HOME/.local/bin:$PATH"
 fi
 
 if [ -d "$HOME/.local/scripts" ]; then
-    PATH="$HOME/.local/scripts:$PATH"
+  PATH="$HOME/.local/scripts:$PATH"
 fi
 
 # add colors to man
@@ -90,6 +92,7 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
+export GROFF_NO_SGR=1
 
 # start ssh-agent
 if ! pgrep -u "$USER" ssh-agent >/dev/null; then
@@ -100,7 +103,7 @@ if [ ! "$SSH_AUTH_SOCK" ]; then
 fi
 
 # startx in tty1
-[ "$(fgconsole 2>/dev/null)" = 1 ] && exec startx "$XDG_CONFIG_HOME/x11/xinitrc" -- vt1
+[ "$(fgconsole 2>/dev/null)" = 1 ] && exec hyprland
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

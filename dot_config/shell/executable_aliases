@@ -14,12 +14,12 @@ alias \
 alias ip="ip --color=auto"
 
 alias \
-    ls="exa --color=automatic --group-directories-first --icons" \
-    la="exa -1a --color=automatic --group-directories-first --icons" \
-    ll="exa -la --color=automatic --group-directories-first --icons --git" \
-    l="exa -la --color=automatic --group-directories-first --icons --git" \
-    lg="exa -la --color=automatic --group-directories-first --icons --git-ignore" \
-    lt="exa -aT --color=automatic --group-directories-first --icons"
+    ls="eza --color=automatic --group-directories-first --icons --hyperlink" \
+    la="eza -1a --color=automatic --group-directories-first --icons --hyperlink" \
+    ll="eza -la --color=automatic --group-directories-first --icons --git --hyperlink" \
+    l="eza -la --color=automatic --group-directories-first --icons --git --hyperlink" \
+    lg="eza -la --color=automatic --group-directories-first --icons --git-ignore --hyperlink" \
+    lt="eza -aT --color=automatic --group-directories-first --icons --hyperlink"
 
 alias \
     i="iex -S mix" \
@@ -31,9 +31,10 @@ alias \
     mcc="mix clean && mix compile"
 
 alias cat="bat -p"
+alias mpv="DRI_PRIME=1 mpv"
 # alias le="less -R --LINE-NUMBERS --line-num-width=4 -S --shift=1 --quit-if-one-screen -J --status-col-width=1"
-alias vifm="$HOME/.config/vifm/scripts/vifmrun"
-alias f="$HOME/.config/vifm/scripts/vifmrun"
+alias vifm="DRI_PRIME=1 /usr/bin/vifm"
+alias f="DRI_PRIME=1 /usr/bin/vifm"
 
 alias \
     mp="ncmpcpp 2>/dev/null" \
@@ -59,6 +60,8 @@ alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias info="info --vi-keys"
 alias livereload="browser-sync start --server --files ."
 alias p="sudo pacman"
+
+alias wtf="whence -vas -fx 4"
 
 alias ...="cd ../.."
 alias ....="cd ../../.."

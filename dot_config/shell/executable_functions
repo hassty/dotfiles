@@ -27,14 +27,14 @@ ex() {
 }
 
 cv() {
-    dst="$(command "$HOME/.config/vifm/scripts/vifmrun" -c 'only' -c 'set millerview' --choose-dir - "$@")"
+    dst="$(command "vifm" -c 'only' -c 'set millerview' --choose-dir - "$@")"
     if [ -z "$dst" ]; then
         return 0
     fi
     cd "$dst" || exit 1
 }
 
-cdd() {
+mkcd() {
     mkdir "$1"
     cd "$1" || exit 1
 }
@@ -50,7 +50,7 @@ qira() {
 }
 
 odump() {
-    objdump --disassembler-color=on -M intel-mnemonic -d "$1" | less --LINE-NUMBERS --chop-long-lines
+    objdump --disassembler-color=on -M intel -d "$1" | less --LINE-NUMBERS --chop-long-lines
 }
 
 lr() {
@@ -66,14 +66,6 @@ t() {
         tldr "$@"
     else
         tldr --list | tr -d "\[\]'' " | tr ',' '\n' | fzf --preview "tldr {1}" --preview-window=right,70% | xargs -ro tldr
-    fi
-}
-
-v() {
-    if [ $# -gt 0 ]; then
-        "${EDITOR}" "$@"
-    else
-        "${EDITOR}" .
     fi
 }
 
