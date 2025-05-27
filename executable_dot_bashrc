@@ -13,6 +13,8 @@ esac
 
 eval "$(starship init bash)"
 
+eval "$(direnv hook bash)"
+
 shopt -s histappend
 shopt -s histverify
 shopt -s cmdhist
