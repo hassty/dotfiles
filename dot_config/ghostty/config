@@ -1,0 +1,11 @@
+confirm-close-surface = false
+font-family = Hack Nerd Font Mono
+font-size = 14
+cursor-invert-fg-bg = true
+theme = catppuccin-mocha
+background = #11111b
+background-opacity = 0.9
+copy-on-select = clipboard
+app-notifications = no-clipboard-copy
+gtk-tabs-location = hidden
+shell-integration-features = no-cursor
