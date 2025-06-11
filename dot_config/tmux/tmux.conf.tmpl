@@ -8,6 +8,8 @@ set -g @yank_selection_mouse 'clipboard'
 
 set -g @plugin 'tmux-plugins/tmux-sessionist'
 
+set -g @plugin 'thewtex/tmux-mem-cpu-load'
+
 unbind C-b
 set -g prefix C-f
 unbind C-f
@@ -28,8 +30,8 @@ set -g renumber-windows on
 set -g status-keys emacs
 set -g visual-activity off
 set -sg escape-time 10
-set -g status-interval 15
-set -g status-right "#(iwgetid -r)"
+set -g status-interval 1
+set -g status-right '#($TMUX_PLUGIN_MANAGER_PATH/tmux-mem-cpu-load/tmux-mem-cpu-load --interval 1)'
 
 setw -g aggressive-resize on
 setw -g mode-keys vi
@@ -53,13 +55,14 @@ bind -T copy-mode-vi L send $
 bind -T copy-mode-vi Escape send C-c
 bind -T copy-mode-vi BSpace send -X clear-selection
 
-setw -g monitor-activity on
+setw -g monitor-activity off
 
 bind r source-file '{{ .chezmoi.homeDir }}/.config/tmux/tmux.conf' \; display "tmux.conf reloaded"
 
 bind C-p previous-window
 bind C-k next-window
 bind C-w detach-client
+bind H attach -c "#{pane_current_path}"
 
 bind v split-window -h -c "#{pane_current_path}"
 bind s split-window -v -c "#{pane_current_path}"
