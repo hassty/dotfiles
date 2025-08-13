@@ -1,7 +1,51 @@
 return {
-  { "tpope/vim-surround", event = "LazyFile" },
-  { "tpope/vim-repeat", event = "LazyFile" },
-  { "tpope/vim-abolish", event = "LazyFile" },
-  { "jeffkreeftmeijer/vim-numbertoggle", event = "LazyFile" },
-  { "folke/todo-comments.nvim", enabled = false },
+  { "psliwka/vim-smoothie" },
+  {
+    "dstein64/nvim-scrollview",
+    opts = {
+      excluded_filetypes = { "netrw" },
+      current_only = true,
+      base = "right",
+      column = 1,
+    }
+  },
+  { "jeffkreeftmeijer/vim-numbertoggle" },
+  { "tpope/vim-surround" },
+  { "tpope/vim-repeat" },
+  { "tpope/vim-abolish" },
+  {
+    "unblevable/quick-scope",
+    keys = { "f", "F", "t", "T" },
+    init = function()
+      vim.g.qs_highlight_on_keys = { "f", "F", "t", "T" }
+      vim.g.qs_max_chars = 150
+    end,
+  },
+  {
+    "j-hui/fidget.nvim",
+    event = "LspAttach",
+    opts = {
+      progress = {
+        display = {
+          done_icon = "",
+        },
+      },
+      notification = {
+        window = { winblend = 0 },
+      },
+    }
+  },
+  {
+    'stevearc/oil.nvim',
+    lazy = false,
+    opts = {},
+    keys = {
+      { "-",         "<cmd>Oil<cr>" },
+      { "<leader>e", "<cmd>topleft 30 vsplit | Oil<cr>", desc = "Browse files" },
+    },
+    -- Optional dependencies
+    dependencies = { "echasnovski/mini.icons" },
+    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+  },
 }
