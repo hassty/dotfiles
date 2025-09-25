@@ -1,9 +1,11 @@
 #!/bin/sh
 
-choice=$(printf "poweroff\nreboot\nlogout" | dmenu -c -l 3)
+choice=$(printf "poweroff\nreboot\nlogout" | wofi -d)
 case "$choice" in
-    logout) pidof dwm | xargs kill -9
-        ;;
-    *) sudo "$choice"
-        ;;
+logout)
+  hyprctl dispatch exit
+  ;;
+*)
+  sudo "$choice"
+  ;;
 esac

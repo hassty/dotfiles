@@ -96,10 +96,10 @@ export GROFF_NO_SGR=1
 
 # start ssh-agent
 if ! pgrep -u "$USER" ssh-agent >/dev/null; then
-    ssh-agent -t 1h >"$XDG_RUNTIME_DIR/ssh-agent.env"
+  ssh-agent -t 1h >"$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
 if [ ! "$SSH_AUTH_SOCK" ]; then
-    . "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+  . "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
 # startx in tty1
@@ -107,14 +107,14 @@ fi
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-    if [ -f "$XDG_CONFIG_HOME/shell/bash/.bashrc" ]; then
-        . "$XDG_CONFIG_HOME/shell/bash/.bashrc"
-    else
-        . "$HOME/.bashrc"
-    fi
-    # if running zsh
+  if [ -f "$XDG_CONFIG_HOME/shell/bash/.bashrc" ]; then
+    . "$XDG_CONFIG_HOME/shell/bash/.bashrc"
+  else
+    . "$HOME/.bashrc"
+  fi
+  # if running zsh
 elif [ -n "$ZSH_NAME" ]; then
-    if [ -f "$XDG_CONFIG_HOME/shell/zsh/.zshrc" ]; then
-        . "$XDG_CONFIG_HOME/shell/zsh/.zshrc"
-    fi
+  if [ -f "$XDG_CONFIG_HOME/shell/zsh/.zshrc" ]; then
+    . "$XDG_CONFIG_HOME/shell/zsh/.zshrc"
+  fi
 fi

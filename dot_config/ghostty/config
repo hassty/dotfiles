@@ -8,4 +8,7 @@ background-opacity = 0.9
 copy-on-select = clipboard
 app-notifications = no-clipboard-copy
 gtk-tabs-location = hidden
+gtk-single-instance = false
+cursor-style = block_hollow
+cursor-style-blink = true
 shell-integration-features = no-cursor

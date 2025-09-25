@@ -1,35 +1,36 @@
 #!/bin/sh
 
 alias \
-    cp="cp -irv" \
-    mv="mv -iv" \
-    rm="rm -vI" \
-    mkdir="mkdir -pv"
+  cp="cp -irv" \
+  mv="mv -iv" \
+  rm="rm -vI" \
+  mkdir="mkdir -pv"
 
 alias \
-    grep="grep --color=auto" \
-    fgrep="fgrep --color=auto" \
-    egrep="egrep --color=auto"
+  grep="grep --color=auto" \
+  fgrep="fgrep --color=auto" \
+  egrep="egrep --color=auto"
 
 alias ip="ip --color=auto"
 
 alias \
-    ls="eza --color=automatic --group-directories-first --icons --hyperlink" \
-    la="eza -1a --color=automatic --group-directories-first --icons --hyperlink" \
-    ll="eza -la --color=automatic --group-directories-first --icons --git --hyperlink" \
-    l="eza -la --color=automatic --group-directories-first --icons --git --hyperlink" \
-    lg="eza -la --color=automatic --group-directories-first --icons --git-ignore --hyperlink" \
-    lt="eza -aT --color=automatic --group-directories-first --icons --hyperlink"
+  ls="eza --color=automatic --group-directories-first --icons --hyperlink" \
+  la="eza -1a --color=automatic --group-directories-first --icons --hyperlink" \
+  ll="eza -la --color=automatic --group-directories-first --icons --git --hyperlink" \
+  l="eza -la --color=automatic --group-directories-first --icons --git --hyperlink" \
+  lg="eza -la --color=automatic --group-directories-first --icons --git-ignore --hyperlink" \
+  lt="eza -aT --color=automatic --group-directories-first --icons --hyperlink"
 
 alias \
-    i="iex -S mix" \
-    is="iex -S mix phx.server" \
-    ms="mix setup" \
-    mem="mix ecto.migrate" \
-    mer="mix ecto.reset" \
-    mc="mix compile" \
-    mcc="mix clean && mix compile"
+  i="iex -S mix" \
+  is="iex -S mix phx.server" \
+  ms="mix setup" \
+  mem="mix ecto.migrate" \
+  mer="mix ecto.reset" \
+  mc="mix compile" \
+  mcc="mix clean && mix compile"
 
+alias j="just"
 alias cat="bat -p"
 alias mpv="DRI_PRIME=1 mpv"
 # alias le="less -R --LINE-NUMBERS --line-num-width=4 -S --shift=1 --quit-if-one-screen -J --status-col-width=1"
@@ -37,55 +38,37 @@ alias vifm="DRI_PRIME=1 /usr/bin/vifm"
 alias f="DRI_PRIME=1 /usr/bin/vifm"
 
 alias \
-    mp="ncmpcpp 2>/dev/null" \
-    am="alsamixer" \
-    pm="pulsemixer" \
-    im="nsxiv -t *" \
-    nb="newsboat" \
-    ca="calcurse" \
-    c="cargo" \
-    ti="timew" \
-    ts="timew summary" \
-    gt="gotop" \
-    lz="lazygit" \
-    lo="lazydocker" \
-    g="goto" \
-    xc="xclip -sel clip" \
-    vn="$EDITOR -u NONE" \
-    py="python -q" \
-    ppy="ipython --no-banner --no-confirm-exit"
+  mp="ncmpcpp 2>/dev/null" \
+  am="alsamixer" \
+  pm="pulsemixer" \
+  im="nsxiv -t *" \
+  ti="timew" \
+  ts="timew summary" \
+  lz="lazygit" \
+  lo="sudo lazydocker" \
+  xc="xclip -sel clip" \
+  v="$EDITOR" \
+  vn="$EDITOR -u NONE" \
+  py="python -q" \
+  ppy="ipython --no-banner --no-confirm-exit"
 
 alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias info="info --vi-keys"
-alias livereload="browser-sync start --server --files ."
 alias p="sudo pacman"
+alias gef="gdb -ix /usr/share/gef/gef.py"
 
 alias wtf="whence -vas -fx 4"
+
+alias lv="NVIM_APPNAME=LazyVim nvim"
 
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 alias \
-    gi="git init" \
-    gc="git clone --depth 1" \
-    ga="git add" \
-    gaa="git add --all" \
-    gs="git status" \
-    gb="git branch" \
-    gm="git commit" \
-    gma="git commit --amend" \
-    gmn="git commit --amend --no-edit" \
-    gd="git diff" \
-    gds="git diff --staged" \
-    gco="git checkout" \
-    gcm="git checkout master" \
-    gl="git log --oneline --graph" \
-    gr="git restore"
-
-alias \
-    tm="tmux" \
-    ta="tmux attach" \
-    tk="tmux kill-server" \
-    tl="tmux ls"
+  tm="tmux" \
+  ta="tmux attach" \
+  tk="tmux kill-server" \
+  tl="tmux ls" \
+  tms="tmux-sessionizer"

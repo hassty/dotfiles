@@ -12,6 +12,11 @@ eval "$(zoxide init zsh)"
 
 eval "$(direnv hook zsh)"
 
+function pyenv_init() {
+    eval "$(pyenv init - zsh)"
+    eval "$(pyenv virtualenv-init -)"
+}
+
 # hide EOL sign ('%')
 PROMPT_EOL_MARK=""
 
@@ -86,7 +91,7 @@ zsh_add_file "/usr/share/fzf/key-bindings.zsh"
 zsh_add_file "/usr/share/goto/goto.sh"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
-bindkey '^ ' autosuggest-accept
+bindkey '^y' autosuggest-accept
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 zsh_add_plugin "tarrasch/zsh-bd"

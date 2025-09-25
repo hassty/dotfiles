@@ -25,7 +25,7 @@ vim.o.undofile = true
 vim.o.updatetime = 50
 vim.o.fillchars = "eob: "
 vim.o.wrap = false
-vim.o.laststatus = 3
+vim.o.laststatus = 2
 vim.o.winborder = "rounded"
 vim.o.pumblend = 20
 -- vim.o.winblend = 20
@@ -36,5 +36,6 @@ vim.o.inccommand = "split"
 vim.opt.title = true
 vim.opt.titlestring = '%F - nvim'
 
+vim.opt.completeopt = { "menuone", "popup", "noselect", "fuzzy" }
 vim.opt.wildignore = { "*.a", "*.o", "*.so", "*.pyc", ".git", "*.pdf" }
 vim.opt.shortmess:append("c")

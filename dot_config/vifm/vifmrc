@@ -110,7 +110,8 @@ endif
 
 " Set custom status line look
 
-set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+set statusline="  Hint: %z%= %A %10u:%-7g %15E %20d  "
+
 
 set timeoutlen=100
 set previewoptions+=graphicsdelay:0
@@ -219,14 +220,12 @@ filextype {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
         \ mplayer %f,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
         \*.fl[icv],*.m2v,*.mov,*.webm,*.mts,*.m4v,*.r[am],*.qt,*.divx
-        \ vifmimg videopreview %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
+        \ viu -b %c
 
 " Web
 filextype {*.html,*.htm},<text/html>
-        \ {Open with dwb}
-        \ dwb %f %i &,
+        \ {Open with zen}
+        \ zen-browser %f &,
         \ {Open with firefox}
         \ firefox %f &,
         \ {Open with uzbl}
@@ -244,22 +243,16 @@ fileviewer {*.[1-8]},<text/troff> man ./%c | col -b
 
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-        \ {View in nsxiv}
-        \ nsxiv -i %f &,
         \ {View in imv}
-        \ imv -b 1D2330 -d %d &,
+        \ imv -b checks -d %f &,
         \ {View in feh}
         \ feh %d &,
         \ {View in cacaview}
         \ cacaview %c &,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
-        \ vifmimg draw %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
+        \ viu -b %c
 fileviewer *.gif
-        \ vifmimg gifpreview %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
+        \ viu -b %c
 
 " OpenRaster
 filextype *.ora
@@ -536,66 +529,66 @@ source $HOME/.config/vifm/icons
 "
 " let $VIFM_SERVER_NAME = v:servername
 
-noremap n j
-noremap N J
-noremap e k
-noremap E K
-noremap i l
-noremap I L
-noremap k n
-noremap K N
-noremap l i
-noremap L I
-noremap j e
-noremap J E
+"noremap n j
+"noremap N J
+"noremap e k
+"noremap E K
+"noremap i l
+"noremap I L
+"noremap k n
+"noremap K N
+"noremap l i
+"noremap L I
+"noremap j e
+"noremap J E
 noremap zx ZQ
 noremap zz ZZ
 noremap ZZ zz
 
-dnoremap n j
-dnoremap N J
-dnoremap e k
-dnoremap E K
-dnoremap i l
-dnoremap I L
-dnoremap k n
-dnoremap K N
-dnoremap l i
-dnoremap L I
-dnoremap j e
-dnoremap J E
+"dnoremap n j
+"dnoremap N J
+"dnoremap e k
+"dnoremap E K
+"dnoremap i l
+"dnoremap I L
+"dnoremap k n
+"dnoremap K N
+"dnoremap l i
+"dnoremap L I
+"dnoremap j e
+"dnoremap J E
 dnoremap zx ZQ
 dnoremap zz ZZ
 dnoremap ZZ zz
 
-mnoremap n j
-mnoremap N J
-mnoremap e k
-mnoremap E K
-mnoremap i l
-mnoremap I L
-mnoremap k n
-mnoremap K N
-mnoremap l i
-mnoremap L I
-mnoremap j e
-mnoremap J E
+"mnoremap n j
+"mnoremap N J
+"mnoremap e k
+"mnoremap E K
+"mnoremap i l
+"mnoremap I L
+"mnoremap k n
+"mnoremap K N
+"mnoremap l i
+"mnoremap L I
+"mnoremap j e
+"mnoremap J E
 mnoremap zx ZQ
 mnoremap zz ZZ
 mnoremap ZZ zz
 
-qnoremap n j
-qnoremap N J
-qnoremap e k
-qnoremap E K
-qnoremap i l
-qnoremap I L
-qnoremap k n
-qnoremap K N
-qnoremap l i
-qnoremap L I
-qnoremap j e
-qnoremap J E
+"qnoremap n j
+"qnoremap N J
+"qnoremap e k
+"qnoremap E K
+"qnoremap i l
+"qnoremap I L
+"qnoremap k n
+"qnoremap K N
+"qnoremap l i
+"qnoremap L I
+"qnoremap j e
+"qnoremap J E
 qnoremap <C-[> <S-Tab>
 qnoremap zx <S-Tab>
 qnoremap zz ZZ

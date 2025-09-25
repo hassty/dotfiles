@@ -1,6 +1,7 @@
 local map = vim.keymap.set
 
 -- map("i", "<CR>", function()
+--     TODO: vim.fn.pumvisible
 --     local visible = vim.api.nvim_exec2("echo pumvisible()", { output = true })
 --     if visible.output == "1" then
 --         return "<C-e><CR>"
@@ -8,6 +9,21 @@ local map = vim.keymap.set
 --         return "<CR>"
 --     end
 -- end, { expr = true })
+
+map("", "<leader>O", "O<C-\\><C-o>O")
+map(
+  "",
+  "<leader>o",
+  function()
+    return vim.api.nvim_get_current_line() == "" and "o<C-\\><C-o>O" or "o<C-\\><C-o>o"
+  end,
+  { expr = true })
+map("", "<leader>$", "$h")
+map("", "<leader>i", "i <C-g>U<Left>")
+map("", "<leader>I", "I <C-g>U<Left>")
+map("", "<leader>,", "i, <C-g>U<Left><C-g>U<Left>")
+map("", "<leader>'", "i'', <C-g>U<Left><C-g>U<Left><C-g>U<Left>")
+map("", '<leader>"', 'i"", <C-g>U<Left><C-g>U<Left><C-g>U<Left>')
 
 map("", "<leader>w", "<cmd>silent write!<cr>", { desc = "Save" })
 map("", "<leader>W", "<cmd>silent wall!<cr>", { desc = "Save All" })
@@ -17,6 +33,7 @@ map("", "<leader><Tab>", "<C-^>", { desc = "Alternate file" })
 map({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy to clipboard" })
 map({ "n", "v" }, "<leader>Y", '"+y$', { desc = "Copy to clipboard (until line end)" })
 map({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from clipboard" })
+map("", "<leader>dy", "<cmd>let @+=expand('%:t').':'.line('.')<cr>", { desc = "Copy current position" })
 
 -- keeping it centered
 map("n", "n", "nzzzv")

@@ -1,11 +1,11 @@
 #!/bin/sh
 
 if [ -f "$XDG_CONFIG_HOME/shell/aliases" ]; then
-    . "$XDG_CONFIG_HOME/shell/aliases"
+  . "$XDG_CONFIG_HOME/shell/aliases"
 fi
 
 if [ -f "$XDG_CONFIG_HOME/shell/functions" ]; then
-    . "$XDG_CONFIG_HOME/shell/functions"
+  . "$XDG_CONFIG_HOME/shell/functions"
 fi
 
 # add colors to tty
@@ -28,14 +28,3 @@ fi
 #    printf "\e]PF9AD1DC" #white
 #    clear
 #fi
-
-# autojump
-[ -s /etc/profile.d/autojump.sh ] && . /etc/profile.d/autojump.sh
-
-# start pyenv only if python version is set
-[ -s .python-version ] && eval "$(pyenv init -)"
-
-# autostart tmux on ssh session
-if [ -n "$PS1" ] && [ -z "$TMUX" ] && [ -n "$SSH_CONNECTION" ]; then
-    tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
-fi

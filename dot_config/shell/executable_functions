@@ -2,82 +2,86 @@
 
 # archive extraction
 ex() {
-    if [ -f "$1" ]; then
-        case "$1" in
-            *.tar.bz2) tar xjf "$1" ;;
-            *.tar.gz) tar xzf "$1" ;;
-            *.bz2) bunzip2 "$1" ;;
-            *.rar) unrar x "$1" ;;
-            *.gz) gunzip "$1" ;;
-            *.tar) tar xf "$1" ;;
-            *.tbz2) tar xjf "$1" ;;
-            *.tgz) tar xzf "$1" ;;
-            *.zip) unzip "$1" ;;
-            *.Z) uncompress "$1" ;;
-            *.7z) 7z x "$1" ;;
-            *.iso) 7z x "$1" ;;
-            *.deb) ar x "$1" ;;
-            *.tar.xz) tar xf "$1" ;;
-            *.tar.zst) unzstd "$1" ;;
-            *) echo "'$1' cannot be extracted via ex()" ;;
-        esac
-    else
-        echo "'$1' is not a valid file"
-    fi
+  if [ -f "$1" ]; then
+    case "$1" in
+    *.tar.bz2) tar xjf "$1" ;;
+    *.tar.gz) tar xzf "$1" ;;
+    *.bz2) bunzip2 "$1" ;;
+    *.rar) unrar x "$1" ;;
+    *.gz) gunzip "$1" ;;
+    *.tar) tar xf "$1" ;;
+    *.tbz2) tar xjf "$1" ;;
+    *.tgz) tar xzf "$1" ;;
+    *.zip) unzip "$1" ;;
+    *.Z) uncompress "$1" ;;
+    *.7z) 7z x "$1" ;;
+    *.iso) 7z x "$1" ;;
+    *.deb) ar x "$1" ;;
+    *.tar.xz) tar xf "$1" ;;
+    *.tar.zst) unzstd "$1" ;;
+    *) echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
 }
 
 cv() {
-    dst="$(command "vifm" -c 'only' -c 'set millerview' --choose-dir - "$@")"
-    if [ -z "$dst" ]; then
-        return 0
-    fi
-    cd "$dst" || exit 1
+  dst="$(command "vifm" -c 'only' -c 'set millerview' --choose-dir - "$@")"
+  if [ -z "$dst" ]; then
+    return 0
+  fi
+  cd "$dst" || exit 1
 }
 
 mkcd() {
-    mkdir "$1"
-    cd "$1" || exit 1
+  mkdir "$1"
+  cd "$1" || exit 1
+}
+
+replace() {
+  grep -rl "$2" "$1" | xargs sed -i "s/$2/$3/g"
 }
 
 # list git repositories and cd
 gf() {
-    preview="onefetch --no-bold --no-color-palette --no-art {} 2>/dev/null || echo 'no commits'"
-    cd "$(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="$preview")" || exit 1
+  preview="onefetch --no-bold --no-color-palette --no-art {} 2>/dev/null || echo 'no commits'"
+  cd "$(ghq list -p | fzf -1 --delimiter='/' --with-nth=5.. --preview="$preview")" || exit 1
 }
 
 qira() {
-    docker run --rm -v "$PWD":/mnt -p 3002:3002 -p 4000:4000 -ti qira bash
+  docker run --rm -v "$PWD":/mnt -p 3002:3002 -p 4000:4000 -ti qira bash
 }
 
 odump() {
-    objdump --disassembler-color=on -M intel -d "$1" | less --LINE-NUMBERS --chop-long-lines
+  objdump --disassembler-color=on -M intel -d "$1" | less --LINE-NUMBERS --chop-long-lines
 }
 
 lr() {
-    fullpath="$(readlink -f "$1")"
-    command="entr -ccr"
-    [ -x "$fullpath" ] || command="$command cat"
-    /usr/bin/ls "$fullpath" | eval "$command $fullpath"
+  fullpath="$(readlink -f "$1")"
+  command="entr -ccr"
+  [ -x "$fullpath" ] || command="$command cat"
+  /usr/bin/ls "$fullpath" | eval "$command $fullpath"
 }
 
 # tldr
 t() {
-    if [ $# -gt 0 ]; then
-        tldr "$@"
-    else
-        tldr --list | tr -d "\[\]'' " | tr ',' '\n' | fzf --preview "tldr {1}" --preview-window=right,70% | xargs -ro tldr
-    fi
+  if [ $# -gt 0 ]; then
+    tldr "$@"
+  else
+    tldr --list | tr -d "\[\]'' " | tr ',' '\n' | fzf --preview "tldr {1}" --preview-window=right,70% | xargs -ro tldr
+  fi
 }
 
 # i use arch btw
 pf() {
-    pacman -Slq | fzf --multi --preview-window '55%,wrap' --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S
+  pacman -Slq | fzf --multi --preview-window '55%,wrap' --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S
 }
 
 ppf() {
-    paru -Slq | fzf --multi --preview-window '55%,wrap' --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk "{print \$2}")' | xargs -ro paru -S
+  paru -Slq | fzf --multi --preview-window '55%,wrap' --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk "{print \$2}")' | xargs -ro paru -S
 }
 
 pd() {
-    pacman -Qq | fzf --multi --preview-window '55%,wrap' --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns
+  pacman -Qq | fzf --multi --preview-window '55%,wrap' --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns
 }

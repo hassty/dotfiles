@@ -508,9 +508,9 @@
 
 def_key "space"
  pause
-def_key "e"
+def_key "k"
  scroll_up
-def_key "n"
+def_key "j"
  scroll_down
 def_key "g"
  move_home
@@ -526,13 +526,13 @@ def_key "."
  next
 def_key ","
  previous
-def_key "i"
+def_key "l"
  seek_forward
 def_key "h"
  seek_backward
-def_key "k"
+def_key "n"
  next_found_item
-def_key "K"
+def_key "N"
  previous_found_item
 def_key "f"
  jump_to_position_in_song
